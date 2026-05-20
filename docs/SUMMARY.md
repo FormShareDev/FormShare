@@ -58,6 +58,17 @@
   * [KML for geographic data](data-management/data-products/kml.md)
   * [Media](data-management/data-products/media.md)
 
+## Additional functionality
+
+* [Analytics](additional-functionality/analytics.md)
+* [R Analytics](additional-functionality/r-analytics.md)
+* [Superset](additional-functionality/superset.md)
+* [WorkSpace](additional-functionality/workspace.md)
+* [ElasticMap](additional-functionality/elastic-map.md)
+* [MassiveSpatial](additional-functionality/massive-spatial.md)
+* [OData](additional-functionality/odata.md)
+* [Enketo](additional-functionality/enketo.md)
+
 ## Plugin development
 
 * [Plugin development](technical-pages/plugins/README.md)
