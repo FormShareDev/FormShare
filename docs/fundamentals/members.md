@@ -22,7 +22,7 @@ You can access the collaborator's page in the left menu of FormShare or on the "
 4\. **Add collaborator**: Click on the "Add collaborator" button to add the collaborator to the project. By default, the collaborator will be added as a "Member" of the project.
 
 {% hint style="info" %}
-**Note:** Depending on the ["Collaborator settings](../technical-pages/settings.md#collaborators)" FormShare will add the collaborator directly or send an email requesting the acceptance of such collaboration.&#x20;
+**Note:** Depending on how your FormShare instance is configured, the collaborator will either be added directly or sent an email requesting acceptance of the collaboration. Ask your FormShare administrator which behavior applies on your instance.&#x20;
 {% endhint %}
 
 ## Edit collaborators

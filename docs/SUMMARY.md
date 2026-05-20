@@ -18,6 +18,7 @@
 * [Collaborators](fundamentals/members.md)
 * [Forms](fundamentals/forms/README.md)
   * [Common errors in a form](fundamentals/forms/common-errors-in-a-form.md)
+  * [Data columns](fundamentals/forms/data-columns.md)
 * [Assistants](fundamentals/tasks/README.md)
   * [Assistant groups](fundamentals/tasks/assistant-groups.md)
 * [Repositories](fundamentals/repositories/README.md)
@@ -48,6 +49,7 @@
   * [Private vs public products](data-management/data-products/private-vs-public-products.md)
   * [Flat CSV (One CSV file)](data-management/data-products/flat-csv-one-csv-file.md)
 
-## Technical pages
+## Plugin development
 
-* [Settings](technical-pages/settings.md)
+* [Plugin development](technical-pages/plugins/README.md)
+  * [Writing a plugin](technical-pages/plugins/writing-a-plugin.md)

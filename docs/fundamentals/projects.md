@@ -56,7 +56,7 @@ The project details page shows different elements that a project has. Here you c
 13. **Project partners**: You can link any number of [partners](partners.md) to a project. When you link a partner to a project they can access any data of any form inside the project. You can also link partners to individual forms to allow more limited access.
 
 {% hint style="info" %}
-Note on Partners: Partners access is a feature that is not present by default in a FormShare installation. See the "[Partner settings](../technical-pages/settings.md#partners)" for information about how to activate this feature.
+Note on Partners: Partners access is a feature that is not present by default in a FormShare installation. If you do not see the "Project partners" section, contact your FormShare administrator to enable it.
 {% endhint %}
 
 ## Edit a project
