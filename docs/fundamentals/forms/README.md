@@ -96,7 +96,7 @@ Remember: To control duplicate submissions, you need to select a variable from y
 * Download data in CSV format: This is a "[Flat CSV file](../../data-management/data-products/flat-csv-one-csv-file.md)". FormShare does not [resolve option labels or multi-select fields](../repositories/how-does-formshare-stores-my-data.md) for data in the testing stage.
 * Download submitted media: This is a Zip file containing any media submitted to the form. Media files will be separated by [submission ID](../submissions/).
 
-7\. Form files: ODK forms can use supporting files when collecting data. These files can be data or media files. If your form uses data files, e.g., CSV files, FormShare will alert you if such files are missing. FormShare will finish checking your form once you attach all necessary data files.
+7\. Form files: ODK forms can use supporting files when collecting data. These files can be data or media files. If your form uses data files, e.g., CSV files, FormShare will alert you if such files are missing. FormShare will finish checking your form once you attach all necessary data files. See "[Form files](form-files.md)" for the full walkthrough.
 
 ![](../../.gitbook/assets/add\_files\_and\_check\_pending.png)
 

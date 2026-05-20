@@ -10,16 +10,19 @@
   * [Create and assign assistants](guides/creating-your-first-task/create-and-assign-assistants.md)
   * [Test your form](guides/creating-your-first-task/test-your-form.md)
   * [Create a repository for your form](guides/creating-your-first-task/advanced-permissions.md)
+* [Setting up ODK Collect](guides/odk-collect-setup.md)
 
 ## Fundamentals
 
 * [The dashboard](fundamentals/the-dashboard.md)
 * [Your account](fundamentals/your-account.md)
 * [Projects](fundamentals/projects.md)
+* [Project files](fundamentals/project-files.md)
 * [Collaborators](fundamentals/members.md)
 * [Forms](fundamentals/forms/README.md)
   * [Common errors in a form](fundamentals/forms/common-errors-in-a-form.md)
   * [Data columns](fundamentals/forms/data-columns.md)
+  * [Form files](fundamentals/forms/form-files.md)
 * [Assistants](fundamentals/tasks/README.md)
   * [Assistant groups](fundamentals/tasks/assistant-groups.md)
 * [Repositories](fundamentals/repositories/README.md)
@@ -49,6 +52,11 @@
 * [Data products](data-management/data-products/README.md)
   * [Private vs public products](data-management/data-products/private-vs-public-products.md)
   * [Flat CSV (One CSV file)](data-management/data-products/flat-csv-one-csv-file.md)
+  * [Zipped CSV](data-management/data-products/zipped-csv.md)
+  * [Excel](data-management/data-products/excel.md)
+  * [JSON](data-management/data-products/json.md)
+  * [KML for geographic data](data-management/data-products/kml.md)
+  * [Media](data-management/data-products/media.md)
 
 ## Plugin development
 

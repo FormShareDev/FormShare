@@ -18,12 +18,12 @@ Products are only available for forms with a [repository](../../fundamentals/rep
 
 FormShare ships with the following product types out of the box. Plugins can add more.
 
-* **Flat CSV** (private / public) — a single CSV file that denormalizes the form into one table. The easiest format to open in Excel for ad-hoc inspection, with the trade-off that repeats are duplicated. See "[Flat CSV (One CSV file)](flat-csv-one-csv-file.md)".
-* **Zipped CSV** (private / public) — a Zip archive containing one CSV per table in the repository (main, repeats, lookups, multi-selects). The right format for analysts who want a normalized, lossless export.
-* **Excel** (private / public) — an `.xlsx` workbook with one sheet per table. Same content as the zipped CSV, but in a single file readable by Excel-native users.
-* **JSON** (private / public) — a Zip archive of JSON records. The right format for downstream systems that consume nested data structures.
-* **KML** — a Keyhole Markup Language file for forms that include GPS data. Opens in Google Earth and most mapping software. KML is published as a single non-publishable variant (there is no "public KML" toggle, since GPS coordinates are often sensitive and you control their inclusion through the [data dictionary](../data-dictionary/marking-sensitive-fields.md)).
-* **Media** — a Zip archive of every media file (photos, audio, video, signatures) that has been submitted with the form. Organized by submission ID. Like KML, this is a single variant.
+* **[Flat CSV](flat-csv-one-csv-file.md)** (private / public) — a single CSV file that denormalizes the form into one table. The easiest format to open in Excel for ad-hoc inspection, with the trade-off that repeats are duplicated.
+* **[Zipped CSV](zipped-csv.md)** (private / public) — a Zip archive containing one CSV per table in the repository (main, repeats, lookups, multi-selects). The right format for analysts who want a normalized, lossless export.
+* **[Excel](excel.md)** (private / public) — an `.xlsx` workbook with one sheet per table. Same content as the zipped CSV, but in a single file readable by Excel-native users.
+* **[JSON](json.md)** (private / public) — a Zip archive of JSON records. The right format for downstream systems that consume nested data structures.
+* **[KML](kml.md)** — a Keyhole Markup Language file for forms that include GPS data. Opens in Google Earth and most mapping software. KML is published as a single non-publishable variant (there is no "public KML" toggle, since GPS coordinates are often sensitive and you control their inclusion through the [data dictionary](../data-dictionary/marking-sensitive-fields.md)).
+* **[Media](media.md)** — a Zip archive of every media file (photos, audio, video, signatures) that has been submitted with the form. Organized by submission ID. Like KML, this is a single variant.
 
 The first four — Flat CSV, Zipped CSV, Excel, JSON — exist in both [private and public variants](private-vs-public-products.md). The public variant respects fields marked as [sensitive](../data-dictionary/marking-sensitive-fields.md); the private variant always includes the full data.
 
