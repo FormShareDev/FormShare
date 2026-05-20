@@ -9,7 +9,7 @@ A **partner** is an external party who has been granted read-only access to data
 Partners are different from [collaborators](members.md) (who help you manage projects and forms) and from [assistants](tasks/) (who collect or clean data). Partners only consume data; they cannot upload, edit, or delete anything.
 
 {% hint style="info" %}
-**Partner access is an optional feature.** Partner support is not enabled by default in a FormShare installation. If you don't see "Partners" in the menu or on the project details page, see the "[Partner settings](../technical-pages/settings.md#partners)" page for how to activate this feature on your instance, or ask your administrator.
+**Partner access is an optional feature.** Partner support is not enabled by default in a FormShare installation. If you don't see "Partners" in the menu or on the project details page, contact your FormShare administrator to enable it on your instance.
 {% endhint %}
 
 ## What partners can do

@@ -15,7 +15,7 @@ You can access the collaborator's page in the left menu of FormShare or on the "
 
 1\. **Roles**: Collaborators can have three different roles in a project: Members (the default) can only access forms and data in read-only mode, Editors can make modifications in forms and project details but cannot add or remove other collaborators, and Administrators can make any kind of modifications to the project, forms and its collaborators.
 
-2\. **Current collaborators**: Each collaborator shows their role within the project. You can [change their role](members.md#add-collaborators) or [remove them](members.md#undefined).&#x20;
+2\. **Current collaborators**: Each collaborator shows their role within the project. You can [change their role](members.md#edit-collaborators) or [remove them](members.md#remove-collaborator).&#x20;
 
 3\. **Search for collaborators**: You can search for collaborators by name or by email. Once you select a collaborator you can add them with the "Add collaborator" button.
 
