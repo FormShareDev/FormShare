@@ -14,6 +14,7 @@
 ## Fundamentals
 
 * [The dashboard](fundamentals/the-dashboard.md)
+* [Your account](fundamentals/your-account.md)
 * [Projects](fundamentals/projects.md)
 * [Collaborators](fundamentals/members.md)
 * [Forms](fundamentals/forms/README.md)
