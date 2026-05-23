@@ -32,6 +32,7 @@
 * [Submissions](fundamentals/submissions/README.md)
   * [Import external data](fundamentals/submissions/import-external-data.md)
 * [Partners](fundamentals/partners.md)
+* [Manage users](fundamentals/manage-users.md)
 
 ## Data management
 
