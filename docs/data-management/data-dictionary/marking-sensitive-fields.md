@@ -35,7 +35,7 @@ If you're not sure which to pick, **Exclude** is the safest default for most ide
 3. Find the field. Each field card shows a coloured circle — **green** for not sensitive, **red** for sensitive.
 4. Click **Set as sensitive** (the eye-slash icon) on the card. A modal dialog opens with the **Type of protection** selector.
 
-> Add screenshot of the "Set as sensitive" modal showing the protection type selector and the Set / Cancel buttons.
+<!-- TODO screenshot: the "Set as sensitive" modal showing the protection type selector and the Set / Cancel buttons. -->
 
 5. Pick the protection type (the default is usually right). Click **Set as sensitive** in the modal.
 

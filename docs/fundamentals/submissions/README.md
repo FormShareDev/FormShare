@@ -36,7 +36,7 @@ The submission ID lets FormShare:
 * Move submissions between states (database, error log, log entries) without losing traceability.
 * Reference a submission from the API, from the [audit log](../../data-management/cleaning/in-a-repository/audit-log.md), or from the file system holding media attachments.
 
-> Add screenshot of a submission detail panel showing the submission ID prominently.
+<!-- TODO screenshot: a submission detail panel showing the submission ID prominently. -->
 
 In addition to the submission ID, FormShare stores ODK Collect metadata (start time, end time, device ID, instance ID) for every submission. This metadata is available in exports and is what powers the timeline-style activity statistics you see on the dashboard.
 

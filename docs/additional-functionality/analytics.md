@@ -10,7 +10,7 @@ description: Analytics gives you direct SQL access to your form repositories and
 
 A new entry labeled **Analytics** appears in the left-hand sidebar. Click it to open the Analytics page at `/user/<your-username>/analytics`.
 
-> Add screenshot of the Analytics page with the "Repositories" tab open, listing several form schemas with their project codes and form IDs.
+<!-- TODO screenshot: the Analytics page with the "Repositories" tab open, listing several form schemas with their project codes and form IDs. -->
 
 ## First-time setup
 

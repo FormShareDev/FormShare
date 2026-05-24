@@ -12,7 +12,7 @@ This screen is meant for occasional administrative work, not for routine data cl
 
 From the form details page, click **Manage submissions**. The screen shows a grid of every submission currently in the database.
 
-> Add screenshot of the Manage Submissions screen with the grid, the per-row buttons, and the "Danger zone" section visible.
+<!-- TODO screenshot: the Manage Submissions screen with the grid, the per-row buttons, and the "Danger zone" section visible. -->
 
 The screen is available to the **project owner** and to **collaborators** with editor or administrator access. Read-only collaborators, assistants, and partners do not see it.
 
@@ -41,7 +41,7 @@ Next to each submission, there is a **Move to logs** button. Clicking it opens a
 
 On confirmation, FormShare removes the submission from the repository and creates a corresponding entry in the [error log](submissions-with-errors.md). The full JSON of the submission is preserved — nothing is lost.
 
-> Add screenshot of the "Move to logs" dialog with the assistant picker.
+<!-- TODO screenshot: the "Move to logs" dialog with the assistant picker. -->
 
 Use **Move to logs** when:
 

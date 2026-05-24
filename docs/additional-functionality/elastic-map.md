@@ -18,7 +18,7 @@ ElasticMap replaces the standard map on three pages:
 
 The pages look the same — the map panel is in the same place. What changes is how data is rendered and how navigation feels.
 
-> Add screenshot of an ElasticMap view at a continental zoom level showing several large cluster badges.
+<!-- TODO screenshot: an ElasticMap view at a continental zoom level showing several large cluster badges. -->
 
 ## How the map behaves
 
@@ -37,7 +37,7 @@ The map only loads the data you can currently see. Panning to a new area trigger
 * **Expand to fullscreen** with the control in the map's top right. The map redraws to use the full browser width; click again to collapse.
 * **Search and filter** if your form provides those controls — narrows what appears on the map.
 
-> Add screenshot of a cluster being clicked, zooming in to show smaller sub-clusters or individual points.
+<!-- TODO screenshot: a cluster being clicked, zooming in to show smaller sub-clusters or individual points. -->
 
 ## Performance
 

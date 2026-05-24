@@ -59,7 +59,7 @@ Alternatively — and this is the better option for analytical work — you can 
 
 From the form details page, click **Export data** → pick **Flat CSV** (private or public) → set the rendering options for lookups and multi-selects → click **Generate**.
 
-> Add screenshot of the "Export data" dialog with the Flat CSV options selected.
+<!-- TODO screenshot: the "Export data" dialog with the Flat CSV options selected. -->
 
 FormShare queues a background task. When it finishes, the file appears under the form's **Products and tasks** tab; download it from there. Like every product, the file is cached — generate again to pick up newer submissions or cleaning edits.
 

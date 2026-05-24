@@ -12,7 +12,7 @@ Follow-up forms are the workhorses of a longitudinal project. You can have as ma
 
 Once a project has its case creator form, any new form you upload is treated as a follow-up. From the project details page, click **Add new form**. The upload page appears with the follow-up-specific fields visible.
 
-> Add screenshot of the follow-up upload form showing the type dropdown, case selector field, and case date field.
+<!-- TODO screenshot: the follow-up upload form showing the type dropdown, case selector field, and case date field. -->
 
 You need to provide:
 

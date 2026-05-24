@@ -14,7 +14,7 @@ This page covers what a signed-in FormShare user can do to manage their own acco
 
 Click your name at the top right of any FormShare page to open the menu, then click **Profile**. The profile page appears at `/user/<your-username>/profile`.
 
-> Add screenshot of the profile page showing the bio, joined date, project count, and the API key with copy-to-clipboard button.
+<!-- TODO screenshot: the profile page showing the bio, joined date, project count, and the API key with copy-to-clipboard button. -->
 
 The profile page shows:
 
@@ -33,7 +33,7 @@ The profile page is read-only at a glance — click **Edit** to make changes.
 
 From the profile page, click **Edit**. The profile-edit page appears at `/user/<your-username>/profile/edit`.
 
-> Add screenshot of the profile-edit page with the three sections (Profile, API keys, Password) visible.
+<!-- TODO screenshot: the profile-edit page with the three sections (Profile, API keys, Password) visible. -->
 
 The page is organised as a single form with three sections — Profile, API keys, and Password. You can submit any section independently with its **Save** button.
 
@@ -68,7 +68,7 @@ The second section of the profile-edit page is **API keys**. You have two creden
 * **API key** — a UUID-style identifier. Programmatic clients send this on every request.
 * **API secret** — a hex token. Used as a shared secret alongside the key by FormShare features that require it.
 
-> Add screenshot of the API keys section showing the read-only API key field, the read-only API secret field, and the two "Generate new" buttons.
+<!-- TODO screenshot: the API keys section showing the read-only API key field, the read-only API secret field, and the two "Generate new" buttons. -->
 
 Both fields are read-only. To produce a new value, click **Generate new key** or **Generate new secret**. The new value appears in the field; click **Save API key** to persist it.
 

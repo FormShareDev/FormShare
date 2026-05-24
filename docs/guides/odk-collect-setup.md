@@ -20,7 +20,7 @@ The fastest way is to let ODK Collect read the project's QR code. It encodes the
 
 In FormShare, open the **Project details** page of the project. The QR code is in the main panel of the page, captioned "Use this QR code to configure ODK Collect".
 
-> Add screenshot of the project details page highlighting the QR code panel.
+<!-- TODO screenshot: the project details page highlighting the QR code panel. -->
 
 If you need to tweak the encoded Collect settings before sharing, click **Edit QR data** below the code. The "Project QR" page lets you change form update behavior, auto-send, video resolution, image size, and other Collect preferences for everyone scanning the QR from now on (see "[Collect settings the QR controls](#collect-settings-the-qr-controls)" below).
 

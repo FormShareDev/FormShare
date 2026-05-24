@@ -15,7 +15,7 @@ Open any form's details page and click the **Links** tab. The OData section appe
 * The **OData URL** for this form, with a copy-to-clipboard button.
 * A **What is OData?** info button that opens a help modal with tool-specific setup instructions (Power BI Desktop, Tableau, Excel).
 
-> Add screenshot of the form details "Links" tab with the OData URL field and copy button.
+<!-- TODO screenshot: the form details "Links" tab with the OData URL field and copy button. -->
 
 ## What you need to connect
 
@@ -61,7 +61,7 @@ For the built-in feed:
 3. Paste the URL. **Basic authentication** with API key and secret.
 4. Pick the tables to load.
 
-> Add screenshot of Power BI Desktop's navigator with several FormShare tables listed (main table, repeats, lookups).
+<!-- TODO screenshot: Power BI Desktop's navigator with several FormShare tables listed (main table, repeats, lookups). -->
 
 ## Using the Excel Add-in
 
@@ -85,7 +85,7 @@ If your IT department hasn't already deployed the add-in to your account, instal
 6. Paste the Network Path you copied, click **Add Catalog**, tick **Show in menu**, then **OK** → **OK**.
 7. Close Excel.
 
-> Add screenshot of Excel's Trusted Add-in Catalogs dialog with the Network Path added and "Show in menu" ticked.
+<!-- TODO screenshot: Excel's Trusted Add-in Catalogs dialog with the Network Path added and "Show in menu" ticked. -->
 
 ### Link the add-in to your workbook
 
@@ -121,7 +121,7 @@ The add-in is built around a read-edit-commit loop:
 3. Click **Commit**. The add-in sends each row independently to FormShare. Rows that fail (validation rejected by the repository — for example a value that violates a lookup constraint) turn red so you can see exactly which records didn't go through. A failure on one row does not affect the others; the rest commit normally.
 4. After committing, click **Close** to keep your current data in the sheet, or **Close & refresh** to reload the data from FormShare (useful if other people have also been editing).
 
-> Add screenshot of the task pane showing the Review & commit panel with several rows highlighted in different colours.
+<!-- TODO screenshot: the task pane showing the Review & commit panel with several rows highlighted in different colours. -->
 
 ### What the add-in does and doesn't do
 

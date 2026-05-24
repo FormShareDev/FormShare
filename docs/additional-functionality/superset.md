@@ -10,7 +10,7 @@ description: Superset gives you a full Apache Superset workspace pre-configured 
 
 Open the Analytics page from your user menu (`/user/<your-username>/analytics`). A **Superset** tab appears next to the other Analytics tabs. Click it to manage your Superset access.
 
-> Add screenshot of the Superset tab on the Analytics page showing the Enable button before activation.
+<!-- TODO screenshot: the Superset tab on the Analytics page showing the Enable button before activation. -->
 
 ## First-time setup
 
@@ -24,7 +24,7 @@ FormShare then:
 
 The page reloads with a warning: **You need to set your Superset password**. Click the button, enter a new password (twice), and save. From then on, that is the password you use to sign in to Superset.
 
-> Add screenshot of the "Set your Superset password" modal.
+<!-- TODO screenshot: the "Set your Superset password" modal. -->
 
 ## What you see after setup
 
@@ -45,7 +45,7 @@ Inside Superset, your repositories appear under a database connection bearing yo
 * **Build dashboards**: drag your saved charts onto a dashboard, arrange them in tiles, add filters that apply across all charts, and share the dashboard with collaborators.
 * **Run SQL** in **SQL Lab**: write any query you like against your repositories. Useful for one-off questions or for prototyping a query before turning it into a chart.
 
-> Add screenshot of Superset's chart builder with a FormShare table selected and a bar chart in progress.
+<!-- TODO screenshot: Superset's chart builder with a FormShare table selected and a bar chart in progress. -->
 
 Superset queries are **live** — every time a chart loads, it hits the underlying repository directly. There is no snapshot or cache by default; new submissions show up automatically.
 

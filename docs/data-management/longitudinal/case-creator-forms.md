@@ -18,7 +18,7 @@ In a longitudinal project, the case creator form's upload page asks for **more**
 
 From the project details page of a longitudinal project, click **Add new form** as you would for any other form. The "Upload new form" screen appears with the case-specific fields visible.
 
-> Add screenshot of the case-creator upload form showing the case ID, case label, and case date fields.
+<!-- TODO screenshot: the case-creator upload form showing the case ID, case label, and case date fields. -->
 
 You need to provide:
 

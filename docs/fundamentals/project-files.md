@@ -12,7 +12,7 @@ Project files are different from [form files](forms/form-files.md): project file
 
 On the **Project details** page, scroll to the **Project files** section. The list shows every file currently attached to the project, with a download link and (if you have edit access) controls to upload a new file or remove an existing one.
 
-> Add screenshot of the Project files section on the project details page with a few PDF files listed.
+<!-- TODO screenshot: the Project files section on the project details page with a few PDF files listed. -->
 
 ## Upload a file
 

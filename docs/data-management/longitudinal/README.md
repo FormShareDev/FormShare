@@ -33,7 +33,7 @@ In addition, follow-up forms can carry an **activation effect**: the same submis
 
 A longitudinal project is set up at creation time by ticking **Use a case/longitudinal workflow** on the "Add new project" page. Once any form has been added to the project, the setting becomes effectively read-only: you cannot convert a regular project to a longitudinal one or the other way around without starting over.
 
-> Add screenshot of the "Add new project" form with the case/longitudinal checkbox highlighted.
+<!-- TODO screenshot: the "Add new project" form with the case/longitudinal checkbox highlighted. -->
 
 {% hint style="warning" %}
 **Plan this up front.** Whether a project is longitudinal is a structural decision, not a configuration knob. Once you upload the case creator form, the project's primary key shifts from "submission ID" to "case ID + visit date" semantics, and FormShare cannot retrofit a non-longitudinal project into a longitudinal one. If in doubt, start a new test project to try both modes before committing to your real project.

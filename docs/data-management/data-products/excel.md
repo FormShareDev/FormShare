@@ -18,7 +18,7 @@ The workbook contains:
 * One sheet per **repeat group** — e.g. `rpt_members`, `rpt_crops` — one row per repeat instance.
 * Optional sheets for **multi-select tables** and **lookup tables**, depending on the toggles you set when generating.
 
-> Add screenshot of an exported workbook open in Excel showing several sheets with their tab names.
+<!-- TODO screenshot: an exported workbook open in Excel showing several sheets with their tab names. -->
 
 Sheet names come from the table descriptions in the [data dictionary](../data-dictionary/). Excel imposes a **31-character limit** on sheet names, so very long descriptions are truncated.
 

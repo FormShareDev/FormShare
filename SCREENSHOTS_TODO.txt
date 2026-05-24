@@ -1,0 +1,212 @@
+FormShare Documentation – Screenshots TODO
+============================================================
+
+Total: 59 screenshots across 35 files.
+
+Each placeholder is currently an HTML comment in the source
+(<!-- TODO screenshot: ... -->) so GitBook does not render it.
+When you add a screenshot, replace the matching comment with the
+GitBook image / file include.
+
+Line numbers are the source-file lines at the time of generation;
+they may shift slightly as the docs evolve. Use the description
+text to locate the right comment if a line number drifts.
+
+------------------------------------------------------------
+docs/additional-functionality/analytics.md  (1)
+------------------------------------------------------------
+  [ ] line  13: the Analytics page with the "Repositories" tab open, listing several form schemas with their project codes and form IDs.
+
+------------------------------------------------------------
+docs/additional-functionality/elastic-map.md  (2)
+------------------------------------------------------------
+  [ ] line  21: an ElasticMap view at a continental zoom level showing several large cluster badges.
+  [ ] line  40: a cluster being clicked, zooming in to show smaller sub-clusters or individual points.
+
+------------------------------------------------------------
+docs/additional-functionality/enketo.md  (2)
+------------------------------------------------------------
+  [ ] line  21: the form details "Links" tab showing the web browser data collection section with the mode dropdown open.
+  [ ] line  56: the thank-you page editor with formatting toolbar and a sample message.
+
+------------------------------------------------------------
+docs/additional-functionality/massive-spatial.md  (3)
+------------------------------------------------------------
+  [ ] line  15: the MassiveSpatial Databases page with a couple of databases listed.
+  [ ] line  43: the Layers view showing several layers with their status badges (Ready, Processing).
+  [ ] line  82: a form's map with the MassiveSpatial layers sidebar open, showing toggleable layers grouped by database.
+
+------------------------------------------------------------
+docs/additional-functionality/odata.md  (4)
+------------------------------------------------------------
+  [ ] line  18: the form details "Links" tab with the OData URL field and copy button.
+  [ ] line  64: Power BI Desktop's navigator with several FormShare tables listed (main table, repeats, lookups).
+  [ ] line  88: Excel's Trusted Add-in Catalogs dialog with the Network Path added and "Show in menu" ticked.
+  [ ] line 124: the task pane showing the Review & commit panel with several rows highlighted in different colours.
+
+------------------------------------------------------------
+docs/additional-functionality/r-analytics.md  (1)
+------------------------------------------------------------
+  [ ] line  13: the form details page showing the R tab in the tab bar.
+
+------------------------------------------------------------
+docs/additional-functionality/superset.md  (3)
+------------------------------------------------------------
+  [ ] line  13: the Superset tab on the Analytics page showing the Enable button before activation.
+  [ ] line  27: the "Set your Superset password" modal.
+  [ ] line  48: Superset's chart builder with a FormShare table selected and a bar chart in progress.
+
+------------------------------------------------------------
+docs/additional-functionality/workspace.md  (2)
+------------------------------------------------------------
+  [ ] line  15: the workspaces list with two or three workspaces visible.
+  [ ] line  42: the workspace collaborators page with the search field and the existing collaborator list.
+
+------------------------------------------------------------
+docs/data-management/cleaning/in-a-repository/api.md  (1)
+------------------------------------------------------------
+  [ ] line  15: the assistant edit page highlighting the "Generate new key" button next to the API Key field.
+
+------------------------------------------------------------
+docs/data-management/cleaning/in-a-repository/audit-log.md  (1)
+------------------------------------------------------------
+  [ ] line  27: the audit-log grid showing several recent changes with all columns visible.
+
+------------------------------------------------------------
+docs/data-management/cleaning/in-a-repository/web-interface.md  (4)
+------------------------------------------------------------
+  [ ] line  19: the Assistant Access portal showing the "Clean data" link on a form card.
+  [ ] line  30: the table selector and field selector.
+  [ ] line  43: the grid with a cell in edit mode.
+  [ ] line  60: the multi-select editor modal.
+
+------------------------------------------------------------
+docs/data-management/cleaning/submissions-with-errors.md  (1)
+------------------------------------------------------------
+  [ ] line  38: the error list showing the status badges (with error, checked out, checked in, fixed, disregarded).
+
+------------------------------------------------------------
+docs/data-management/cleaning/working-with-submissions.md  (2)
+------------------------------------------------------------
+  [ ] line  15: the Manage Submissions screen with the grid, the per-row buttons, and the "Danger zone" section visible.
+  [ ] line  44: the "Move to logs" dialog with the assistant picker.
+
+------------------------------------------------------------
+docs/data-management/data-dictionary/README.md  (2)
+------------------------------------------------------------
+  [ ] line  21: the data dictionary tables view, filtered by type with a search box.
+  [ ] line  35: the data dictionary fields view showing the sensitive / not sensitive indicator on each card.
+
+------------------------------------------------------------
+docs/data-management/data-dictionary/marking-sensitive-fields.md  (1)
+------------------------------------------------------------
+  [ ] line  38: the "Set as sensitive" modal showing the protection type selector and the Set / Cancel buttons.
+
+------------------------------------------------------------
+docs/data-management/data-products/README.md  (1)
+------------------------------------------------------------
+  [ ] line  13: the form details page with the "Products and tasks" tab open and several product cards visible.
+
+------------------------------------------------------------
+docs/data-management/data-products/excel.md  (1)
+------------------------------------------------------------
+  [ ] line  21: an exported workbook open in Excel showing several sheets with their tab names.
+
+------------------------------------------------------------
+docs/data-management/data-products/flat-csv-one-csv-file.md  (1)
+------------------------------------------------------------
+  [ ] line  62: the "Export data" dialog with the Flat CSV options selected.
+
+------------------------------------------------------------
+docs/data-management/data-products/kml.md  (1)
+------------------------------------------------------------
+  [ ] line  22: the "Export data" dialog for KML showing the field-selector multi-select.
+
+------------------------------------------------------------
+docs/data-management/data-products/private-vs-public-products.md  (1)
+------------------------------------------------------------
+  [ ] line  44: a product card with both a "Publish" button on one generation and an "Unpublish" button on another, showing the published label and timestamp.
+
+------------------------------------------------------------
+docs/data-management/data-products/zipped-csv.md  (1)
+------------------------------------------------------------
+  [ ] line  25: the "Export data" dialog for Zipped CSV with the multiselect-tables and lookup-tables toggles visible.
+
+------------------------------------------------------------
+docs/data-management/longitudinal/README.md  (1)
+------------------------------------------------------------
+  [ ] line  36: the "Add new project" form with the case/longitudinal checkbox highlighted.
+
+------------------------------------------------------------
+docs/data-management/longitudinal/case-creator-forms.md  (1)
+------------------------------------------------------------
+  [ ] line  21: the case-creator upload form showing the case ID, case label, and case date fields.
+
+------------------------------------------------------------
+docs/data-management/longitudinal/follow-up-forms.md  (1)
+------------------------------------------------------------
+  [ ] line  15: the follow-up upload form showing the type dropdown, case selector field, and case date field.
+
+------------------------------------------------------------
+docs/data-management/longitudinal/real-time-csv.md  (1)
+------------------------------------------------------------
+  [ ] line  52: the case-lookup configuration page with several fields checked and aliased.
+
+------------------------------------------------------------
+docs/fundamentals/forms/data-columns.md  (2)
+------------------------------------------------------------
+  [ ] line  15: the form details page showing the "Data columns" button.
+  [ ] line  23: the Data columns modal with all three lists populated.
+
+------------------------------------------------------------
+docs/fundamentals/forms/form-files.md  (1)
+------------------------------------------------------------
+  [ ] line  15: the Form details page with the "Form files" tab open and several files listed, plus the red "missing files" warning if any are required and absent.
+
+------------------------------------------------------------
+docs/fundamentals/manage-users.md  (6)
+------------------------------------------------------------
+  [ ] line  13: the FormShare sidebar with the yellow "Manage users" entry highlighted, just below "Dashboard".
+  [ ] line  24: the Manage users page showing both cards (Add user button at top, search box below).
+  [ ] line  32: the search dropdown showing two or three matching users with avatars next to their names.
+  [ ] line  38: the Add user form with every visible field labelled.
+  [ ] line  69: the Edit user screen showing the Current information card with all fields and switches.
+  [ ] line  90: the Change password card with the two password fields and the red "Change password" button.
+
+------------------------------------------------------------
+docs/fundamentals/partners.md  (2)
+------------------------------------------------------------
+  [ ] line  33: the "Manage partners" page with the partner list and "Add partner" button.
+  [ ] line  88: the Partner Access portal landing page.
+
+------------------------------------------------------------
+docs/fundamentals/project-files.md  (1)
+------------------------------------------------------------
+  [ ] line  15: the Project files section on the project details page with a few PDF files listed.
+
+------------------------------------------------------------
+docs/fundamentals/submissions/README.md  (1)
+------------------------------------------------------------
+  [ ] line  39: a submission detail panel showing the submission ID prominently.
+
+------------------------------------------------------------
+docs/fundamentals/submissions/import-external-data.md  (1)
+------------------------------------------------------------
+  [ ] line  17: the "Import data" form with the three fields (Source type, Assistant, Data file).
+
+------------------------------------------------------------
+docs/fundamentals/the-dashboard.md  (1)
+------------------------------------------------------------
+  [ ] line   9: the dashboard with each numbered area called out here.
+
+------------------------------------------------------------
+docs/fundamentals/your-account.md  (3)
+------------------------------------------------------------
+  [ ] line  17: the profile page showing the bio, joined date, project count, and the API key with copy-to-clipboard button.
+  [ ] line  36: the profile-edit page with the three sections (Profile, API keys, Password) visible.
+  [ ] line  71: the API keys section showing the read-only API key field, the read-only API secret field, and the two "Generate new" buttons.
+
+------------------------------------------------------------
+docs/guides/odk-collect-setup.md  (1)
+------------------------------------------------------------
+  [ ] line  23: the project details page highlighting the QR code panel.

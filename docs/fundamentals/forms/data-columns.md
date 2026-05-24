@@ -12,7 +12,7 @@ This is how you ship a richly documented dataset without writing a separate code
 
 After you upload a form, the form details page lists which extra columns FormShare detected in your XLSForm. Click **Data columns** on the form details page to open the data columns modal.
 
-> Add screenshot of the form details page showing the "Data columns" button.
+<!-- TODO screenshot: the form details page showing the "Data columns" button. -->
 
 The modal has three lists:
 
@@ -20,7 +20,7 @@ The modal has three lists:
 * **Data columns that can be imported into lookup tables** — extra columns found in the **choices** sheet. Each becomes an extra column in the lookup table corresponding to the choice list it appeared in.
 * **Warning: data columns that cannot be imported because their names are invalid** — columns whose names break FormShare's naming rules (see [Restrictions](#restrictions) below). These columns are detected but skipped.
 
-> Add screenshot of the Data columns modal with all three lists populated.
+<!-- TODO screenshot: the Data columns modal with all three lists populated. -->
 
 The modal is informational — it shows you what FormShare found. The import itself happens automatically when you [create the repository](README.md#create-a-repository); you do not need to take a separate action to trigger it.
 

@@ -19,7 +19,7 @@ If neither condition is met, the KML option appears greyed out or the generation
 
 On the form details page, click **Export data** → pick **KML**. The product appears in the **Products and tasks** tab when the background task completes. KML is **non-publishable** — there is one variant, controlled by the [sensitive-field configuration](../data-dictionary/marking-sensitive-fields.md) just like a private product. GPS coordinates are sensitive by their nature, so FormShare deliberately keeps KML in the team's hands rather than offering a public version.
 
-> Add screenshot of the "Export data" dialog for KML showing the field-selector multi-select.
+<!-- TODO screenshot: the "Export data" dialog for KML showing the field-selector multi-select. -->
 
 ## What's in the KML
 

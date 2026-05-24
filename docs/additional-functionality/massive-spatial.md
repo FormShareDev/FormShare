@@ -12,7 +12,7 @@ It is for when your data collection needs spatial context that doesn't come from
 
 A new entry labeled **MassiveSpatial** (globe icon) appears in the main navigation. Click it to open the **MassiveSpatial Databases** page — the home of all your spatial work.
 
-> Add screenshot of the MassiveSpatial Databases page with a couple of databases listed.
+<!-- TODO screenshot: the MassiveSpatial Databases page with a couple of databases listed. -->
 
 ## The four objects
 
@@ -40,7 +40,7 @@ Open the database and click **Add Layer**. Provide:
 
 Click **Upload & Import**. The layer enters a **Processing** state while MassiveSpatial reads it; this can take from seconds (a small vector file) to several minutes (a large raster). When the status flips to **Ready** the layer is available for classification.
 
-> Add screenshot of the Layers view showing several layers with their status badges (Ready, Processing).
+<!-- TODO screenshot: the Layers view showing several layers with their status badges (Ready, Processing). -->
 
 ### 3. Create a classification
 
@@ -79,7 +79,7 @@ Once assigned, the layer appears on the **map panel of the project's forms**, wi
 * Pick the colour of the submission dots themselves.
 * Save the current map view to revisit later.
 
-> Add screenshot of a form's map with the MassiveSpatial layers sidebar open, showing toggleable layers grouped by database.
+<!-- TODO screenshot: a form's map with the MassiveSpatial layers sidebar open, showing toggleable layers grouped by database. -->
 
 ## Editing and deleting
 

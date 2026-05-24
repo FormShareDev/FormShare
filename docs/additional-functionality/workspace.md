@@ -12,7 +12,7 @@ Workspaces let you grant access at the portfolio level, so adding a new analyst 
 
 A **WorkSpaces** entry appears in the main navigation. Click it to open the workspaces list at `/user/<your-username>/workspaces`. You'll see every workspace you own or have been added to as a collaborator.
 
-> Add screenshot of the workspaces list with two or three workspaces visible.
+<!-- TODO screenshot: the workspaces list with two or three workspaces visible. -->
 
 If you have no workspaces yet, the page invites you to create your first one with a **Create a new workspace** button.
 
@@ -39,7 +39,7 @@ From inside a workspace you can:
 
 A workspace has its own collaborator list separate from its projects'. From the workspace, click **Edit collaborators**.
 
-> Add screenshot of the workspace collaborators page with the search field and the existing collaborator list.
+<!-- TODO screenshot: the workspace collaborators page with the search field and the existing collaborator list. -->
 
 * Search for users by username, full name, or email.
 * Pick the user and click **Add collaborator**.

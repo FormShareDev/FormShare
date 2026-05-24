@@ -35,7 +35,7 @@ A fifth state is possible at any point:
 
 * **Disregarded** — the assistant has explicitly marked the submission as something to keep in the audit trail but not in the dataset. Disregarded submissions are preserved in full (you can always look back at them) but do not count toward the dataset's submission total.
 
-> Add screenshot of the error list showing the status badges (with error, checked out, checked in, fixed, disregarded).
+<!-- TODO screenshot: the error list showing the status badges (with error, checked out, checked in, fixed, disregarded). -->
 
 ## What an assistant does
 

@@ -16,7 +16,7 @@ To open the interface:
 2. From the assistant's dashboard, the assistant picks the form they want to clean.
 3. The assistant clicks **Clean data**. The cleaning interface opens.
 
-> Add screenshot of the Assistant Access portal showing the "Clean data" link on a form card.
+<!-- TODO screenshot: the Assistant Access portal showing the "Clean data" link on a form card. -->
 
 ## Pick a table and fields
 
@@ -27,7 +27,7 @@ At the top of the cleaning interface:
 * **Table dropdown**: Pick which table you want to edit (e.g. `maintable`, `rpt_members`, `lkp_province`).
 * **Fields multi-select**: Pick which fields to display. The grid only shows the fields you select, plus the primary-key columns and the submission ID.
 
-> Add screenshot of the table selector and field selector.
+<!-- TODO screenshot: the table selector and field selector. -->
 
 Click **Load** to refresh the grid with your selection. You can change the table or the visible fields at any time.
 
@@ -40,7 +40,7 @@ The data grid loads 10 rows at a time. You can:
 * **Page** forward and backward with the controls at the bottom.
 * **Edit a cell** by double-clicking it. The cell becomes editable; type the new value and click outside (or press Tab) to save.
 
-> Add screenshot of the grid with a cell in edit mode.
+<!-- TODO screenshot: the grid with a cell in edit mode. -->
 
 The change is sent to the server as soon as you leave the cell. If the value violates a database constraint (wrong type, missing reference, primary key duplication), the change is rejected and the cell reverts to its previous value; an error message explains why.
 
@@ -57,7 +57,7 @@ Multi-selects (`select_multiple` in the ODK form) cannot be edited inline becaus
 * **Available options**: All options defined in the lookup, minus what is already selected.
 * **Selected options**: What is currently checked for this submission.
 
-> Add screenshot of the multi-select editor modal.
+<!-- TODO screenshot: the multi-select editor modal. -->
 
 Move options between the lists with the arrow buttons. Click **Save** to apply the changes. FormShare replaces all junction-table rows for that submission and records the change in the audit log.
 

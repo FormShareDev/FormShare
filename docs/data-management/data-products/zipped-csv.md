@@ -22,7 +22,7 @@ Optionally — controlled by toggles when you generate the product — the archi
 * **One CSV per multi-select field** (filename pattern `<parent-table>_msel_<field>.csv`). Each row is one (submission, selected option) pair. Without this, multi-selects are condensed into a single column in the parent CSV.
 * **One CSV per lookup table** (filename pattern `lkp_<list>.csv`). These are the reference tables that hold option codes and labels for `select_one` and `select_multiple` choices.
 
-> Add screenshot of the "Export data" dialog for Zipped CSV with the multiselect-tables and lookup-tables toggles visible.
+<!-- TODO screenshot: the "Export data" dialog for Zipped CSV with the multiselect-tables and lookup-tables toggles visible. -->
 
 Each CSV's columns are the field names from the repository — the same names you see in the [data dictionary](../data-dictionary/) — plus standard FormShare bookkeeping columns: the **submission ID** (`rowuuid`), the **primary key**, and (for repeat tables) the row index inside the repeat.
 

@@ -18,7 +18,7 @@ Open any form's details page and click the **Links** tab. A section labeled **We
 * An **Edit thank you page** link for customising what respondents see after submitting.
 * A **Re-generate URLs** button for refreshing the links if you ever need to.
 
-> Add screenshot of the form details "Links" tab showing the web browser data collection section with the mode dropdown open.
+<!-- TODO screenshot: the form details "Links" tab showing the web browser data collection section with the mode dropdown open. -->
 
 If you haven't activated Enketo yet, the section shows a **Generate the URLs** button — click once and FormShare prepares the links.
 
@@ -53,7 +53,7 @@ After a respondent submits, they see a thank-you page. Click **Edit thank you pa
 * Image upload — embed a logo or completion icon.
 * Per-language customisation — if the form has multiple languages, you can write a thank-you message in each language; respondents see the one matching the language they used.
 
-> Add screenshot of the thank-you page editor with formatting toolbar and a sample message.
+<!-- TODO screenshot: the thank-you page editor with formatting toolbar and a sample message. -->
 
 This is a small detail with outsized impact — a personalised thank-you message reads as far more professional than the default "Thank you" and is the right place to provide instructions ("Watch your inbox in 24 hours for results", "Contact us at …").
 

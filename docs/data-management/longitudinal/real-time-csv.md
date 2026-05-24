@@ -49,7 +49,7 @@ By default, the CSV contains only the case ID and case label. You can add more f
 
 From the case creator form's details page, click **Case lookup table**. The case lookup configuration page opens, listing every variable from the case creator form's main table.
 
-> Add screenshot of the case-lookup configuration page with several fields checked and aliased.
+<!-- TODO screenshot: the case-lookup configuration page with several fields checked and aliased. -->
 
 For each variable you can decide:
 

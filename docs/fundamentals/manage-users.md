@@ -10,7 +10,7 @@ When self-registration is disabled on a FormShare instance, end users cannot cre
 **Who sees this feature?** Only users marked as **super user**. The link in the sidebar — **Manage users** (yellow icon under the dashboard entry) — only appears when (1) you are a super user, and (2) the instance is configured so that users cannot register themselves through the website. If you don't see the link, your instance is in a different mode and there is nothing for you to manage here.
 {% endhint %}
 
-> Add screenshot of the FormShare sidebar with the yellow "Manage users" entry highlighted, just below "Dashboard".
+<!-- TODO screenshot: the FormShare sidebar with the yellow "Manage users" entry highlighted, just below "Dashboard". -->
 
 ## Open the Manage users page
 
@@ -21,7 +21,7 @@ The page is split into two cards:
 * **FormShare users** — short heading with an **Add user** button on the right.
 * **Search for a user** — a search box plus an **Edit user** button.
 
-> Add screenshot of the Manage users page showing both cards (Add user button at top, search box below).
+<!-- TODO screenshot: the Manage users page showing both cards (Add user button at top, search box below). -->
 
 ## Search for a user
 
@@ -29,13 +29,13 @@ The search box lets you find an existing account by **username**, **full name**,
 
 Select a result from the dropdown, then click **Edit user** to open that user's edit page.
 
-> Add screenshot of the search dropdown showing two or three matching users with avatars next to their names.
+<!-- TODO screenshot: the search dropdown showing two or three matching users with avatars next to their names. -->
 
 ## Add a user
 
 From the Manage users page, click **Add user** (top-right of the first card). The "Add user" form opens.
 
-> Add screenshot of the Add user form with every visible field labelled.
+<!-- TODO screenshot: the Add user form with every visible field labelled. -->
 
 Fill in the fields:
 
@@ -66,7 +66,7 @@ In all three cases, the form shows an error at the top of the page and no accoun
 
 Search for the user on the Manage users page, then click **Edit user**. The edit screen has two cards stacked vertically: **Current information** at the top and **Change password** below.
 
-> Add screenshot of the Edit user screen showing the Current information card with all fields and switches.
+<!-- TODO screenshot: the Edit user screen showing the Current information card with all fields and switches. -->
 
 ### Current information
 
@@ -87,7 +87,7 @@ Click **Modify user** to save your changes.
 
 The second card on the edit screen lets you set a new password for the user without knowing the old one.
 
-> Add screenshot of the Change password card with the two password fields and the red "Change password" button.
+<!-- TODO screenshot: the Change password card with the two password fields and the red "Change password" button. -->
 
 Enter the **New password** twice (the second field confirms the first), then click **Change password**. The user can sign in with the new password immediately.
 

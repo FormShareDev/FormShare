@@ -12,7 +12,7 @@ Form files are different from [project files](../project-files.md): project file
 
 On the **Form details** page, look for the **Form files** tab. It lists every file currently attached to the form, with a download link and (if you have edit access) controls to upload or remove a file.
 
-> Add screenshot of the Form details page with the "Form files" tab open and several files listed, plus the red "missing files" warning if any are required and absent.
+<!-- TODO screenshot: the Form details page with the "Form files" tab open and several files listed, plus the red "missing files" warning if any are required and absent. -->
 
 ## Missing-file detection
 

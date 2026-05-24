@@ -24,7 +24,7 @@ Both web-interface edits and API edits write to the same log, in the same format
 
 From the form details page, click **Audit log**. The audit-log page opens with a grid of all changes ever made to the form's data.
 
-> Add screenshot of the audit-log grid showing several recent changes with all columns visible.
+<!-- TODO screenshot: the audit-log grid showing several recent changes with all columns visible. -->
 
 ## Reading the audit log
 

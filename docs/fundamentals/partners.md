@@ -30,7 +30,7 @@ A partner cannot:
 
 ## Managing partners
 
-> Add screenshot of the "Manage partners" page with the partner list and "Add partner" button.
+<!-- TODO screenshot: the "Manage partners" page with the partner list and "Add partner" button. -->
 
 From the left-hand menu, click **Partners** to open the partner-management page. From here you can add new partners, edit existing ones, change passwords, regenerate API keys, view per-partner activity logs, and remove partners that are no longer needed.
 
@@ -85,6 +85,6 @@ If you only want a partner to see one form, link them to the form directly from 
 
 Partners do not use the main FormShare sign-in page. Each FormShare instance exposes a separate partner sign-in URL (e.g. `https://your-formshare-instance/partner_login`) that is restricted to partner accounts. Share that URL with your partners along with their credentials.
 
-> Add screenshot of the Partner Access portal landing page.
+<!-- TODO screenshot: the Partner Access portal landing page. -->
 
 After signing in, the partner sees their dashboard with the list of projects and forms they have access to, and can download the data they are entitled to.

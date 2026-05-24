@@ -10,7 +10,7 @@ A **data product** is a downloadable file (or archive of files) that FormShare g
 
 Products live under the form details page, on the **Products and tasks** tab. Each product type has its own card; opening a card shows the recent generations of that product, with download buttons, publish/unpublish controls, and a delete button on each one.
 
-> Add screenshot of the form details page with the "Products and tasks" tab open and several product cards visible.
+<!-- TODO screenshot: the form details page with the "Products and tasks" tab open and several product cards visible. -->
 
 Products are only available for forms with a [repository](../../fundamentals/repositories/). Forms in the [testing stage](../../fundamentals/forms/#the-testing-stage) have a much more limited set of downloads (the testing-stage flat CSV and the media zip), no public/private distinction, and no product history.
 

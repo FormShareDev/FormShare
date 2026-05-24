@@ -12,7 +12,7 @@ The API is authenticated with the **API key** of an [assistant](../../../fundame
 
 Treat the API key like a password — anyone with the key can edit the form's data as that assistant, and every change will be attributed to them in the audit log. Project owners' and collaborators' API keys do not work for this endpoint; cleaning is reserved to assistants.
 
-> Add screenshot of the assistant edit page highlighting the "Generate new key" button next to the API Key field.
+<!-- TODO screenshot: the assistant edit page highlighting the "Generate new key" button next to the API Key field. -->
 
 ## Endpoint
 

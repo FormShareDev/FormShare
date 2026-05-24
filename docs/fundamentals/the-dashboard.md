@@ -6,7 +6,7 @@ description: The dashboard is your starting point in FormShare — it shows the 
 
 The dashboard is the home page of a FormShare account. It always shows your **active project** — the one project (out of those you own or collaborate on) that you have marked as active with the ⭐ icon. From here you can review forms, check submission progress, see who is on the team, and jump into any other project.
 
-> Add screenshot of the dashboard with each numbered area called out here.
+<!-- TODO screenshot: the dashboard with each numbered area called out here. -->
 
 1. **Active project**: The dashboard always reflects your active project. The project name appears at the top, along with the icon and color you chose when creating it.
 2. **Forms**: A grid of the forms inside the active project, each shown with its color, status (active or inactive), and submission count. Use the **Add new form** button to upload a new form straight into the active project, bypassing the project details page.

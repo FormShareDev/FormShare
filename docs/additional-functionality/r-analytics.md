@@ -10,7 +10,7 @@ description: R Analytics gives you a guided way to pull FormShare data into R fr
 
 Open any form's details page. A tab marked with the **R** logo appears alongside the existing tabs. Click it to open the R Analytics view.
 
-> Add screenshot of the form details page showing the R tab in the tab bar.
+<!-- TODO screenshot: the form details page showing the R tab in the tab bar. -->
 
 ## What it shows
 

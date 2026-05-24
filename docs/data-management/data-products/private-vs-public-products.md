@@ -41,7 +41,7 @@ Generating a public product does not, by itself, make it shareable on the open w
 
 Once published, the public URL can be shared with partners, donors, or external collaborators. Anyone with the URL can download the file — there is no authentication on a public link. Treat the URL as the credential.
 
-> Add screenshot of a product card with both a "Publish" button on one generation and an "Unpublish" button on another, showing the published label and timestamp.
+<!-- TODO screenshot: a product card with both a "Publish" button on one generation and an "Unpublish" button on another, showing the published label and timestamp. -->
 
 To revoke public access, click **Unpublish** on the generation. The public URL stops working immediately, but the file remains in your team's view as a regular private download.
 

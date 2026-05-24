@@ -18,7 +18,7 @@ Forms in the [testing stage](../../fundamentals/forms/#the-testing-stage) have n
 
 From the form details page, click **Data dictionary**. The dictionary opens on the **Tables** view.
 
-> Add screenshot of the data dictionary tables view, filtered by type with a search box.
+<!-- TODO screenshot: the data dictionary tables view, filtered by type with a search box. -->
 
 The tables view lists:
 
@@ -32,7 +32,7 @@ Use the type filter and the search box to narrow the list. Click any table to dr
 
 Inside a table, the **Fields** view shows one card per column.
 
-> Add screenshot of the data dictionary fields view showing the sensitive / not sensitive indicator on each card.
+<!-- TODO screenshot: the data dictionary fields view showing the sensitive / not sensitive indicator on each card. -->
 
 Each card displays:
 

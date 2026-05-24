@@ -14,7 +14,7 @@ When a form already has data elsewhere — because you are migrating from anothe
 
 From the form details page, click **Import external data**. The import page appears.
 
-> Add screenshot of the "Import data" form with the three fields (Source type, Assistant, Data file).
+<!-- TODO screenshot: the "Import data" form with the three fields (Source type, Assistant, Data file). -->
 
 You need to provide:
 
