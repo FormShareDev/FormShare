@@ -4,6 +4,10 @@ description: FormShare maintains a live CSV of currently active cases that ODK C
 
 # The real-time CSV file
 
+{% hint style="warning" %}
+**Legacy page.** This describes the earlier case model, kept for projects created with the **Use a case/longitudinal workflow** switch. New longitudinal work uses "[Case management (longitudinal workflows)](../case-management/README.md)".
+{% endhint %}
+
 In a [longitudinal project](README.md), enumerators in the field need to pick which case they are visiting before they can fill in a follow-up form. FormShare maintains a **real-time CSV file** of the currently active cases that ODK Collect downloads along with each follow-up form. The CSV is regenerated whenever the case list changes, so the picker the enumerator sees in the field is never more than one form-sync stale.
 
 You don't need to upload or maintain this file yourself. FormShare creates it, updates it, and serves it. Your only job is to decide which fields from the case creator form should be visible in the picker.

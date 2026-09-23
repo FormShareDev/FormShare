@@ -1,12 +1,16 @@
 FormShare Documentation – Screenshots TODO
 ============================================================
 
-Total: 59 screenshots across 35 files.
+Total: 68 screenshots across 40 files. 9 done, 59 to go.
 
 Each placeholder is currently an HTML comment in the source
 (<!-- TODO screenshot: ... -->) so GitBook does not render it.
 When you add a screenshot, replace the matching comment with the
 GitBook image / file include.
+
+An entry marked [x] is already in the page, with the file it points to
+shown under it. Those comments are gone from the source, so keep the
+entry here rather than regenerating this file from the comments alone.
 
 Line numbers are the source-file lines at the time of generation;
 they may shift slightly as the docs evolve. Use the description
@@ -61,6 +65,44 @@ docs/additional-functionality/workspace.md  (2)
 ------------------------------------------------------------
   [ ] line  15: the workspaces list with two or three workspaces visible.
   [ ] line  42: the workspace collaborators page with the search field and the existing collaborator list.
+
+------------------------------------------------------------
+docs/data-management/case-management/case-links.md  (1)
+------------------------------------------------------------
+  [x] line  24: the "Links to lists" page showing a form that references three lists, with the case link selected on one of them.
+            -> /home/cquiros/data/projects2017/personal/software/formshare_docs/FormShare/docs/.gitbook/assets/case-links-to-lists.png
+
+------------------------------------------------------------
+docs/data-management/case-management/properties.md  (1)
+------------------------------------------------------------
+  [x] line  17: the Properties page with a form and table selected, showing the add-property form and the list of existing properties.
+            -> /home/cquiros/data/projects2017/personal/software/formshare_docs/FormShare/docs/.gitbook/assets/case-properties.png
+
+------------------------------------------------------------
+docs/data-management/case-management/published-lists.md  (2)
+------------------------------------------------------------
+  [x] line  32: the Published lists page with three lists, showing the key, rows, edition and last-generated columns, and the per-list actions.
+            -> /home/cquiros/data/projects2017/personal/software/formshare_docs/FormShare/docs/.gitbook/assets/case-lists-actions.png
+  [x] line  48: the "Publish a list" wizard with the source form and source table drop-downs filled in.
+            -> /home/cquiros/data/projects2017/personal/software/formshare_docs/FormShare/docs/.gitbook/assets/case-list-wizard.png
+
+------------------------------------------------------------
+docs/data-management/case-management/walkthrough.md  (4)
+------------------------------------------------------------
+  [x] line 113: the Published lists page of a project with no lists yet, showing the "Publish a new list" button and the empty-state message.
+            -> /home/cquiros/data/projects2017/personal/software/formshare_docs/FormShare/docs/.gitbook/assets/case-lists-empty.png
+  [x] line 135: the edit page of school_list.csv with the three served columns added and the "Served as" field visible.
+            -> /home/cquiros/data/projects2017/personal/software/formshare_docs/FormShare/docs/.gitbook/assets/case-list-edit-school-list.png
+  [x] line 277: the "Links to lists" page of the interview form showing the three lists with their roles and the case-link radio buttons.
+            -> /home/cquiros/data/projects2017/personal/software/formshare_docs/FormShare/docs/.gitbook/assets/case-links-to-lists.png
+  [x] line 293: the Published lists page with the three lists showing their key, rows, edition and last-generated time.
+            -> /home/cquiros/data/projects2017/personal/software/formshare_docs/FormShare/docs/.gitbook/assets/case-lists-generated.png
+
+------------------------------------------------------------
+docs/data-management/case-management/workflow-diagram.md  (1)
+------------------------------------------------------------
+  [x] line  14: the workflow diagram of the walkthrough project, showing the registration form with its two tables, the three list cards and the coloured lines between them.
+            -> /home/cquiros/data/projects2017/personal/software/formshare_docs/FormShare/docs/.gitbook/assets/case-workflow-diagram.png
 
 ------------------------------------------------------------
 docs/data-management/cleaning/in-a-repository/api.md  (1)
@@ -135,22 +177,22 @@ docs/data-management/data-products/zipped-csv.md  (1)
 ------------------------------------------------------------
 docs/data-management/longitudinal/README.md  (1)
 ------------------------------------------------------------
-  [ ] line  36: the "Add new project" form with the case/longitudinal checkbox highlighted.
+  [ ] line  42: the "Add new project" form with the case/longitudinal checkbox highlighted.
 
 ------------------------------------------------------------
 docs/data-management/longitudinal/case-creator-forms.md  (1)
 ------------------------------------------------------------
-  [ ] line  21: the case-creator upload form showing the case ID, case label, and case date fields.
+  [ ] line  25: the case-creator upload form showing the case ID, case label, and case date fields.
 
 ------------------------------------------------------------
 docs/data-management/longitudinal/follow-up-forms.md  (1)
 ------------------------------------------------------------
-  [ ] line  15: the follow-up upload form showing the type dropdown, case selector field, and case date field.
+  [ ] line  19: the follow-up upload form showing the type dropdown, case selector field, and case date field.
 
 ------------------------------------------------------------
 docs/data-management/longitudinal/real-time-csv.md  (1)
 ------------------------------------------------------------
-  [ ] line  52: the case-lookup configuration page with several fields checked and aliased.
+  [ ] line  56: the case-lookup configuration page with several fields checked and aliased.
 
 ------------------------------------------------------------
 docs/fundamentals/forms/data-columns.md  (2)

@@ -4,6 +4,10 @@ description: Follow-up forms attach repeat-visit data to existing cases. They re
 
 # Follow-up forms
 
+{% hint style="warning" %}
+**Legacy page.** This describes the earlier case model, kept for projects created with the **Use a case/longitudinal workflow** switch. New longitudinal work uses "[Case management (longitudinal workflows)](../case-management/README.md)".
+{% endhint %}
+
 A **follow-up form** is any form in a [longitudinal project](README.md) other than the [case creator](case-creator-forms.md). Where the case creator form *registers* a new case, a follow-up form *attaches new data* to an existing case — a clinic visit, a quarterly livelihood check, a follow-up vaccination record, a re-measurement of a plot of land.
 
 Follow-up forms are the workhorses of a longitudinal project. You can have as many of them as you need, each capturing a different kind of repeat data, and all of them share the same case list maintained by the [real-time CSV file](real-time-csv.md).

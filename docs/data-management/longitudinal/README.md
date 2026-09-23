@@ -2,7 +2,13 @@
 description: How FormShare supports panel studies, cohort studies, and any other workflow where the same subject is surveyed many times.
 ---
 
-# Longitudinal data collection
+# Longitudinal data collection (legacy case projects)
+
+{% hint style="warning" %}
+**This section describes the earlier case model.** It applies to projects created with the **Use a case/longitudinal workflow** switch, where the first form registers the cases and every later form is a follow-up. Projects already built that way keep working exactly as described here.
+
+New longitudinal work uses "[Case management (longitudinal workflows)](../case-management/README.md)" instead. There, any form with a repository can publish lists of cases, any form can follow them up, cases can come from a repeat as well as from a whole submission, and the link between the two forms is enforced by the database.
+{% endhint %}
 
 In a **longitudinal** project, the same subject — a household, a farmer, a patient, an animal, a plot of land — is visited and surveyed repeatedly over time. The dataset is not "one row per household" but "many rows per household, linked together so you can study them as a single trajectory".
 

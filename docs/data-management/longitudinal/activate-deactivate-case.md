@@ -4,6 +4,10 @@ description: Active vs. inactive cases — what the status means, how it changes
 
 # Activating / de-activating a case
 
+{% hint style="warning" %}
+**Legacy page.** This describes the earlier case model, kept for projects created with the **Use a case/longitudinal workflow** switch. New longitudinal work uses "[Case management (longitudinal workflows)](../case-management/README.md)".
+{% endhint %}
+
 In a [longitudinal project](README.md), every case has a status: **active** or **inactive**. The status decides whether the case appears in the [real-time CSV file](real-time-csv.md) that ODK Collect downloads, and therefore whether enumerators in the field can record more follow-up data against it.
 
 Cases are not free to be edited directly — their status changes are driven by [follow-up forms](follow-up-forms.md), so every status change has an associated submission, an associated enumerator, and an associated date. The trail of why a case was deactivated is always traceable.

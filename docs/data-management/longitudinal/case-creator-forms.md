@@ -4,6 +4,10 @@ description: The case creator form is the first form in a longitudinal project �
 
 # Case creator forms
 
+{% hint style="warning" %}
+**Legacy page.** This describes the earlier case model, kept for projects created with the **Use a case/longitudinal workflow** switch. New longitudinal work uses "[Case management (longitudinal workflows)](../case-management/README.md)".
+{% endhint %}
+
 The **case creator form** is the entry point into a [longitudinal project](README.md). It is the form that enumerators use to register a new subject — a household, a farmer, a patient, an animal — for the first time. Every other form in the project will attach data to subjects this form has created.
 
 A longitudinal project has exactly **one** case creator form. The first form you upload into a [longitudinal-enabled project](README.md#turning-the-feature-on) automatically becomes the case creator; subsequent forms are [follow-ups](follow-up-forms.md).
