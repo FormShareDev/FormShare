@@ -13,7 +13,7 @@ A form that selects from a [published list](published-lists.md) is **linked** to
 
 Go to the form's page and click **Links to lists**. The button appears on a form that has no repository yet, in a project that publishes lists, so open it after uploading the form and [attaching its files](../../fundamentals/forms/form-files.md).
 
-FormShare reads the form's `select_one_from_file` questions and shows every published list the form references, with the selector variable and the role of each:
+FormShare reads the form's `select_one_from_file` questions and shows every published list the form references, CSV or [GeoJSON](geojson-lists.md), with the selector variable and the role of each:
 
 | Role | Meaning |
 | --- | --- |
@@ -21,9 +21,11 @@ FormShare reads the form's `select_one_from_file` questions and shows every publ
 | **Reads** | A list the form selects from as a reference, such as the school used to filter the teachers. |
 | **Value list (filter)** | A list of distinct values. It can never be the case link. |
 
-<figure><img src="../../.gitbook/assets/case-links-to-lists.png" alt="The Links to lists page showing three referenced lists: a value list marked with a dash, a list marked Reads, and the list selected as the case link."><figcaption><p>Only lists of cases get a radio button. The value list is marked with a dash, and the page repeats in red that the choice cannot be undone once the repository is built.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/case-links-to-lists.png" alt="The Links to lists page of the Teacher interview form after its repository was built: district_list.csv as a value list, school_list.csv as a list the form reads, and teacher_list.csv marked with a link icon as the case link, above a note that the form has a repository and its links are built into the schema."><figcaption><p>The interview's links once its repository is built: a link icon marks the case link, and the note says the links are built into the schema. The page repeats in red that the choice cannot be undone.</p></figcaption></figure>
 
-When the form references exactly one list of cases, FormShare marks it as the case link for you. With several, choose with the radio buttons and click **Save the case link**.
+When the form references exactly one list of cases, FormShare marks it as the case link for you. With several, choose with the radio buttons and click **Save the case link**. Only lists of cases get a radio button: a value list is marked with a dash.
+
+Once the form has a repository, the page shows its links without radio buttons and says *This form has a repository: its links are built into the schema.* A new version of a form says instead that it keeps the links of the version it replaces.
 
 {% hint style="info" %}
 **The question that picks the case must sit outside every repeat.** Only questions outside repeats are read on this page. A list referenced from inside a repeat is still served to the form, but no link is detected and nothing is enforced.
@@ -60,7 +62,12 @@ instance('<file name without .csv>')/root/item[name=current()/../<selector>]/<co
 
 **To carry a recognisable code into your exports**, either join the two repositories on the identity, or serve the code as a column of the list (`emis` in the walkthrough) and store it in the follow-up with a `calculate`.
 
+## The case link and actions
+
+The case link also decides what a form's [actions](case-actions.md) act on: the row its selector names. A form without a case link acts on its own rows.
+
 ## What's next
 
+* Change the case when a follow-up arrives in "[Form actions](case-actions.md)".
 * See the links you built drawn out in the "[Workflow diagram](workflow-diagram.md)".
 * Read "[Rules and safeguards](rules-and-safeguards.md)" for what happens when a case is missing, inactive, or deleted.

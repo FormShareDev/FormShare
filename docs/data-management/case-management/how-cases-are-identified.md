@@ -11,7 +11,7 @@ Everything in case management links through one column: `rowuuid`. Read this pag
 
 ## Every row has a rowuuid
 
-Every row of every table in a [repository](../../fundamentals/repositories/README.md) has a `rowuuid`. It is a 36-character identifier such as `5c1d9a7e-3b2f-4c8a-9e1d-2f3a4b5c6d7e`, generated when the row is stored, unique in the world, and never changed. A school registration has one. Each teacher in its repeat has one of its own. So does every interview. It is FormShare's name for the row, independent of anything the enumerator typed.
+Every row of every table in a [repository](../../fundamentals/repositories/README.md) has a `rowuuid`. It is a 36-character identifier such as `5c1d9a7e-3b2f-4c8a-9e1d-2f3a4b5c6d7e`, unique in the world and never changed. The server generates it when the row is stored, unless [FormShare Collect](offline-in-formshare-collect.md) already gave the row one on the device, in which case the server keeps that one. A school registration has one. Each teacher in its repeat has one of its own. So does every interview. It is FormShare's name for the row, independent of anything the enumerator typed.
 
 ## It is not the variable that controls duplicates
 
@@ -22,12 +22,12 @@ When you upload a form, FormShare asks which variable controls duplicate submiss
 | U0012345 | Kira Primary School | 5c1d9a7e-3b2f-4c8a-9e1d-2f3a4b5c6d7e |
 | U0098765 | Nakasero Primary School | 9e8d7c6b-5a4f-4e3d-8c2b-1a0f9e8d7c6b |
 
-A published list identifies each case by its `rowuuid`, which is what the list's `name` column carries. The follow-up form stores that value in its selector (`school_id`, `teacher_id`), and the database relationship is built on it. There are four reasons for that:
+A published list identifies each case by its `rowuuid`, which is what the list's `name` column carries, or the `id` of each feature in a [GeoJSON list](geojson-lists.md). The follow-up form stores that value in its selector (`school_id`, `teacher_id`), and the database relationship is built on it. There are four reasons for that:
 
-* **Every table has it, including repeats.** A teacher row has no primary key of its own, because a repeat only numbers its rows within one submission, but it has a `rowuuid`, so it can be a case.
-* **It never changes.** If an EMIS code was mistyped and someone corrects it later in the [data editor](../cleaning/in-a-repository/web-interface.md), every interview still points at the right school. A link built on the code would break, or point somewhere else.
-* **It is unique by construction**, across tables and across projects, so the database can enforce the relationship. An interview cannot refer to a teacher that does not exist, and a teacher row cannot be deleted while interviews refer to it.
-* **Nobody types it.** The form never shows it. The enumerator sees the label.
+* Every table has it, including repeats. A teacher row has no primary key of its own, because a repeat only numbers its rows within one submission, but it has a `rowuuid`, so it can be a case.
+* It never changes. If an EMIS code was mistyped and someone corrects it later in the [data editor](../cleaning/in-a-repository/web-interface.md), every interview still points at the right school. A link built on the code would break, or point somewhere else.
+* It is unique by construction, across tables and across projects, so the database can enforce the relationship. An interview cannot refer to a teacher that does not exist, and a teacher row cannot be deleted while interviews refer to it.
+* Nobody types it. The form never shows it, and the enumerator sees the label.
 
 The primary key keeps doing what it is for: refusing duplicates and giving people a code they recognise. Serve it as a column of the list (`school_emis` served as `emis` in the walkthrough) when a form or an export needs to show it.
 
@@ -66,7 +66,7 @@ You will see `rowuuid` in four places:
 
 * In the [data editor](../cleaning/in-a-repository/web-interface.md), as a read-only column.
 * In the [exports](../data-products/README.md) of a repository.
-* In every published list, as the `name` column.
+* In every published list, as the `name` column, or as each feature's `id` in a GeoJSON list.
 * In the selector columns of your follow-up forms, holding the case each submission is about.
 
 ## What's next

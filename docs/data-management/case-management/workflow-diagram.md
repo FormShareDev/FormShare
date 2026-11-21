@@ -11,7 +11,7 @@ The **workflow diagram** draws what you built: each form with its tables, each p
 
 Open a project and click **Workflow diagram** in the right column. The button appears once a workflow is in place, which means a form with a repository attaches a list of the project.
 
-<figure><img src="../../.gitbook/assets/case-workflow-diagram.png" alt="The workflow diagram of the walkthrough project: the School registration form on the left with its maintable and teachers tables, three list cards in the middle, and the Teacher interview form on the right, joined by brown, blue and red lines."><figcaption><p>The workflow built in the walkthrough, drawn by FormShare from the two repositories and the three lists between them.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/case-workflow-diagram.png" alt="The workflow diagram of the walkthrough project: the School registration form on the left with its maintable and teachers tables, four list cards in the middle, among them school_map.geojson, and the Teacher interview form on the right, joined by brown, blue and red lines."><figcaption><p>The workflow built in the walkthrough, drawn by FormShare from the two repositories and the four lists between them. No form reads <code>school_map.geojson</code> yet, so only its brown line is drawn.</p></figcaption></figure>
 
 ## What the boxes show
 
@@ -34,7 +34,7 @@ Open a project and click **Workflow diagram** in the right column. The button ap
 | --- | --- |
 | Brown | A table publishes a list, regenerated on a device's manifest pull when stale. |
 | Blue | A form reads a list. The selector is retyped to the source key, with a foreign key when the list is a list of rows. |
-| Red | The [case link](case-links.md). The label spells out the trigger, such as `teachers.rowuuid must be _active`. |
+| Red | The [case link](case-links.md). The label spells out the trigger, such as `trigger: teachers.rowuuid must be _active`. |
 | Grey | A repeat and the row it belongs to. |
 
 The blue and red lines also name what the database does on a delete, `FK ON DELETE RESTRICT` being what stops a case disappearing under its follow-ups. A blue line into a value list says `value only, no FK` instead, because there is no row for it to point at.

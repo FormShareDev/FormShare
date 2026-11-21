@@ -110,13 +110,14 @@ Upload the form to your project with **Add new form**, as you would any other fo
 
 Open the project page and click **Published lists**. A project that has published nothing yet says so, and offers one button.
 
-<figure><img src="../../.gitbook/assets/case-lists-empty.png" alt="The Published lists page of a project with no lists, showing the Publish a new list button and the message: This project publishes no lists yet."><figcaption><p><strong>Properties</strong> is not on the page yet. It appears beside <strong>Publish a new list</strong> once the project has at least one list to attach a property to.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/case-lists-empty.png" alt="The Published lists page of a project with no lists, showing the Publish a new list and Import lists buttons and the message: This project publishes no lists yet."><figcaption><p><strong>Import lists</strong> brings in lists exported from another project. <strong>Properties</strong> and <strong>Export all</strong> appear once the project has a list.</p></figcaption></figure>
 
 Click **Publish a new list** and fill the wizard in:
 
 | Field | Value |
 | --- | --- |
 | List code | `schools` |
+| Format | CSV: a list to choose from |
 | File name | `school_list.csv` |
 | Source form | School registration |
 | Source table | `maintable` |
@@ -124,7 +125,9 @@ Click **Publish a new list** and fill the wizard in:
 | Key | Each row (keyed by its rowuuid) |
 | Rows to serve | Active cases |
 
-Click **Publish the list**. The list's edit page opens. Pick each column from the drop-down at the bottom, type a **Served as** name where the table asks for one, and click **Add the column**:
+<figure><img src="../../.gitbook/assets/case-list-wizard.png" alt="The Publish a list wizard filled in for school_list.csv: list code schools, format CSV, source form School registration, source table maintable, label column school_name, each row keyed by its rowuuid, active cases."><figcaption><p>The other format, GeoJSON, serves each case with its location, for a follow-up form that picks the case on a map. See <a href="geojson-lists.md">GeoJSON lists</a>.</p></figcaption></figure>
+
+Click **Publish the list**. The list's edit page opens on its **Served columns** tab. Pick each column from the drop-down at the bottom, type a **Served as** name where the table asks for one, and click **Add the column**:
 
 | Column | Served as |
 | --- | --- |
@@ -132,9 +135,11 @@ Click **Publish the list**. The list's edit page opens. Pick each column from th
 | `subcounty` | *(leave empty)* |
 | `school_emis` | `emis` |
 
-<figure><img src="../../.gitbook/assets/case-list-edit-school-list.png" alt="The edit page of school_list.csv showing its key, rows to serve, label column, and the three served columns district, subcounty and school_emis served as emis."><figcaption><p>Leaving <strong>Served as</strong> empty keeps the column's own name, which is why <code>district</code> and <code>subcounty</code> read the same on both sides while <code>school_emis</code> is served as <code>emis</code>.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/case-list-served-columns.png" alt="The Served columns tab of school_list.csv with district, subcounty, and school_emis served as emis."><figcaption><p>Leaving <strong>Served as</strong> empty keeps the column's own name, which is why <code>district</code> and <code>subcounty</code> read the same on both sides while <code>school_emis</code> is served as <code>emis</code>.</p></figcaption></figure>
 
-The line under the file name says where the rows come from, and the key, the rows to serve and the label column each have their own button, so you can come back and change any of them later.
+The line under the file name says where the rows come from. The **Definition** tab holds the key, the rows to serve and the label column, each with its own button, so you can come back and change any of them later. The other two tabs, **Filters** and **Case accessibility**, decide which rows are served and to whom; the walkthrough [Filter lists and share cases out](walkthrough-sharing-cases.md) uses them.
+
+<figure><img src="../../.gitbook/assets/case-list-edit-school-list.png" alt="The Definition tab of school_list.csv: the key, the rows to serve and the label column."><figcaption><p>Rows to serve cannot change once a form with a repository uses the list.</p></figcaption></figure>
 
 **Sample CSV** now downloads something like this:
 
@@ -197,9 +202,11 @@ A [property](properties.md) is a column FormShare keeps beside a table without c
 | --- | --- | --- | --- |
 | `status` | String | `pending` | Interview status of the teacher |
 
-Every teacher now has `status = pending`, whether registered before or after you added it. Go back to the edit page of `teacher_list.csv` and add the column `status` from the **Properties** group of the drop-down. The list serves it too.
+Every teacher now has `status = pending`, whether registered before or after you added it. Go back to the edit page of `teacher_list.csv` and, on its **Served columns** tab, add the column `status` from the **Properties** group of the drop-down. The list serves it too.
 
-Today the value stays at its default. The *actions* feature that will let a follow-up change it is still being built, so serve the property now and the form you design today will not have to change when it arrives.
+<figure><img src="../../.gitbook/assets/case-properties.png" alt="The Properties page for the teachers table of School registration, listing status with default pending and experience_band with no default."><figcaption><p>The page of the finished example. <code>experience_band</code> is added in the walkthrough <a href="walkthrough-actions.md">Update cases with actions</a>.</p></figcaption></figure>
+
+Nobody types a property in a form. It changes when an interview is submitted and one of the interview's [actions](case-actions.md) says so: the walkthrough [Update cases with actions](walkthrough-actions.md) sets `status` to `interviewed`.
 {% endstep %}
 
 {% step %}
@@ -274,7 +281,7 @@ Whatever you attach is a placeholder. FormShare replaces its content with the ge
 
 Open the interview's form page and click **Links to lists**. FormShare has read the form's `select_one_from_file` questions and lists all three files it references, each with the variable that selects from it and the role FormShare reads from the form.
 
-<figure><img src="../../.gitbook/assets/case-links-to-lists.png" alt="The Links to lists page for the Teacher interview form: district_list.csv as a value list, school_list.csv as Reads, and teacher_list.csv selected as the case link."><figcaption><p><code>district_list.csv</code> gets a dash instead of a radio button, because a value list can never be the case link. The grey word beside each file name is the list code you typed when you published it.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/case-links-to-lists.png" alt="The Links to lists page for the Teacher interview form: district_list.csv as a value list, school_list.csv as Reads, and teacher_list.csv as the case link, with a note that the form has a repository."><figcaption><p>The page of the finished example, after step 9 built the repository: the links are part of the database now, so the choice is no longer offered. Before that, <code>school_list.csv</code> and <code>teacher_list.csv</code> each have a radio button, and <code>district_list.csv</code> a dash, because a value list can never be the case link. The grey word beside each file name is the list code you typed when you published it.</p></figcaption></figure>
 
 Select `teacher_list.csv` and click **Save the case link**. The interview is now a follow-up of a teacher. When the repository is built, `teacher_id` will be checked against the teachers that exist and are active, and each interview will keep its school's identity in `school_id`.
 
@@ -284,13 +291,13 @@ FormShare marks the case link for you when a form references exactly one list of
 {% step %}
 ## Test on a device
 
-Assign the interview form to your assistants and open it in ODK Collect or in [Enketo](../../additional-functionality/enketo.md). The three lists arrive as attachments of the form, generated from the registrations collected so far.
+Assign the interview form to your assistants and open it in FormShare Collect, ODK Collect or [Enketo](../../additional-functionality/enketo.md). The three lists arrive as attachments of the form, generated from the registrations collected so far.
 
 Register another school, then run *Get Blank Form* again. The device reports the form as updated, and the new school is in the picker.
 
 Back on **Published lists**, the three lists now carry an edition and a *Last generated* time.
 
-<figure><img src="../../.gitbook/assets/case-lists-generated.png" alt="The published lists table showing all three lists at edition 1 with the same last-generated timestamp."><figcaption><p>One device request generated all three, so they share a timestamp and sit at edition 1. Collect another registration and fetch the form again, and each of them moves to edition 2.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/case-lists-generated.png" alt="The published lists table: school_list.csv at edition 2, district_list.csv and teacher_list.csv at edition 1, and school_map.geojson never generated."><figcaption><p>The table of the finished example project. Each request that finds a list out of date generates it again and moves its edition up. <code>school_map.geojson</code> and the note under <code>school_list.csv</code>'s rows come from the walkthrough <a href="walkthrough-sharing-cases.md">Filter lists and share cases out</a>.</p></figcaption></figure>
 
 Lists are generated when a device asks for a form that attaches them, and regenerated when the source form has received a submission, or had its data edited, since the last generation.
 {% endstep %}
@@ -315,12 +322,18 @@ What the enumerator sees does not change. What changes is what happens to a subm
 
 Upload the new workbook with **Merge new version** on the form page, attach the same three CSV names, and merge. The new version inherits the lists and the case link of the version it replaces.
 
+Its [actions](case-actions.md) do not come with it: after the merge, open the new version's **Form actions** and add them again, or the interviews sent with it change no teacher.
+
 A version that picks its cases from a different list is refused at the [merge check](../../fundamentals/repositories/merging-subversions-of-a-form.md), with the reason given. The same applies to a new version of the registration form: the lists it feeds keep working, and if it gains a column you can serve it after the merge.
 {% endstep %}
 {% endstepper %}
 
 ## What's next
 
+* Follow "[Update cases with actions](walkthrough-actions.md)" to let each interview change its teacher: mark them interviewed, or deactivate a teacher who has left.
+* Follow "[Filter lists and share cases out](walkthrough-sharing-cases.md)" to leave rows out of a list and give each field officer the schools of their own district.
 * Read "[Published lists](published-lists.md)" for the rest of the publishing screen: changing a list, value lists, and how lists reach the devices.
 * Read "[Rules and safeguards](rules-and-safeguards.md)" before you start deleting forms, lists or cases.
 * Open "[Workflow diagram](workflow-diagram.md)" to read the drawing of what you just built.
+
+<figure><img src="../../.gitbook/assets/case-workflow-diagram.png" alt="The workflow diagram of the example: School registration with its teachers repeat publishing school_list.csv, district_list.csv, teacher_list.csv and school_map.geojson, and Teacher interview reading them, with teacher_list.csv as its case link."><figcaption><p>The workflow diagram of the finished example, the GeoJSON list included.</p></figcaption></figure>
