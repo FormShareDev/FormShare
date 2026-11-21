@@ -61,7 +61,7 @@ Case sensitive file names: FormShare is case sensitive, therefore if you declare
 
 To add a new assistant you will need to provide the following information:
 
-* Assistant ID: This is a simple name to identify the assistant in FormShare. It is the name that the assistant will use in ODK Collect.
+* Assistant ID: This is a simple name to identify the assistant in FormShare. It is the name that the assistant will use in FormShare Collect.
 
 {% hint style="info" %}
 The assistant id must be unique **across your account** and cannot be changed afterward.&#x20;
@@ -75,7 +75,7 @@ An assistant is defined in a project **but can be used** across several projects
 * Email: The email of the assistant.
 * Time zone: This should be the time zone where the assistant performs activities.
 * Telephone: This is the telephone of the assistant. Optional.
-* Password: This is the password that the assistant will use in ODK Collect.
+* Password: This is the password that the assistant will use in FormShare Collect.
 * Share among projects: Since an assistant id must be unique across your account you can have one assistant in a project assisting other projects. Turn this check on (green) to allow this assistant to assist in other projects.
 
 9\. Assigned assistants: Assistants help you to collect and clean data. Once you have one or more assistants in your project you can assign them to a form. Click on the "+" button to assign an assistant to the form. The "Adding assistant" screen will appear.

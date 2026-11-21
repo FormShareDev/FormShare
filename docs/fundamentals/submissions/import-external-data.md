@@ -20,7 +20,7 @@ You need to provide:
 
 * **Source type**: The format of the file you are about to upload. Available options:
   * **FormShare 1.0 (JSON / Zip)** — submissions exported from FormShare 1.0 as JSON files, packaged in a Zip.
-  * **ODK Collect XML data files (Zip)** — raw XML instances exactly as ODK Collect produces them, packaged in a Zip. This is the format used to migrate from ODK Central and from any other Aggregate-compatible server.
+  * **ODK Collect XML data files (Zip)** — raw XML instances exactly as FormShare Collect and ODK Collect produce them, packaged in a Zip. This is the format used to migrate from ODK Central and from any other Aggregate-compatible server.
   * **Additional types** may appear here if your FormShare instance has plugins installed that add custom importers. Each plugin documents its own expected file layout.
 * **Assistant**: Pick which [assistant](../tasks/) FormShare should record as the submitter of the imported records. Every submission in a FormShare repository is attributed to an assistant; for imports, you typically create a dedicated assistant like "migration" so the imports are easy to spot in the audit log.
 * **Data file**: The Zip file containing the data. For FormShare 1.0 imports the Zip can contain individual JSON files; for ODK XML imports the Zip must contain XML files and their media attachments.
@@ -52,6 +52,6 @@ When the import finishes, the submission count on the form details page updates.
 
 ## When *not* to use import
 
-* If you only need to load a handful of records, it is often easier to submit them through ODK Collect using a test device.
+* If you only need to load a handful of records, it is often easier to submit them through FormShare Collect using a test device.
 * If your source data is in CSV or Excel format, you cannot import it directly — convert it to FormShare 1.0 JSON or to ODK XML first, or ask whether a plugin can be written for your specific source.
 * Imports cannot create test-stage submissions; they always go directly into the repository.

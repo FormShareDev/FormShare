@@ -10,7 +10,7 @@
   * [Create and assign assistants](guides/creating-your-first-task/create-and-assign-assistants.md)
   * [Test your form](guides/creating-your-first-task/test-your-form.md)
   * [Create a repository for your form](guides/creating-your-first-task/advanced-permissions.md)
-* [Setting up ODK Collect](guides/odk-collect-setup.md)
+* [Setting up FormShare Collect](guides/odk-collect-setup.md)
 
 ## Fundamentals
 

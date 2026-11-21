@@ -4,9 +4,9 @@ description: Form files are the supporting files an ODK form needs at submission
 
 # Form files
 
-ODK forms can depend on **supporting files** at submission time. The most common case is a CSV that the form pulls data from — a national-region list used by `pulldata()`, an option list used by `select_one_from_file`, a roster of subjects for a follow-up form. FormShare stores these files alongside the form, serves them to ODK Collect through the form manifest, and tells you when one is missing.
+ODK forms can depend on **supporting files** at submission time. The most common case is a CSV that the form pulls data from — a national-region list used by `pulldata()`, an option list used by `select_one_from_file`, a roster of subjects for a follow-up form. FormShare stores these files alongside the form, serves them to FormShare Collect through the form manifest, and tells you when one is missing.
 
-Form files are different from [project files](../project-files.md): project files are documentation for the team (PDFs, briefing notes) and never reach ODK Collect; form files are operational data the form itself needs in order to render and accept submissions.
+Form files are different from [project files](../project-files.md): project files are documentation for the team (PDFs, briefing notes) and never reach FormShare Collect; form files are operational data the form itself needs in order to render and accept submissions.
 
 ## Where to find them
 
@@ -21,7 +21,7 @@ When you upload an ODK form, FormShare reads the form's XML and identifies every
 If any of the referenced files are not yet attached, FormShare:
 
 * Shows a **red banner** on the form details page listing the names of the missing files.
-* Marks the form as **incomplete** — you cannot test it on ODK Collect or [create a repository](README.md#create-a-repository) for it until the files are present.
+* Marks the form as **incomplete** — you cannot test it on FormShare Collect or [create a repository](README.md#create-a-repository) for it until the files are present.
 
 Once you attach the missing files, the banner clears and the form proceeds.
 
@@ -56,9 +56,9 @@ Click the file name in the list to download it. This is useful for retrieving th
 
 Click and hold (or right-click) the file in the list. FormShare asks to confirm, then removes the file from the form. If the file was satisfying a "missing required file" check, the warning banner reappears until it is re-uploaded.
 
-## How ODK Collect gets the files
+## How FormShare Collect gets the files
 
-ODK Collect doesn't pull form files directly. It pulls the **form manifest** — an XML document listing every file the form depends on, with the file's name, size, and MD5 hash. Collect then downloads any file whose hash differs from its local copy.
+FormShare Collect doesn't pull form files directly. It pulls the **form manifest** — an XML document listing every file the form depends on, with the file's name, size, and MD5 hash. Collect then downloads any file whose hash differs from its local copy.
 
 This is why FormShare cares about whether files are present and valid: a missing file in FormShare means Collect cannot prepare the form for a submission, and the enumerator's device errors out.
 
@@ -71,7 +71,7 @@ For [longitudinal projects](../../data-management/longitudinal/), the real-time 
 * The reference dataset (price list, roster) has been updated.
 * A media file (an instructional photo embedded in the form) needs a higher-resolution version.
 
-Upload the new version; check **Overwrite** so FormShare replaces the existing one. The next time ODK Collect syncs, the new file rolls out to every device.
+Upload the new version; check **Overwrite** so FormShare replaces the existing one. The next time FormShare Collect syncs, the new file rolls out to every device.
 
 ## What's next
 

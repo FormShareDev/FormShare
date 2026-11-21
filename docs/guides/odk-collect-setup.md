@@ -1,24 +1,24 @@
 ---
-description: How to configure ODK Collect on an Android device to talk to a FormShare project — using the QR code, or manually with assistant credentials.
+description: How to configure FormShare Collect on an Android device to talk to a FormShare project — using the QR code, or manually with assistant credentials.
 ---
 
-# Setting up ODK Collect
+# Setting up FormShare Collect
 
-[ODK Collect](https://docs.getodk.org/collect-intro/) is the Android app enumerators use to fill in forms and submit data to FormShare. This guide walks through configuring a new device the first time, both with the project's QR code (the fast way) and manually (when the QR code is not accessible).
+FormShare Collect is the Android app enumerators use to fill in forms and submit data to FormShare. It is built on [ODK Collect](https://docs.getodk.org/collect-intro/), so ODK's documentation of Collect applies to it too. This guide walks through configuring a new device the first time, both with the project's QR code (the fast way) and manually (when the QR code is not accessible).
 
 Before you start, you need:
 
-* An Android device with [ODK Collect](https://play.google.com/store/apps/details?id=org.odk.collect.android) installed.
+* An Android device with [FormShare Collect](https://play.google.com/store/apps/details?id=com.qlands.collect.android) installed.
 * A FormShare project with at least one form uploaded — see "[Creating your first project](creating-your-first-project.md)" and "[Uploading your first ODK Form](creating-your-first-task/)".
 * At least one [assistant](../fundamentals/tasks/) created in the project and **assigned to the form**. The assistant's username and password are the credentials the device will use to sign in.
 
 ## Method A — QR code
 
-The fastest way is to let ODK Collect read the project's QR code. It encodes the server URL, your project's preferred Collect settings, and the project's branding (icon and color) in one scan.
+The fastest way is to let FormShare Collect read the project's QR code. It encodes the server URL, your project's preferred Collect settings, and the project's branding (icon and color) in one scan.
 
 ### Find the QR code
 
-In FormShare, open the **Project details** page of the project. The QR code is in the main panel of the page, captioned "Use this QR code to configure ODK Collect".
+In FormShare, open the **Project details** page of the project. The QR code is in the main panel of the page.
 
 <!-- TODO screenshot: the project details page highlighting the QR code panel. -->
 
@@ -26,21 +26,21 @@ If you need to tweak the encoded Collect settings before sharing, click **Edit Q
 
 ### Scan the QR
 
-On the device, open ODK Collect and tap the three-dot menu in the top right, then **Configure via QR code**. Point the camera at the FormShare QR code on the project details page. ODK Collect reads it, applies the settings, and returns you to the home screen.
+On the device, open FormShare Collect and tap the three-dot menu in the top right, then **Configure via QR code**. Point the camera at the FormShare QR code on the project details page. FormShare Collect reads it, applies the settings, and returns you to the home screen.
 
 The device is now talking to FormShare — but it still needs credentials to actually pull the form list.
 
 ### Sign in with the assistant credentials
 
-From ODK Collect's main screen, tap **Get Blank Form**. Collect asks for a username and password the first time. Enter the **assistant's username and password** that you created and assigned to the form.
+From FormShare Collect's main screen, tap **Get Blank Form**. Collect asks for a username and password the first time. Enter the **assistant's username and password** that you created and assigned to the form.
 
-ODK Collect retrieves the list of forms that assistant is assigned to. Tap any to download it; the form is now ready to fill in.
+FormShare Collect retrieves the list of forms that assistant is assigned to. Tap any to download it; the form is now ready to fill in.
 
 ## Method B — Manual configuration
 
 When the QR code isn't usable — air-gapped device, broken camera, you're talking the user through it over a phone — configure Collect by hand:
 
-1. In ODK Collect, tap the three-dot menu → **General Settings** → **Server**.
+1. In FormShare Collect, tap the three-dot menu → **General Settings** → **Server**.
 2. **Type**: ODK.
 3. **URL**: Copy from the project details page in FormShare. The page shows the URL alongside the QR code with a copy-to-clipboard button.
 4. **Username**: The assistant's username.
@@ -50,7 +50,7 @@ Save the settings and return to the main screen. **Get Blank Form** now connects
 
 ## What the assistant credentials do
 
-Every submission lands in FormShare attributed to **whichever assistant sent it**, based on the credentials configured in ODK Collect. The assistant identity is the foundation of:
+Every submission lands in FormShare attributed to **whichever assistant sent it**, based on the credentials configured in FormShare Collect. The assistant identity is the foundation of:
 
 * **Audit trail**: every submission, every clean, every disregard is logged against the assistant who took the action.
 * **Permission control**: an assistant can only see and submit to forms they are assigned to. Assistants not assigned to a form don't see it in their form list.
@@ -75,7 +75,7 @@ The QR encodes a number of Collect preferences in addition to the server URL. Fr
 Changes to these settings take effect for **new** scans of the QR code; devices already configured do not pull updates automatically.
 
 {% hint style="info" %}
-**Re-scan after changing QR settings**: If you update the QR settings to, say, change auto-send to WiFi-only, devices that already scanned the old QR keep their old setting. Either ask enumerators to scan the new QR, or instruct them to change the setting manually in ODK Collect's general settings.
+**Re-scan after changing QR settings**: If you update the QR settings to, say, change auto-send to WiFi-only, devices that already scanned the old QR keep their old setting. Either ask enumerators to scan the new QR, or instruct them to change the setting manually in FormShare Collect's general settings.
 {% endhint %}
 
 ## Crowdsourcing (anonymous submissions)
@@ -94,5 +94,5 @@ Be aware that anonymous submissions are still attributed to a special "anonymous
 ## What's next
 
 * "[Test your form](creating-your-first-task/test-your-form.md)" — the testing-stage walkthrough.
-* "[Assistants](../fundamentals/tasks/)" — managing the accounts ODK Collect signs in with.
+* "[Assistants](../fundamentals/tasks/)" — managing the accounts FormShare Collect signs in with.
 * "[Submissions](../fundamentals/submissions/)" — what happens to data after it leaves the device.

@@ -264,8 +264,8 @@ A second submission with the same primary key, such as an edited copy of one alr
 * An encrypted answer. An action reads only its sealed value, and cannot write one in clear.
 * A value the target cannot hold: a whole number for an integer, at most 7 digits before the point and 3 after for a decimal property, a real date as `YYYY-MM-DD`, a date and time as `YYYY-MM-DD HH:MM:SS`, at most 255 characters for a string property. Such a change fails the run.
 
-{% hint style="warning" %}
-**Actions belong to one version of the form.** A new version merged into the repository keeps the case link of the version it replaces, but starts with no actions. Add them again on the new version's **Form actions** page.
+{% hint style="info" %}
+**A new version takes the actions with it.** When a new version is merged into the repository, it gets a copy of the actions of the version it replaces, as they are at the time of the merge, beside the case link it keeps. While it is in testing, its **Form actions** page is empty. From the merge on, each version's actions are its own: a change to one does not reach the other.
 {% endhint %}
 
 {% hint style="info" %}

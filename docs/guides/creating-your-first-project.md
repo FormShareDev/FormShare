@@ -18,8 +18,8 @@ To add a project you will need to provide the following information:
 
 * Code: This is a short name to identify your project within FormShare. The name cannot have any special characters besides underscore (\_). This name must be unique across your account and **cannot be changed afterward**.
 * Name: This is the full name of your project. It can contain spaces but must not exceed 120 characters.
-* Color: In ODK Collect each project can have a color for easy identification.
-* Icon: In ODK Collect each project can have **one** icon/emoji for easy identification.
+* Color: In FormShare Collect each project can have a color for easy identification.
+* Icon: In FormShare Collect each project can have **one** icon/emoji for easy identification.
 * Time zone: This should be the time zone where submissions happen.&#x20;
 * Abstract: Type here any other information regarding your project
 * Use a case/longitudinal workflow (optional): Check this option if the forms within this project and their submissions will be related to cases. You can read more about this in the section "[Longitudinal data collection](../data-management/longitudinal/)"

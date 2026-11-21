@@ -16,7 +16,7 @@ The "Download submitted media" option that appears for forms in the [testing sta
 
 ## What's in the zip
 
-The archive contains one folder per submission that has media attached. Folder names are derived from the submission's primary key (with any unsafe characters escaped). Inside each folder, files are saved with **their original names** as submitted by ODK Collect:
+The archive contains one folder per submission that has media attached. Folder names are derived from the submission's primary key (with any unsafe characters escaped). Inside each folder, files are saved with **their original names** as submitted by FormShare Collect:
 
 ```
 H-001/

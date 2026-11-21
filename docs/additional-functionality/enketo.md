@@ -4,9 +4,9 @@ description: Enketo turns any FormShare form into a web-based form respondents c
 
 # Enketo
 
-**Enketo** lets respondents fill in your ODK forms directly in a web browser, without installing ODK Collect. It's the right tool when your respondents are on desktops, when you're running an online survey, when you need a public link anyone can use, or when you want to preview the form without a device.
+**Enketo** lets respondents fill in your ODK forms directly in a web browser, without installing FormShare Collect. It's the right tool when your respondents are on desktops, when you're running an online survey, when you need a public link anyone can use, or when you want to preview the form without a device.
 
-Enketo and ODK Collect can be used at the same time on the same form — submissions from both end up in the same FormShare repository, treated identically.
+Enketo and FormShare Collect can be used at the same time on the same form — submissions from both end up in the same FormShare repository, treated identically.
 
 ## Where to find it
 
@@ -59,15 +59,15 @@ This is a small detail with outsized impact — a personalised thank-you message
 
 ## How submissions reach FormShare
 
-Enketo submissions follow exactly the same path as ODK Collect submissions:
+Enketo submissions follow exactly the same path as FormShare Collect submissions:
 
 * They are checked against the form's structure (primary key uniqueness, required fields, lookup validity) at submission time.
 * Valid submissions enter the form's repository.
 * Invalid submissions land in the [error log](../data-management/cleaning/submissions-with-errors.md) for an assistant to handle.
-* Media files (photos, audio, video) attached through the browser are stored alongside the data, the same as media from ODK Collect.
+* Media files (photos, audio, video) attached through the browser are stored alongside the data, the same as media from FormShare Collect.
 * The audit log treats Enketo submissions like any other — every change is attributed and timestamped.
 
-You can mix and match Enketo and ODK Collect on the same form indefinitely. Many projects do — Enketo for online respondents, ODK Collect for enumerator-led face-to-face interviews.
+You can mix and match Enketo and FormShare Collect on the same form indefinitely. Many projects do — Enketo for online respondents, FormShare Collect for enumerator-led face-to-face interviews.
 
 ## Permissions
 
@@ -79,12 +79,12 @@ If your form's project is configured to require authentication (the "Requires au
 
 ## What Enketo can't do
 
-* **Forms that require ODK Collect's hardware integration** (specific Bluetooth sensors, NFC readers) won't work in a browser.
+* **Forms that require FormShare Collect's hardware integration** (specific Bluetooth sensors, NFC readers) won't work in a browser.
 * **Very long forms with hundreds of cascading questions** can be slow in some browsers — test before sending widely.
 * **No batch import** through Enketo — it's a per-submission interface. For bulk loads, use [Import external data](../fundamentals/submissions/import-external-data.md).
 
 ## What's next
 
-* "[Forms](../fundamentals/forms/)" — the form lifecycle ODK Collect and Enketo share.
-* "[Setting up ODK Collect](../guides/odk-collect-setup.md)" — when the same form needs to work on mobile devices.
+* "[Forms](../fundamentals/forms/)" — the form lifecycle FormShare Collect and Enketo share.
+* "[Setting up FormShare Collect](../guides/odk-collect-setup.md)" — when the same form needs to work on mobile devices.
 * "[Submissions](../fundamentals/submissions/)" — what happens to data once it arrives.

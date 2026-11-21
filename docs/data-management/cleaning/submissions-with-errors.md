@@ -18,7 +18,7 @@ A submission enters the error log when any of these checks fail at the moment of
 * **Type mismatch** — a numeric field contains non-numeric data, a date field contains an invalid date, etc.
 * **Foreign-key violation** — a value referencing another table (e.g. in a case workflow) points at a record that does not exist.
 
-The same checks apply to live submissions from ODK Collect and to records arriving through [imports](../../fundamentals/submissions/import-external-data.md): if the data doesn't fit, the record sits in the error log instead of being dropped.
+The same checks apply to live submissions from FormShare Collect and to records arriving through [imports](../../fundamentals/submissions/import-external-data.md): if the data doesn't fit, the record sits in the error log instead of being dropped.
 
 A form's details page shows the count of errored submissions in a "With error" badge. Clicking it takes you to the error list.
 

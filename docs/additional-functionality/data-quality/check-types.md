@@ -148,7 +148,7 @@ Answer is empty also flags a question that its relevance skipped. Say when the q
 
 Date is in the future compares a date with the day the submission arrived, not with today, so a date that was in the future when it was sent stays wrong. The margin covers the difference between the server's clock, in UTC, and the device's local date: without it, a form filled just after midnight, local time, could look a day ahead of the day it arrived.
 
-GPS accuracy is poor reads the accuracy that ODK writes with each location. ODK Collect writes 0 for a location from a fake GPS app and for a point placed by hand on a map. An external GPS receiver gives 0 too, unless the question sets `allow-mock-accuracy`.
+GPS accuracy is poor reads the accuracy that ODK writes with each location. FormShare Collect writes 0 for a location from a fake GPS app and for a point placed by hand on a map. An external GPS receiver gives 0 too, unless the question sets `allow-mock-accuracy`.
 
 Value is a duplicate flags rows with the same value, or the same combination of values, as another row of the table: a phone number, or a name together with a birth year. Text is compared without case or extra spaces, and numbers as numbers. A row with one of the fields empty, or holding a value to ignore, is not compared. Every row of a duplicate group is flagged, and the message names up to three of the others. A new duplicate also flags the record it repeats.
 
@@ -210,7 +210,7 @@ Assistants can recode these texts to one of the select's choices on a page of th
 
 ### On the form's audit
 
-A form with a row of type `audit` makes ODK Collect record each screen it shows, when it appeared and when it was left, and send that with the submission. FormShare keeps it with the repository. These checks read the times of the audit, never its answers.
+A form with a row of type `audit` makes FormShare Collect record each screen it shows, when it appeared and when it was left, and send that with the submission. FormShare keeps it with the repository. These checks read the times of the audit, never its answers.
 
 | Type | Fields offered | Options |
 | --- | --- | --- |

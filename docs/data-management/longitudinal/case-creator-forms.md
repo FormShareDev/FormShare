@@ -28,7 +28,7 @@ You need to provide:
 
 * **Survey file (XLS / XLSX)**: The ODK form in Excel format, as always.
 * **Case ID variable**: The field in your ODK form that uniquely identifies each case. Pick a variable whose values will be **unique across every case you expect to register** — for example `farmer_id`, `household_code`, `patient_uuid`. This becomes the long-lived identifier that every follow-up form will reference. It **cannot be changed afterward**.
-* **Case label variable**: A human-readable field that ODK Collect will show enumerators in their case-picker — for example `farmer_name`, `household_head`, `patient_name`. The case label exists to make the case list usable in the field: the case ID is what FormShare stores, but the case label is what the enumerator sees.
+* **Case label variable**: A human-readable field that FormShare Collect will show enumerators in their case-picker — for example `farmer_name`, `household_head`, `patient_name`. The case label exists to make the case list usable in the field: the case ID is what FormShare stores, but the case label is what the enumerator sees.
 * **Case date variable**: A date or datetime field in your ODK form that records when the case was first registered. This is the timestamp that anchors the case's history. The field's type in the ODK form must be `date` or `datetime`.
 * **Expected number of cases** (optional): If you have a target — for instance, 400 households for a baseline survey — type it here. FormShare shows progress toward this target on the form details page.
 
@@ -40,15 +40,15 @@ Click **Add form**. FormShare runs the same checks it would for any form (variab
 
 ## Creating the repository
 
-After testing, [create the repository](../../fundamentals/forms/#create-a-repository) for the case creator form the same way you would for any other form. At that point FormShare also creates the **case lookup table** — the bookkeeping that holds the live list of cases that ODK Collect will see.
+After testing, [create the repository](../../fundamentals/forms/#create-a-repository) for the case creator form the same way you would for any other form. At that point FormShare also creates the **case lookup table** — the bookkeeping that holds the live list of cases that FormShare Collect will see.
 
 From the form's details page, a new **Case lookup table** option appears. This is where you configure which fields will be visible to enumerators when they pick a case in a follow-up form. See "[The real-time CSV file](real-time-csv.md)" for what this configuration controls and how to set it.
 
 ## How cases are added
 
-Cases are added the same way regular submissions are added: through ODK Collect, through Enketo, or through an [external import](../../fundamentals/submissions/import-external-data.md). Every accepted submission to the case creator form registers exactly one new case.
+Cases are added the same way regular submissions are added: through FormShare Collect, through Enketo, or through an [external import](../../fundamentals/submissions/import-external-data.md). Every accepted submission to the case creator form registers exactly one new case.
 
-The newly registered case appears in the [real-time CSV file](real-time-csv.md) almost immediately — the next time ODK Collect downloads the manifest of any follow-up form, the new case is in the picker.
+The newly registered case appears in the [real-time CSV file](real-time-csv.md) almost immediately — the next time FormShare Collect downloads the manifest of any follow-up form, the new case is in the picker.
 
 ## Common mistakes
 

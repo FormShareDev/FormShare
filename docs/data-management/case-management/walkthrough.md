@@ -322,7 +322,7 @@ What the enumerator sees does not change. What changes is what happens to a subm
 
 Upload the new workbook with **Merge new version** on the form page, attach the same three CSV names, and merge. The new version inherits the lists and the case link of the version it replaces.
 
-Its [actions](case-actions.md) do not come with it: after the merge, open the new version's **Form actions** and add them again, or the interviews sent with it change no teacher.
+Its [actions](case-actions.md) come with it once the merge goes ahead. While the new version is in testing, its **Form actions** page is still empty.
 
 A version that picks its cases from a different list is refused at the [merge check](../../fundamentals/repositories/merging-subversions-of-a-form.md), with the reason given. The same applies to a new version of the registration form: the lists it feeds keep working, and if it gains a column you can serve it after the merge.
 {% endstep %}

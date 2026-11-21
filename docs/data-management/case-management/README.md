@@ -30,7 +30,7 @@ FormShare keeps every form's data in a [repository](../../fundamentals/repositor
 | [Offline in FormShare Collect](offline-in-formshare-collect.md) | Cases registered and followed up with no connection, with the actions run on the device. |
 | [Workflow diagram](workflow-diagram.md) | A drawing of the forms, the lists between them and the links the databases enforce, generated from what you built. |
 
-Nothing changes in how you write ODK. The form author writes `select_one_from_file school_list.csv` and that is all: no special sheet, no entity declaration, nothing to learn beyond the file names FormShare shows you. The same forms work in ODK Collect, in [Enketo](../../additional-functionality/enketo.md) web forms and in FormShare Collect. A form written for ODK Central's entities uploads too: "[Forms written for ODK Central](forms-written-for-odk-central.md)" says what to set up in its place.
+Nothing changes in how you write ODK. The form author writes `select_one_from_file school_list.csv` and that is all: no special sheet, no entity declaration, nothing to learn beyond the file names FormShare shows you. The same forms work in FormShare Collect, in [Enketo](../../additional-functionality/enketo.md) web forms and in ODK Collect. A form written for ODK Central's entities uploads too: "[Forms written for ODK Central](forms-written-for-odk-central.md)" says what to set up in its place.
 
 ## Words used in this guide
 
@@ -57,7 +57,7 @@ Nothing changes in how you write ODK. The form author writes `select_one_from_fi
 * Use an ordinary project. A project created with **Use a case/longitudinal workflow** follows the [earlier case model](../longitudinal/README.md) and has none of these pages.
 * Be an owner, administrator or editor of the project. Members cannot open the pages of case management.
 * Give the case-creating form a repository first. Lists are generated from a repository, so the form that creates cases must have been uploaded, tested and had its [repository created](../../fundamentals/forms/#create-a-repository) before anything can be published from it. The **Published lists** button appears on the project page once the project has a form with a repository.
-* Know when devices refresh. A device picks up a list when it checks for form updates: *Get Blank Form* or the automatic update in ODK Collect, loading the form in Enketo. A follow-up form always carries the last list the device fetched.
+* Know when devices refresh. A device picks up a list when it checks for form updates: *Get Blank Form* or the automatic update in FormShare Collect, loading the form in Enketo. A follow-up form always carries the last list the device fetched.
 
 {% hint style="info" %}
 **For server administrators.** The pages of case management appear only when a plugin installed on the server declares the `workflows` feature.

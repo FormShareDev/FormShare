@@ -10,8 +10,8 @@ A **submission** is a single completed instance of an ODK form — for a househo
 
 FormShare can accept submissions from several sources:
 
-* **ODK Collect** running on Android phones is by far the most common source. Each form in FormShare exposes an ODK Collect–compatible endpoint, and a QR code on the form details page configures Collect in one scan.
-* **Enketo Express** (a web-based form-filling tool) can be used when devices cannot run ODK Collect, or for testing through a browser. Enketo is provided through an optional FormShare plugin.
+* **FormShare Collect** running on Android phones is by far the most common source. Each form in FormShare exposes an ODK-compatible endpoint, which ODK Collect can use too, and a QR code on the form details page configures Collect in one scan.
+* **Enketo Express** (a web-based form-filling tool) can be used when devices cannot run FormShare Collect, or for testing through a browser. Enketo is provided through an optional FormShare plugin.
 * **Imports from other systems** are supported for forms that already have data elsewhere — for example, projects migrating from FormShare 1.0 or from ODK Central. See "[Import external data](import-external-data.md)" for the available source types.
 * **API submissions** are also possible — assistants can POST data programmatically using their API key. This is most often used when migrating or when integrating FormShare with another platform.
 
@@ -38,7 +38,7 @@ The submission ID lets FormShare:
 
 <!-- TODO screenshot: a submission detail panel showing the submission ID prominently. -->
 
-In addition to the submission ID, FormShare stores ODK Collect metadata (start time, end time, device ID, instance ID) for every submission. This metadata is available in exports and is what powers the timeline-style activity statistics you see on the dashboard.
+In addition to the submission ID, FormShare stores FormShare Collect metadata (start time, end time, device ID, instance ID) for every submission. This metadata is available in exports and is what powers the timeline-style activity statistics you see on the dashboard.
 
 ## Submission states
 

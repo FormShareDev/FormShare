@@ -76,7 +76,7 @@ The below image explains how single selects are stored and linked:
 
 <figure><img src="../../.gitbook/assets/formshare_storage_03.png" alt=""><figcaption></figcaption></figure>
 
-<mark style="color:red;">**4.**</mark> **Select multiple:** ODK Collect stores “select multiple” variables in one field with selected options separated by space. FormShare stores it as independent rows in a separate table linked to the data table using such multi-select and to the associated lookup table.
+<mark style="color:red;">**4.**</mark> **Select multiple:** FormShare Collect stores “select multiple” variables in one field with selected options separated by space. FormShare stores it as independent rows in a separate table linked to the data table using such multi-select and to the associated lookup table.
 
 The image below explain how select multiples are stored and linked:
 

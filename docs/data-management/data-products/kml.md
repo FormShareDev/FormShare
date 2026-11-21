@@ -55,7 +55,7 @@ Fields marked as [sensitive](../data-dictionary/marking-sensitive-fields.md) are
 ## Practical tips
 
 * **Coordinate order in KML is lng/lat**, the opposite of how most people say coordinates ("lat, lng"). FormShare emits them in the correct KML order automatically.
-* **Altitude is 0.** The geopoint's altitude component (if present in ODK Collect's geopoint payload) is not exported — placemarks render at ground level.
+* **Altitude is 0.** The geopoint's altitude component (if present in FormShare Collect's geopoint payload) is not exported — placemarks render at ground level.
 * **Each regeneration produces a fresh KML.** Cache after generation; regenerate to pick up new submissions.
 
 ## What's next

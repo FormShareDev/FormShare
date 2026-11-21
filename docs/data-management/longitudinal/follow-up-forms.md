@@ -35,7 +35,7 @@ Click **Add form**. FormShare validates the form and uploads it in the [testing 
 
 The case selector is the field that ties this submission to a case. In your XLSForm, the case selector variable must be either:
 
-* A **`select_one_from_file`** that points at the case CSV — typically named `list_caseselector.csv`. ODK Collect will render this as a searchable list of cases populated from the [real-time CSV file](real-time-csv.md).
+* A **`select_one_from_file`** that points at the case CSV — typically named `list_caseselector.csv`. FormShare Collect will render this as a searchable list of cases populated from the [real-time CSV file](real-time-csv.md).
 * A **`barcode`** field, if your enumerators scan a barcode from a printed sticker or a registration card to identify the case.
 
 Either way, the value the enumerator enters must be a case ID that exists in the project — the same case ID as the case creator form recorded when the case was first registered.
@@ -69,7 +69,7 @@ When a follow-up submission arrives, FormShare:
 
 ## Common mistakes
 
-* **Forgetting to declare the case CSV in the XLSForm**. The `select_one_from_file` in your form must reference the same CSV name FormShare exposes (typically `list_caseselector`). If the names disagree, ODK Collect can't render the picker.
+* **Forgetting to declare the case CSV in the XLSForm**. The `select_one_from_file` in your form must reference the same CSV name FormShare exposes (typically `list_caseselector`). If the names disagree, FormShare Collect can't render the picker.
 * **Picking the case ID itself as the form's primary key**. This caps follow-ups at one per case forever. Use a calculated combination of case ID and visit date instead.
 * **Using a free-text case selector**. Without the `select_one_from_file` (or barcode) constraint, enumerators will inevitably mistype case IDs and submissions will land in the error log. Constrain at the device.
 * **Not realizing the case must be active**. Simple follow-ups against inactive cases are rejected. If you need to add data to an inactive case, first design a follow-up form with the activate effect.

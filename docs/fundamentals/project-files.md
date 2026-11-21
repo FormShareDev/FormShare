@@ -6,7 +6,7 @@ description: Project files are supporting documents — data management plans, p
 
 A **project file** is any file you attach at the project level for the benefit of the people collaborating on it. The most common examples are PDFs of data management plans, ethics protocols, field manuals, and code lists, but FormShare does not restrict the file type — you can attach any file you would normally share with a teammate.
 
-Project files are different from [form files](forms/form-files.md): project files are governance and documentation, available to every collaborator on the project; form files are operational data (CSVs and media) that ODK Collect needs to render and submit a specific form.
+Project files are different from [form files](forms/form-files.md): project files are governance and documentation, available to every collaborator on the project; form files are operational data (CSVs and media) that FormShare Collect needs to render and submit a specific form.
 
 ## Where to find them
 
@@ -47,11 +47,11 @@ Click and hold (or right-click, depending on the device) on the file in the list
 
 ## What project files are *not* good for
 
-* **Files ODK Collect needs at submission time** — those are [form files](forms/form-files.md), which are served to Collect through the manifest. Project files are not exposed to ODK clients.
+* **Files FormShare Collect needs at submission time** — those are [form files](forms/form-files.md), which are served to Collect through the manifest. Project files are not exposed to ODK clients.
 * **Large media archives** — for exporting the photos and audio that submissions produced, use the [Media export](../data-management/data-products/media.md). Project files are for documentation, not data.
 * **Sensitive credentials** — API keys, passwords, server credentials. Anything readable by every collaborator should not be a secret.
 
 ## What's next
 
-* "[Form files](forms/form-files.md)" — the form-level equivalent for files ODK Collect needs.
+* "[Form files](forms/form-files.md)" — the form-level equivalent for files FormShare Collect needs.
 * "[Projects](projects.md)" — the project model overall.

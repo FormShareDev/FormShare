@@ -132,7 +132,7 @@ Though FormShare checks for certain errors in your form it does not check:
 
 ![](../../.gitbook/assets/form\_test\_stage\_01\_captions.png)
 
-1\. Configure Collect: Use the QR code to configure ODK Collect. You can also use the ODK URL to manually configure it.
+1\. Configure Collect: Use the QR code to configure FormShare Collect. You can also use the ODK URL to manually configure it.
 
 2\. Important note: This form is in the testing stage. This means that you can update it at all times and **submissions are for testing purposes**. When you finished testing the form you can create a repository for the form and start collecting "real" data.
 

@@ -8,7 +8,7 @@ description: Active vs. inactive cases — what the status means, how it changes
 **Legacy page.** This describes the earlier case model, kept for projects created with the **Use a case/longitudinal workflow** switch. New longitudinal work uses "[Case management (longitudinal workflows)](../case-management/README.md)".
 {% endhint %}
 
-In a [longitudinal project](README.md), every case has a status: **active** or **inactive**. The status decides whether the case appears in the [real-time CSV file](real-time-csv.md) that ODK Collect downloads, and therefore whether enumerators in the field can record more follow-up data against it.
+In a [longitudinal project](README.md), every case has a status: **active** or **inactive**. The status decides whether the case appears in the [real-time CSV file](real-time-csv.md) that FormShare Collect downloads, and therefore whether enumerators in the field can record more follow-up data against it.
 
 Cases are not free to be edited directly — their status changes are driven by [follow-up forms](follow-up-forms.md), so every status change has an associated submission, an associated enumerator, and an associated date. The trail of why a case was deactivated is always traceable.
 
@@ -16,7 +16,7 @@ Cases are not free to be edited directly — their status changes are driven by 
 
 An **inactive** case:
 
-* Is **excluded** from the [real-time CSV file](real-time-csv.md) on the next regeneration. ODK Collect's case picker will not show it.
+* Is **excluded** from the [real-time CSV file](real-time-csv.md) on the next regeneration. FormShare Collect's case picker will not show it.
 * Cannot receive new **simple follow-up** submissions. A simple follow-up that references an inactive case lands in the [error log](../cleaning/submissions-with-errors.md) instead of the database.
 * Still exists in the database. All of its previously submitted data is intact and continues to appear in exports.
 * Is included in the audit trail like any other case.
