@@ -42,12 +42,12 @@ Each field writes one column of the question's row:
 | Message to show if the answer is not valid | `constraint_message` | What FormShare Collect says when it doesn't accept an answer. Left empty, it shows a message of its own. |
 | Calculate the value of this question | `calculation` | The value FormShare Collect works out for a calculate, from other answers. A calculate isn't shown; other questions use its value as `${name}`. |
 
-Under each expression field are **Build…** and **Test**, and a line with the expression in plain English.
+Under each expression field are **Build…** and **Test**, and a line with the expression in plain English. **Build…** shows only when the server has Generate set up (see "[Build… and Generate](#build-and-generate)").
 
 **Save** writes the fields to the question's row and closes the dialog. **Close**, or ×, closes it and keeps nothing: nothing reaches the grid before **Save**.
 
-{% hint style="warning" %}
-**Required is a switch.** It shows on for `yes` (or `true`, or `1`), and **Save** writes `yes` or empties the cell. A `required` cell that holds an expression, such as `${age} > 18`, or `true()`, opens with the switch off, and **Save** empties it. Change such a cell in the grid instead.
+{% hint style="info" %}
+**Required is a switch.** It shows on for `yes`, `true`, `true()` or `1`, and **Save** writes `yes` or empties the cell. A value written another way, such as `TRUE`, stays as you typed it while you leave the switch on. A `required` cell that holds a condition, such as `${age} > 18`, shows under the switch as *Required only when this is true:* with the condition, and the switch can't be turned off: **Save** keeps the condition. To change it, edit the `required` column in the grid.
 {% endhint %}
 
 The dialog covers these five columns. The grid has the other logic columns, such as `choice_filter`, `default`, `repeat_count` and `read_only`: see "[The editor](the-editor.md)".
@@ -109,7 +109,7 @@ Brackets and quotes close themselves, and Backspace between an empty pair delete
 
 ### The plain-English line
 
-Under each field, Form Builder writes the expression in words, with the questions' labels in place of their names: `${age} > 18` reads *Age is greater than 18*, and `selected(${symptoms}, 'fever')` reads *Symptoms includes 'fever'*. It reads the common shapes: a question compared with a value, a question between two values, an option chosen or not, a count, an `if`, and these joined by `and` or `or`. For other expressions, among them most that start with `.`, and for long ones, the line stays empty.
+Under each field, Form Builder writes the expression in words, with the questions' labels in place of their names: `${age} > 18` reads *Age is greater than 18*, and `selected(${symptoms}, 'fever')` reads *Symptoms includes 'fever'*. In a translated form the labels are the default language's (the settings sheet's `default_language`), or the first language's when it names none. It reads the common shapes: a question compared with a value, a question between two values, an option chosen or not, a count, an `if`, and these joined by `and` or `or`. For other expressions, among them most that start with `.`, and for long ones, the line stays empty.
 
 The line is the quickest way to see that an expression says what you meant, above all one the AI wrote.
 
@@ -142,7 +142,7 @@ When no expression comes back, the reason shows in red next to **Generate**, and
 | *That looks like a question, not a rule for this field. Describe when the question should show, or what to compute.* | It reads as a question, such as *what is the age?*, with no rule in it. |
 | *A show/validate rule needs a true/false condition…* | For relevance or a constraint, it names a value, such as a total or a count, but no condition. |
 | An explanation from the AI | The rule can't be written for this form: a question it names doesn't exist, an option isn't in the list, the comparison doesn't fit the question's type, or the description isn't a rule at all. |
-| *AI features are disabled.* | The server administrator hasn't turned Generate on. |
+| *AI features are disabled.*, or *AI isn't set up on this server…* | Generate was turned off, or has no API key, since you opened the page. Reload it: **Build…** doesn't show while Generate can't answer. |
 | A message from FormShare's SaaS plugin, such as *Your organization cannot use the AI features right now.* | Your organization can't use the AI at the moment, for example because it has no credits left. |
 | *rate limit exceeded…*, with the time to wait | You have pressed Generate too often this hour, or today. |
 | *The request failed. Please try again.* | The server couldn't be reached, or its answer couldn't be read. |
@@ -167,7 +167,7 @@ Who pays for Generate depends on whether your FormShare runs FormShare's SaaS pl
 With the SaaS plugin, Form Builder reports how each press ended (an expression delivered, a rule the AI couldn't write for this form, or a failure) and the SaaS plugin sets the price of each. A press that cost no credits shows no cost. A press you cancel while it is generating still runs on the server, and is reported as if you had kept its expression. A description that Form Builder's own check turns down (too short, a question, a value with no condition) never reaches the AI and isn't reported, but it still counts toward the hourly and daily limits.
 
 {% hint style="info" %}
-**For server administrators:** Generate needs `formbuilder.ai.enabled = true` and an Anthropic API key in `formbuilder.ai.api_key`, in FormShare's `.ini`. With Generate on and no key, it doesn't say the key is missing: it answers with the fixed expressions its tests use, so set the key before you turn it on. Other settings:
+**For server administrators:** Generate needs `formbuilder.ai.enabled = true` and an Anthropic API key in `formbuilder.ai.api_key`, in FormShare's `.ini`. Without both, the editor shows no **Build…**, Generate answers *AI isn't set up on this server: formbuilder.ai.enabled is true but formbuilder.ai.api_key is empty.*, and Form Builder's health page, `/user/<your user>/builder/health`, reports the AI as `unconfigured`. Other settings:
 
 * `formbuilder.ai.rate_limit.hour` and `formbuilder.ai.rate_limit.day`, 60 and 200 by default, limit each user's presses. Each server process counts on its own, so with several workers a user can go beyond them.
 * `formbuilder.ai.usage_log` names a file that gets one line for each request sent to the AI, with its tokens and cost. It records the description's length, not its text.
@@ -233,6 +233,7 @@ The Question panel follows the row selected in the survey grid. Under **Logic**,
 | Calculated as | The calculation |
 | Choices shown when | The choice filter |
 | Required | Whether, or when, an answer is required |
+| Read-only | Whether, or when, the answer can't be changed (`read_only`) |
 | Number of repeats | The repeat count |
 | Default answer | The default |
 

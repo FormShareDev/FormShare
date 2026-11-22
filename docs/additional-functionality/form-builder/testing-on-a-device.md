@@ -16,7 +16,7 @@ All you need is FormShare Collect on an Android phone: see "[Setting up FormShar
 
 **Test on device** is in the editor's toolbar. It opens the **Test on a device** dialog:
 
-<figure><img src="../../.gitbook/assets/fb-device.png" alt="The Test on a device dialog: the green line Ready: Household water survey (water_survey, version draft-b8704e14d9); the QR code beside three steps to add the project in FormShare Collect and start the form; the server URL, starting with the FormShare address, and a Copy button; the note on what the link gives access to; and the New link and Done buttons."><figcaption><p>The version that starts with draft- changes with every saved change.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/fb-device.png" alt="The Test on a device dialog: the green line Ready: Household water survey (water_survey, version draft-05c64f64b1); the QR code beside three steps to add the project in FormShare Collect, start the form and get a new version with Refresh; the server URL, starting with the FormShare address, and a Copy button; the note on what the link gives access to; and the New link and Done buttons."><figcaption><p>The version that starts with draft- changes with every saved change.</p></figcaption></figure>
 
 | Part | What it shows |
 | --- | --- |
@@ -30,7 +30,7 @@ All you need is FormShare Collect on an Android phone: see "[Setting up FormShar
 
 ### What is saved first
 
-Opening the dialog saves the draft first, as the editor holds it, errors included. The phone always downloads the draft as it was last saved.
+Opening the dialog saves the draft first, as the editor holds it, errors included: the phone downloads the draft as it was last saved. When that save fails, the dialog says *The draft couldn't be saved, so the phone would get an older version:* with the reason, and shows no code until the draft can be saved (see "[When a save fails](the-editor.md#when-a-save-fails)").
 
 The dialog checks the draft when it opens, not while it stays open. After you change the draft, close the dialog and open it again to see whether the new version is ready.
 
@@ -93,7 +93,7 @@ Every saved change is a new version for FormShare Collect, which replaces the fo
 
 ## When the draft has errors
 
-When pyxform or ODK Validate refuses the saved draft, the status line turns yellow: *The draft has errors, so Collect won't see a form yet. Fix the errors in the Problems panel, then download again.*, followed by the first error as pyxform words it.
+When pyxform or ODK Validate refuses the saved draft, the status line turns yellow: *The draft has errors, so FormShare Collect won't see a form yet. Fix the errors in the Problems panel, then tap Refresh in Start new form.*, with the first error as pyxform words it on the line below.
 
 While the draft has errors, the link offers no form. A phone that doesn't have the draft yet finds nothing in **Start new form**. A phone that has it takes it off **Start new form** at its next check, since the project keeps its forms exactly as the link serves them; forms already filled in stay. Fix the errors, open the dialog again to see *Ready*, then tap **Refresh** on the phone.
 

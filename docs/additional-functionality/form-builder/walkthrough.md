@@ -111,7 +111,7 @@ Click the `water_source_other` row. The **Question** panel on the right shows it
 {% step %}
 ## Try it on a phone
 
-Click **Test on device**. Form Builder saves the draft and shows a QR code. In FormShare Collect, open the project menu, choose **Add project**, then **Configure with QR code**, and scan it. Collect adds a project for the draft: tap **Start new form** and fill in a household.
+Click **Test on device**. Form Builder saves the draft and shows a QR code. In FormShare Collect, open the project menu, choose **Add project**, then **Configure with QR code**, and scan it. FormShare Collect adds a project for the draft: tap **Start new form** and fill in a household.
 
 <figure><img src="../../.gitbook/assets/fb-device.png" alt="The Test on a device dialog: Ready, the draft Household water survey; a QR code; the three steps to add it in FormShare Collect; the server URL to type instead; and the New link and Done buttons."><figcaption><p>The submissions you send from here are accepted and thrown away.</p></figcaption></figure>
 
@@ -130,7 +130,7 @@ Click **Publish to project...** and choose the project. Because "Rural water mon
 
 The primary key is the answer that is different in every submission; FormShare uses it to refuse duplicates, and it cannot be changed once the form has a repository. Click **Run precheck**.
 
-<figure><img src="../../.gitbook/assets/fb-publish-precheck.png" alt="The Publish to FormShare project dialog for water_survey version 20261122: the project Rural water monitoring, the primary key hh_id, 150 expected submissions, and the precheck saying No errors with the table the form will get."><figcaption><p>Publish is off until a precheck passes and a primary key is chosen.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/fb-publish-precheck.png" alt="The Publish to FormShare project dialog for water_survey version 20261122: the project Rural water monitoring, the primary key hh_id, 150 expected submissions, and the precheck saying No errors with the table the form will get, maintable."><figcaption><p>Publish is off until a precheck passes and a primary key is chosen.</p></figcaption></figure>
 
 Click **Publish**. The dialog then shows only the result, with a link to the form.
 

@@ -57,7 +57,7 @@ When a question's type names a file the draft doesn't have, a yellow box at the 
 
 | Column | What it shows |
 | --- | --- |
-| File | The name, the size, and when the file was uploaded, in UTC |
+| File | The name, the size, and when the file was uploaded, in the time zone FormShare shows its own times in |
 | Contents | How many rows, items or features, and how many columns; the first six column names; notes on what FormShare Collect would trip on, or why the file can't be read (see "[The checks](#the-checks)") |
 | Used by | The questions whose type names the file, or *No question uses it* |
 

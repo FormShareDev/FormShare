@@ -9,7 +9,7 @@ description: >-
 
 Publishing turns a draft into a form of a FormShare project. Form Builder does it through FormShare's own pages, as if you had uploaded the `.xlsx` yourself, so FormShare checks the form as it always does and every rule of its forms applies. Open the dialog with **Publish to project...** in the editor's toolbar.
 
-<figure><img src="../../.gitbook/assets/fb-publish-precheck.png" alt="The Publish to FormShare project dialog: the form ID water_survey, version 20261122 and name Household water survey from the Settings sheet; the project Rural water monitoring; a message saying the project has no form with that ID and publishing adds it; hh_id chosen as the primary key; 150 expected submissions; and the precheck saying No errors, with the database table the form will get."><figcaption><p>A new form, checked and ready to publish.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/fb-publish-precheck.png" alt="The Publish to FormShare project dialog: the form ID water_survey, version 20261122 and name Household water survey from the Settings sheet; the project Rural water monitoring; a message saying the project has no form with that ID and publishing adds it; hh_id chosen as the primary key; 150 expected submissions; and the precheck saying No errors, with the database table the form will get, maintable."><figcaption><p>A new form, checked and ready to publish.</p></figcaption></figure>
 
 ## Who can publish
 
@@ -22,7 +22,7 @@ The **Project** list offers the projects you own or administer. You need two thi
 
 The **Form ID**, **Version** and **Name** at the top come from the Settings sheet (`form_id`, `version` and `form_title`). The dialog does not change them: to publish under another ID or version, change the Settings sheet, or use **Save as** on the dashboard. FormShare accepts letters, numbers and `_` in a form ID.
 
-Publishing saves the draft first. If that save fails, the editor says why and the dialog publishes the draft as last saved, so fix what stops the save before you publish ("[When a save fails](the-editor.md#when-a-save-fails)").
+Publishing saves the draft first: the dialog saves it when it opens, and again before the precheck and before **Publish**. If a save fails, the dialog says *The draft couldn't be saved, so it can't be checked or published:* with the reason, and neither the precheck nor **Publish** goes ahead until the draft can be saved ("[When a save fails](the-editor.md#when-a-save-fails)").
 
 ## What publishing does
 
@@ -84,7 +84,7 @@ A new form also asks **How many submissions do you expect?** In the project's li
 | --- | --- |
 | "No errors." or the number of errors and warnings | The checks the editor runs (see "[Checking a form](checking-a-form.md)"). Errors stop the publish; warnings do not. |
 | "The form's logic goes round in a circle: fix it before publishing." | A calculation, condition or check depends on itself through other questions. This stops the publish. |
-| **Database tables for this form** | The tables FormShare will create for the form's data: one for the form, one for each repeat and one for each select multiple. |
+| **Database tables for this form** | The tables FormShare will create for the form's data: `maintable` for the form, one for each repeat, named after it, and one for each select multiple, such as `maintable_msel_water_uses`. |
 | **Changes from** the form (version) | For a replacement or a new version: how many questions were added, changed, renamed or removed, and how many choice lists changed. |
 | Compatibility with the form's submissions | For a new version: whether the changes keep the submissions already in the repository usable. Problems are listed, but do not stop the upload: FormShare checks them again when you merge. |
 

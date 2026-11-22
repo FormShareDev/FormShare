@@ -54,7 +54,7 @@ When pyxform stops at a row the first check has already flagged with an error, t
 
 ### The form engine: KotlinRosa
 
-The third check loads the compiled form into KotlinRosa, a Kotlin port of JavaRosa, the form engine inside FormShare Collect. It reports a form the engine can't load, and it reads every expression in the survey's `relevant`, `constraint`, `calculation`, `choice_filter` and `required` cells, reporting one it can't parse on its cell.
+The third check loads the compiled form into KotlinRosa, a Kotlin port of JavaRosa, the form engine inside FormShare Collect. It reports a form the engine can't load, and it reads every expression in the survey's `relevant`, `constraint`, `calculation`, `choice_filter`, `required` and `read_only` cells, reporting one it can't parse on its cell.
 
 It runs only once the second check has compiled the form. It also works out which questions depend on which, from their logic: the Question panel's **Depends on** and **Used by**, the related questions in the Structure outline, and the logic map all come from it. While an error stops the second check, the third doesn't run, and those links stay empty until you fix the error.
 
@@ -77,7 +77,7 @@ They check the form as the editor holds it, with the changes you haven't saved y
 If more than 30 checks are asked for within a minute, the editor shows *Validating too quickly; retrying in a moment.* and checks again shortly afterwards.
 
 {% hint style="info" %}
-**For server administrators:** the limit is `formbuilder.validate.rate_limit_per_minute`, 30 by default, per user. The second and third checks need Java on the server: ODK Validate comes with pyxform and needs Java 8 or later on the path, and KotlinRosa needs its jar named in `formbuilder.kotlinrosa.jar_path`. Without them, every form shows the same error, *Form validation failed because Java (8+ required) could not be found* in the XLSForm category, or *Unknown error: JVM is not running* in the Runtime category, and no draft can be published.
+**For server administrators:** the limit is `formbuilder.validate.rate_limit_per_minute`, 30 by default, per user. The second and third checks need Java on the server. ODK Validate comes with pyxform and needs Java 8 or later on the path: without it, every form shows the error *Form validation failed because Java (8+ required) could not be found* in the XLSForm category, and no draft can be published. KotlinRosa needs its jar named in `formbuilder.kotlinrosa.jar_path`: while its engine isn't running, every form shows the information *ODK's form engine (KotlinRosa) isn't running on the server, so the runtime check was skipped. pyxform and ODK Validate still checked the form.* Drafts still publish then, without the third check and without the links between questions it works out.
 {% endhint %}
 
 ## The Problems panel

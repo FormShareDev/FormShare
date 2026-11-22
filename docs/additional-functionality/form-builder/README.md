@@ -39,10 +39,10 @@ A draft is not a FormShare form. It stays in Form Builder until you publish it, 
 
 **Form Builder** is in FormShare's navigation, on the left. It opens the page of your drafts, where you start a new form or import an `.xlsx`.
 
-<figure><img src="../../.gitbook/assets/fb-dashboard-empty.png" alt="The Form Builder page of a user with no drafts: You have no forms in progress, with the buttons Build from scratch, Import an existing .xlsx file and Import from a published form, and New form and Import .xlsx at the top."><figcaption><p>The page before the first draft.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/fb-dashboard-empty.png" alt="The Form Builder page of a user with no drafts: You have no forms in progress, with the buttons Build from scratch, Import an existing .xlsx file and Import from a published form, and Import from a published form, Import .xlsx and New form at the top."><figcaption><p>The page before the first draft.</p></figcaption></figure>
 
 {% hint style="info" %}
-**For server administrators:** Form Builder is a QLands plugin, not part of FormShare's open source code. Its checks need Java on the server: pyxform runs ODK Validate, and the third check runs ODK's form engine (KotlinRosa), whose jar is set in `formbuilder.kotlinrosa.jar_path`. If the engine cannot start, the third check reports an error on every form, and the publish dialog's precheck counts it, so publishing stays off until the engine runs. **Generate**, the AI help in the logic dialog, needs its own settings; "[Adding logic](logic.md)" lists them.
+**For server administrators:** Form Builder is a QLands plugin, not part of FormShare's open source code. Its checks need Java on the server: pyxform runs ODK Validate, and the third check runs ODK's form engine (KotlinRosa), whose jar is set in `formbuilder.kotlinrosa.jar_path`. If the engine cannot start, the third check is skipped with a note in the Problems panel, and drafts still publish once the other two checks pass. **Generate**, the AI help in the logic dialog, needs its own settings; "[Adding logic](logic.md)" lists them.
 {% endhint %}
 
 ## What's next

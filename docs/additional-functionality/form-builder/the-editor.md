@@ -147,7 +147,7 @@ A choice with no `list_name` shows on its own, after the lists. Give it one and 
 A problem on a choice inside a closed list marks the list's number, its tooltip beginning *In this list:*, and **Go to** opens the list.
 
 {% hint style="warning" %}
-A choice needs its `list_name` and its `name` before the draft can be saved. While one lacks either, every save fails with a message that ends with the place, such as `($.choices[3].name)`: the choice numbered 4 has no name. That includes an empty row you insert in a list: fill it in or delete it.
+A choice needs its `list_name` and its `name` before the draft can be saved. While one lacks either, every save fails with a message that ends with the place, such as `($.choices[3].name)`: the choice numbered 4 has no name. That includes an empty row you insert in a list: fill it in or delete it. Until then, **Test on device**, **Publish to project...** and **Save as** stop with the same message.
 {% endhint %}
 
 ## The settings sheet
@@ -213,9 +213,7 @@ A language column you added and never filled in stays in the file that Export do
 
 How FormShare stores the labels of a form in several languages is in "[Forms with multiple languages](../../fundamentals/repositories/forms-with-multiple-languages.md)".
 
-{% hint style="warning" %}
-A form imported from an `.xlsx` file keeps its language columns (`label::English (en)`, `hint::Español (es)` and the like) and the XLSForm columns the grid has no place for, such as `guidance_hint`, `required_message`, or `submission_url` on the settings sheet. They stay in the draft and go out again with Export and Publish, but the grid doesn't show them, so you can't edit them here. To change them, export the draft, edit them in the file and import it as a new draft.
-{% endhint %}
+A form imported from an `.xlsx` file keeps its language columns (`label::English (en)`, `hint::Español (es)` and the like) and the XLSForm columns the grid has no place of its own for, such as `guidance_hint`, `required_message`, or `submission_url` on the settings sheet. The grid shows them like the columns you add: a language column right after the column it translates, the others after the grid's own. You edit them in the grid, and they go out with Export and Publish.
 
 ## The Structure panel
 
@@ -296,7 +294,7 @@ The editor saves the draft to the server:
 | --- | --- |
 | When you ask | **Save**, or Ctrl+S |
 | By itself | Once you have made no change for 30 seconds |
-| Before a test or a publish | **Test on device** and **Publish to project...** save first. If that save fails, they use the draft as last saved. |
+| Before a test, a publish or a copy | **Test on device**, **Publish to project...** and **Save as** save first. If that save fails, they stop and show why, rather than go on with the draft as last saved. |
 
 **Export** doesn't save first: it downloads the draft as last saved.
 
@@ -304,7 +302,7 @@ If you leave the page with unsaved changes, your browser asks before it goes.
 
 ### The copy in your browser
 
-Between saves, the editor keeps a copy of the draft in your browser, written a moment after each change and cleared by each save. When the page closes before its changes are saved, the next time you open the draft in that browser the editor offers them back. Accept, and they return and are saved 30 seconds later; decline, and the copy is deleted. The copy lives in that browser only: another browser, or another computer, doesn't have it.
+Between saves, the editor keeps a copy of the draft in your browser, written a moment after each change and cleared by each save. When the page closes before its changes are saved, the next time you open the draft in that browser the editor offers them back: **Restore unsaved changes?**, *This browser kept changes to this form that weren't saved. Restore them, or discard them and keep the saved version.* **Restore** brings them back, and they are saved 30 seconds later; **Discard** deletes the copy. The copy lives in that browser only: another browser, or another computer, doesn't have it.
 
 ### Undo and redo
 
@@ -326,6 +324,8 @@ When the draft is also open in another tab of the same browser, the editor warns
 | *We couldn't save your form because of a structural issue.*, ending with a place such as `($.choices[3].name)` | A choice has no `name` or no `list_name`, here the choice numbered 4. Fill it in or delete the row. See "[Choice lists](#choice-lists)". |
 | *This form is larger than the configured size limit.* | The draft is over the server's limit for one draft, 5 MB unless your administrator changed it. |
 | *Save failed. Please try again.* | The server couldn't be reached. Your changes stay in the browser's copy. |
+
+While saves fail, **Test on device**, **Publish to project...** and **Save as** stop with the same reason, so that nothing goes on with an older version of the draft.
 
 {% hint style="info" %}
 **For server administrators:** the wait before saving by itself is `formbuilder.autosave_debounce_seconds`, 30 by default, and the size limit of one draft `formbuilder.max_session_json_bytes`, in bytes, 5242880 (5 MB) by default.

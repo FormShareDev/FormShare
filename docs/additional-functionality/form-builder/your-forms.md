@@ -9,7 +9,7 @@ description: >-
 
 Form Builder keeps each form you build as a **draft**. Its first page lists your drafts under **Your forms**, says where each one is published, and starts new ones.
 
-<figure><img src="../../.gitbook/assets/fb-dashboard-drafts.png" alt="The Form Builder page with three drafts under Your forms: Water point inspection, never published; and two drafts named Household water survey, one published to Rural water monitoring as water_survey_v2 and the other as water_survey, each with Open, Rename, Save as and Delete. Import .xlsx and New form are at the top right."><figcaption><p>The draft saved last is at the top. Each row says where the draft is published.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/fb-dashboard-drafts.png" alt="The Form Builder page with three drafts under Your forms: Water point inspection, never published; and two drafts named Household water survey, one published to Rural water monitoring as water_survey_v2 and the other as water_survey, each with Open, Rename, Save as and Delete. Import from a published form, Import .xlsx and New form are at the top right."><figcaption><p>The draft saved last is at the top. Each row says where the draft is published.</p></figcaption></figure>
 
 ## Drafts and forms
 
@@ -30,11 +30,11 @@ Click **Form Builder** in FormShare's left-hand menu. The page lists your drafts
 | Part | What it shows |
 | --- | --- |
 | The name | The draft's name. Click it, or **Open**, to work on the draft in the [editor](the-editor.md). |
-| Last edit | When the draft was last saved or renamed, in UTC. |
+| Last edit | When the draft was last saved or renamed, in the time zone FormShare shows its own times in. |
 | Publication | Where the draft is published. See below. |
 | Buttons | **Open**, **Rename**, **Save as** and **Delete**. |
 
-When you have no drafts, the page offers **Build from scratch** and **Import an existing .xlsx file** in place of the list, and **Import from a published form**, whose list of forms stays empty: see "[From a form already in a project](#from-a-form-already-in-a-project)".
+At the top of the page are **Import from a published form**, **Import .xlsx** and **New form**. When you have no drafts, the page offers **Build from scratch**, **Import an existing .xlsx file** and **Import from a published form** in place of the list.
 
 ### Where a draft is published
 
@@ -44,7 +44,7 @@ When you have no drafts, the page offers **Build from scratch** and **Import an 
 | **Published**, then the project, the form ID and the version | The draft was published once. The project and form ID link to the form in FormShare. |
 | **Published** with a number | The draft was published as that many forms. Click it for the list. |
 
-The list is titled with the draft's name. For each publication it gives the project (its name and code), the form ID (a link to the form in FormShare), the version, and the date and time it was published, in UTC.
+The list is titled with the draft's name. For each publication it gives the project (its name and code), the form ID (a link to the form in FormShare), the version, and the date and time it was published, in the same time zone as **Last edit**.
 
 A draft keeps one publication per project and form ID: publishing it again over the same form in the same project updates that line. The list is what Form Builder recorded when it published, and it isn't checked against the projects later. A form deleted in FormShare stays listed, and a form uploaded to FormShare directly never appears.
 
@@ -96,9 +96,7 @@ When the page refuses a file, it says why:
 | *Missing required sheet 'survey'.* and the sheets found | The file has no `survey` sheet. |
 | *The file parsed but did not match the spreadsheet schema. The first problem is below.* and a place such as `($.choices[3].name: name is required)` | A choice has no `name`, or no `list_name`. The place counts the choices from 0: `[3]` is the fourth. |
 
-{% hint style="warning" %}
-The grid doesn't show the language columns of an imported file, such as `label::English (en)`, nor some XLSForm columns it has no place for. They stay in the draft and go out again with Export and Publish. See "[Languages](the-editor.md#languages)".
-{% endhint %}
+The grid shows an imported file's language columns, such as `label::English (en)`, and the XLSForm columns it has no place of its own for, and you edit them there. See "[Languages](the-editor.md#languages)".
 
 {% hint style="info" %}
 **For server administrators:** the size limit is `formbuilder.max_import_bytes`, in bytes, 10485760 (10 MB) by default.
@@ -106,13 +104,11 @@ The grid doesn't show the language columns of an imported file, such as `label::
 
 ### From a form already in a project
 
-A form that is already in a project comes into Form Builder as its XLSForm. On the form's page in FormShare, **Download ODK form** downloads it; import that file with **Import .xlsx**. If the form reads CSV, XML or GeoJSON files, download them from the form's **Form files** tab and attach them in the draft's [files tab](form-files.md).
+A form that is already in a project comes into Form Builder as its XLSForm. Click **Import from a published form**, choose the **Project**, then the **Form** (each project lists its forms, the newest first, with their versions), and click **Import**. The new draft opens in the editor, named after the form's ID with *(imported)*. Any project you are a member of will do, even one where you can't publish.
+
+You can also do it by hand: on the form's page in FormShare, **Download ODK form** downloads the XLSForm, and **Import .xlsx** makes a draft from it. Either way, the form's CSV, XML or GeoJSON files don't come with it: download them from the form's **Form files** tab and attach them in the draft's [files tab](form-files.md).
 
 The draft keeps the form's ID and version. "[Publishing to a project](publishing.md)" explains what happens when you publish it back, and "[Walkthrough: add a question to a form that has data](walkthrough-new-version.md)" goes through a new version of a form with a repository.
-
-{% hint style="warning" %}
-When you have no drafts, the page also shows **Import from a published form**. Its dialog lists your projects, but its list of forms stays empty, so nothing can be imported through it. Download the form as above instead.
-{% endhint %}
 
 ### Save as
 
@@ -145,7 +141,7 @@ Renaming changes the draft's name in this list, and the name of the file that [E
 An account can hold 50 drafts, unless your administrator set another limit. At the limit, a banner reads *You have reached the maximum number of in-flight forms (50). Delete old drafts before creating new ones.*, and New form, Import .xlsx and Save as are refused until you delete a draft.
 
 {% hint style="info" %}
-**For server administrators:** the limit is `formbuilder.max_sessions_per_user`, 50 by default.
+**For server administrators:** the limit is `formbuilder.max_sessions_per_user`, 50 by default; 0 sets no limit.
 {% endhint %}
 
 ## What's next
