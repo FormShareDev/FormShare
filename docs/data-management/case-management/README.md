@@ -83,6 +83,7 @@ Work through the walkthroughs first. The first builds a complete workflow, the o
 | [Form actions](case-actions.md) | Rules and code that change a case when a follow-up is submitted, their test, their runs, and what is taken back when a submission is deleted. |
 | [Offline in FormShare Collect](offline-in-formshare-collect.md) | What FormShare Collect does with cases without a connection. |
 | [Forms written for ODK Central](forms-written-for-odk-central.md) | What happens to a form with an *entities* sheet, and what to set up instead. |
+| [Case Explorer](../../additional-functionality/case-explorer/README.md) | A plugin: the cases of a list with the timeline of their follow-ups, each case's history, and giving a case to another assistant. |
 | [Workflow diagram](workflow-diagram.md) | Reading the drawing of what you built. |
 | [Rules and safeguards](rules-and-safeguards.md) | What FormShare refuses to do, how the active flag changes, and what happens to a follow-up whose case is missing or inactive. |
 | [Quick reference](quick-reference.md) | The screens and the expressions on one page, once you know the feature. |

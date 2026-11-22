@@ -38,7 +38,7 @@ An assistant with no case receives the list's header line alone, or a GeoJSON li
 
 ## The cases assigned to them
 
-Every case is assigned to the assistant who registers it, so at first this choice serves the same cases as *the cases they registered*. The difference is that an assignment can change. Only the Case Explorer, a separate plugin, gives a case to another assistant. The new assistant gets the case at their next update check, and the first one no longer does.
+Every case is assigned to the assistant who registers it, so at first this choice serves the same cases as *the cases they registered*. The difference is that an assignment can change. Only the [Case Explorer](../../additional-functionality/case-explorer/reassigning-cases.md), a separate plugin, gives a case to another assistant. The new assistant gets the case at their next update check, and the first one no longer does.
 
 Nothing else changes an assignment. The data editor shows it, in the `_assigned_to` column, without letting anyone edit it, and [actions](case-actions.md) cannot write it. A case in a repeat is assigned with the submission that registered it.
 

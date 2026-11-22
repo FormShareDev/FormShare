@@ -259,7 +259,7 @@ A second submission with the same primary key, such as an edited copy of one alr
 ## What an action cannot change
 
 * Anything but the case and its parent: another case, another form's rows, or the submission itself, unless the form has no case link and the submission is the case.
-* The columns the repository keeps for itself: the row identities, who sent the submission and when, and who the case is assigned to, which only the Case Explorer plugin changes. The active flag changes only through *activate* and *deactivate*.
+* The columns the repository keeps for itself: the row identities, who sent the submission and when, and who the case is assigned to, which only the [Case Explorer](../../additional-functionality/case-explorer/reassigning-cases.md) plugin changes. The active flag changes only through *activate* and *deactivate*.
 * The columns MySQL derives, such as the geometry kept beside a trace or a shape.
 * An encrypted answer. An action reads only its sealed value, and cannot write one in clear.
 * A value the target cannot hold: a whole number for an integer, at most 7 digits before the point and 3 after for a decimal property, a real date as `YYYY-MM-DD`, a date and time as `YYYY-MM-DD HH:MM:SS`, at most 255 characters for a string property. Such a change fails the run.
@@ -278,3 +278,4 @@ A second submission with the same primary key, such as an edited copy of one alr
 * Add the columns your actions write in "[Properties](properties.md)".
 * See how actions behave without a connection in "[Offline in FormShare Collect](offline-in-formshare-collect.md)".
 * Read "[Rules and safeguards](rules-and-safeguards.md)" for what happens to a follow-up of a case an action deactivated.
+* See what each follow-up's actions changed on a case, case by case, in the "[Case Explorer](../../additional-functionality/case-explorer/case-history.md)" plugin.
