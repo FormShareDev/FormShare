@@ -113,6 +113,17 @@
   * [Sending notifications](additional-functionality/notifications/sending-notifications.md)
   * [Calendar reminders](additional-functionality/notifications/reminders.md)
   * [Notifications in a journey](additional-functionality/notifications/in-a-journey.md)
+* [Form Builder](additional-functionality/form-builder/README.md)
+  * [Walkthrough: build a household survey and publish it](additional-functionality/form-builder/walkthrough.md)
+  * [Walkthrough: add a question to a form that has data](additional-functionality/form-builder/walkthrough-new-version.md)
+  * [Your forms](additional-functionality/form-builder/your-forms.md)
+  * [The editor](additional-functionality/form-builder/the-editor.md)
+  * [The question library](additional-functionality/form-builder/question-library.md)
+  * [Adding logic](additional-functionality/form-builder/logic.md)
+  * [Checking a form](additional-functionality/form-builder/checking-a-form.md)
+  * [Form files](additional-functionality/form-builder/form-files.md)
+  * [Testing on a device](additional-functionality/form-builder/testing-on-a-device.md)
+  * [Publishing to a project](additional-functionality/form-builder/publishing.md)
 
 ## Plugin development
 
