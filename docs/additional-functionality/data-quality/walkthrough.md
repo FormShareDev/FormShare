@@ -87,7 +87,7 @@ The **Warnings** panel lists what the checks on the whole form found.
 
 <figure><img src="../../.gitbook/assets/dq-warnings.png" alt="The Warnings panel with DQ-26, Major: enum_c's mean hh_size is 2.56 against 6.28 for the others, p below 0.001, open, with a Dismiss button."><figcaption><p>A household size half the others' is a pattern no single record shows. It may be a real difference between areas, or households cut short to shorten the interview.</p></figcaption></figure>
 
-A warning is dismissed on this page, with the reason, once someone has looked into it.
+A warning is dismissed on this page, with the reason, once someone has looked into it. If it was dismissed by mistake, **Reopen** beside it puts it back, with a reason if you want to give one.
 {% endstep %}
 
 {% step %}
@@ -97,13 +97,15 @@ The **Flags** panel lists every flag, with its issue number, the record, who sen
 
 <figure><img src="../../.gitbook/assets/dq-flags.png" alt="The Flags panel listing open flags: DQ-2 and DQ-3 critical, children under five more than household size, then major flags for interviews of 4 to 8 minutes, each with where to fix it and the record's score."><figcaption><p>A wrong answer is fixed in Clean data. An interview that should not be there at all is deleted, or moved to the logs, on the Submissions page.</p></figcaption></figure>
 
+Clean data belongs to the assistants, so a flag about an answer says that an assistant who can clean the form fixes it there.
+
 Each flag and each warning has a number, such as DQ-3. Whoever fixes the problem names it in the reason of the change, and the flag then shows who fixed it, when and why. Use **Find an issue** to go to one, and **Status** and **Severity** to narrow the list.
 {% endstep %}
 
 {% step %}
 ## Choose who reviews the flags
 
-At the bottom of the page, under **Supervisors**, tick the assistants or groups who review this form's flags, and click **Save supervisors**. A supervisor dismisses flags in Clean data, when a value is genuine or there is nothing to act on, saying why.
+At the bottom of the page, under **Supervisors**, tick the assistants or groups who review this form's flags, and click **Save supervisors**. A supervisor dismisses flags in Clean data, when a value is genuine or there is nothing to act on, saying why. If someone you tick cannot clean the form, the box says so under the list, with where to give them **Can clean**: under **Assigned assistants**, on the form's page.
 
 <figure><img src="../../.gitbook/assets/dq-supervisors.png" alt="The Supervisors panel: Survey supervisor ticked, the three enumerators not, and a Can clean column."><figcaption><p>A supervisor opens the flags from Clean data, so give them the right to clean the form's data as well, on the form's assistants.</p></figcaption></figure>
 {% endstep %}

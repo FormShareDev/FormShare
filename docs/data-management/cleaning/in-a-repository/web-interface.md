@@ -65,6 +65,8 @@ Move options between the lists with the arrow buttons. Click **Save** to apply t
 
 Every cell save and every multi-select change writes one entry per modified column to the audit log: the assistant who made the change, the timestamp, the table, the column, the previous value, and the new value. The submission ID (`rowuuid`) identifies which row was affected.
 
+The edit dialog, and the multi-select dialog, have a **Reason for the change** box. It is optional, holds up to 1,000 characters, and is kept with the change in the audit log. When a data quality flag led you to the record, name its number (such as DQ-12) in the reason. See "[Reasons for changes](audit-log.md#reasons-for-changes)".
+
 The audit log applies in the same way to changes made through the [API](api.md) — both surfaces feed into the same log, viewable from "[The audit log](audit-log.md)".
 
 ## Limits

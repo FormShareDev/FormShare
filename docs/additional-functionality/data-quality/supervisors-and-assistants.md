@@ -1,13 +1,13 @@
 ---
 description: >-
   What assistants see of the data quality checks in Clean data, how a
-  supervisor dismisses a flag, how a form's supervisors are chosen, and the
-  page where assistants recode "other, specify" answers.
+  supervisor dismisses a flag and reopens one, how a form's supervisors are
+  chosen, and the page where assistants recode "other, specify" answers.
 ---
 
 # Supervisors and assistants
 
-Assistants meet the data quality checks in **Clean data**, in the Assistant Access portal (see "[The web interface](../../data-management/cleaning/in-a-repository/web-interface.md)"). An assistant who can clean a form sees each record's score and flags there, and fixes the answers. A supervisor can also dismiss a flag that is right as it is.
+Assistants meet the data quality checks in **Clean data**, in the Assistant Access portal (see "[The web interface](../../data-management/cleaning/in-a-repository/web-interface.md)"). An assistant who can clean a form sees each record's score and flags there, and fixes the answers. A supervisor can also dismiss a flag that is right as it is, and reopen a flag dismissed before.
 
 ## Supervisors
 
@@ -18,10 +18,23 @@ A supervisor is an assistant, or an assistant group, marked as supervising a for
 The box lists the assistants and the groups given the form, with a **Can clean** column. Tick **Supervises** for those who supervise, and press **Save supervisors**. A form with no assistant or group yet says *Assign assistants or groups to this form first.* (see "[Assistants](../../fundamentals/tasks/README.md)" and "[Assistant groups](../../fundamentals/tasks/assistant-groups.md)").
 
 * An inactive assistant or group is marked *inactive*. A group supervises only while it is active, and its members supervise through it.
-* Supervisors dismiss flags in Clean data, and Clean data opens only for an assistant who can clean the form. Give a supervisor **Can clean** too; the box shows who has it.
+* Supervisors dismiss and reopen flags in Clean data, and Clean data opens only for an assistant who can clean the form, with **Can clean** of their own or through one of their groups. The **Can clean** column says *Yes*, *Yes, through* and the group's name, or *No*.
 * Supervisors are set for each version of the form. When you upload a new version for merging, **Keep assistants** carries the assistants and groups over with their supervisor mark.
 * In a project that encrypts answers, a supervisor counts among the people who may be given the project's key, as someone who cleans does. Taking the mark away takes that right away too, unless the person can still clean the form.
 * The check **Follow-up by another officer** leaves the form's supervisors out by default, since a supervisor may follow up a colleague's case.
+
+### A supervisor who cannot open Clean data
+
+A supervisor without **Can clean** keeps the right to dismiss and reopen flags but cannot reach the page where that is done. Under the list, after you save the supervisors, the box warns about each one:
+
+| The supervisor | The warning |
+| --- | --- |
+| An assistant | *Ana cannot open Clean data to review flags: they do not have Can clean on this form.* |
+| A group | *Ana, Ben cannot open Clean data to review flags: the group Field team, through which they supervise, does not have Can clean on this form.* It names the members who cannot clean the form in any other way. |
+
+Each warning says where to give the right: on the form's page, under **Assigned assistants** for an assistant, or **Assigned assistant groups** for a group. Click the name there, tick **Can clean** in **Change privilege**, and confirm with **Change privileges** for an assistant or **Change role** for a group. The Data quality page never changes anyone's access itself.
+
+A group that is not active supervises nobody, so the box does not warn about it.
 
 ## What an assistant sees in Clean data
 
@@ -38,7 +51,8 @@ The dialog shows:
 * for an open flag, where to fix it: *Fix the answer in the grid of its table.*, or, for a flag about the submission as a whole, that the project's owner or an administrator removes it on the Submissions page;
 * where the repository keeps reasons, *Name DQ-57 in the reason.*, with the flag's own number;
 * any edit of the flag's answers that did not fix it, as *Changed by ...; still found*, and the changes whose reason named it;
-* for a dismissed flag, who dismissed it and why.
+* for a dismissed flag, who dismissed it and why, and for a supervisor, **Reopen**;
+* for a flag that was reopened, *Reopened by* and *Dismissed by* lines: who reopened it and who had dismissed it, when and why.
 
 A record without flags shows *This record has no flags.* Flags of a repeat's rows show in the dialog of their record, and their message names the row.
 
@@ -64,9 +78,20 @@ A supervisor sees, under each open flag of the dialog, a box, *Why it does not c
 
 * The reason is required, up to 1,000 characters. The dialog does not send a dismissal without it, and says *Say why it does not count*.
 * Dismissing scores the record again at once, without the flag, and reloads the grid.
-* A dismissed flag stays dismissed while its check keeps finding it, and the pages have no way to undo a dismissal.
+* A dismissed flag stays dismissed while its check keeps finding it, until someone reopens it.
 
 Warnings are dismissed on the Data quality page, by the project's owner, administrators and editors (see "[Warnings](flags-and-scores.md#warnings)").
+
+## Reopening a flag
+
+When a flag was dismissed by mistake, or what made it right no longer holds, a supervisor reopens it in the same dialog. Under a dismissed flag, click **Reopen**. A box shows, *Why it counts again (optional)*, beside **Reopen it**. Type a reason if you want to give one, and click **Reopen it**.
+
+* The reason is optional, up to 1,000 characters.
+* The flag is open again. For a flag of a check, the checks on records run on the record at once, as after an edit; the dialog and the grid then reload with the new score.
+* If the check no longer finds the problem, for example because the answer was fixed while the flag was dismissed, the flag is marked as no longer found instead of counting again, and the dialog says *The flag was reopened, but its check no longer finds it: it is marked as no longer found.*
+* The flag keeps who dismissed it and who reopened it, when and why: the dialog shows them as *Dismissed by* and *Reopened by* lines, and so does the Data quality page.
+
+The project's owner, administrators and editors can reopen flags and warnings on the Data quality page too (see "[Reopening an issue](flags-and-scores.md#reopening-an-issue)").
 
 ## Recode 'other' answers
 

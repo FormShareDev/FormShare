@@ -48,11 +48,14 @@ Each change is recorded in the repository's audit log under the assistant who se
 
 ## Delete a property
 
-A property cannot be deleted while a list serves it, or while a list's filter reads it. Remove it from the list's served columns, or change the filter, then click **Delete** beside the property. There is no confirmation, and the column goes with every value in it.
+A property cannot be deleted while something uses it, and FormShare names what does:
 
-{% hint style="warning" %}
-**Check the form actions before you delete a property.** FormShare does not check them. A rule that names the property shows the reason in red on its Form actions page, in place of its description, and code that names it fails when it runs. Every run of that form's actions then fails, since one failing action stops them all, and until you change or remove the rule, no other action of that form can be saved.
-{% endhint %}
+* a list serves it;
+* a list's filter reads it;
+* a filter given to assistants, on the list's **Case accessibility** tab, reads it;
+* an [action](case-actions.md) reads or writes it: a rule that sets it, tests it or takes its value, or code that names it.
+
+Remove it from the list's served columns, change the filter, or change or remove the action, then click **Delete** beside the property. There is no confirmation, and the column goes with every value in it.
 
 ## What's next
 

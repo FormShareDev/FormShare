@@ -39,7 +39,7 @@ The record is scored again without the flag, here from 85 to 100. The flag stays
 
 <figure><img src="../../.gitbook/assets/dq-flags-dismissed.png" alt="The Flags panel filtered to Dismissed by a supervisor: DQ-11 on HH-038, dismissed by Survey supervisor, with the reason The interview was finished on a second visit."><figcaption><p>The owner's page, with <strong>Status</strong> set to <em>Dismissed by a supervisor</em>.</p></figcaption></figure>
 
-A dismissed flag stays dismissed while its check keeps finding the same thing.
+A dismissed flag stays dismissed while its check keeps finding the same thing. If you dismissed one by mistake, open the record's **Quality flags** again, click **Reopen** under the flag, and then **Reopen it**; a reason is optional. The record is checked again and the flag counts in its score once more. The owner's page then shows who reopened it and who had dismissed it.
 {% endstep %}
 
 {% step %}
@@ -69,6 +69,6 @@ For *Maize*, choose **Maize (maize)** under **Recode to**, leave the others as *
 
 ## What's next
 
-* Read "[Flags, warnings and scores](flags-and-scores.md)" for how flags open and close, and what a dismissal does.
-* Read "[Supervisors and assistants](supervisors-and-assistants.md)" for who may dismiss a flag.
+* Read "[Flags, warnings and scores](flags-and-scores.md)" for how flags open and close, what a dismissal does, and how to reopen a dismissed flag.
+* Read "[Supervisors and assistants](supervisors-and-assistants.md)" for who may dismiss and reopen a flag.
 * Read "[Cleaning data](../../data-management/cleaning/README.md)" for the rest of Clean data.

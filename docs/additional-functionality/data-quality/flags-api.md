@@ -60,7 +60,7 @@ POST /user/{owner}/project/{project}/form/{form}/dq/flags
 
 | Field | Required | What it holds |
 | --- | --- | --- |
-| `source` | Yes | Who raises the flags: 1 to 64 letters, digits or `_ . : -`, such as `script:outliers`. Give each script its own. |
+| `source` | Yes | Who raises the flags: 1 to 64 letters, digits or `_ . : -`, such as `script:outliers`. Give each script its own. A source that starts with `check:` or `dq:` is refused (see "[Sources](#sources)"). |
 | `results` | Yes | One entry for each record the script checked, 5,000 at most. |
 | `rowuuid` | Yes | The record's `rowuuid`, the identity of its row in the main table. Each record once. |
 | `flags` | No | The record's flags, 100 at most. An empty list says the record was checked and found clean. |
@@ -79,15 +79,27 @@ For each record it lists, a post replaces the open flags its `source` had on tha
 * an open flag of the source that the post no longer names is marked as no longer found;
 * a flag a supervisor dismissed stays dismissed, and one no longer found opens again when the post names it.
 
+A dismissed flag counts again only once someone reopens it, in Clean data or on the Data quality page (see "[Reopening an issue](flags-and-scores.md#reopening-an-issue)"). Its record is then scored with it, and the script's next post for the record finds it again or marks it as no longer found.
+
 The records the post does not list keep their flags. Posting the same results twice changes nothing.
 
 Within one source, a flag is identified by its `check` and its `fields`, in any order. The same check on the same fields twice for one record is refused.
 
-Sources add up: a record's score counts the open flags of every source, the form's own checks included. The checks use sources that start with `check:`, so do not give a script a source that starts with `check:`.
+### Sources
+
+Sources add up: a record's score counts the open flags of every source, the form's own checks included.
+
+The plugin keeps two prefixes for itself. Each of the form's checks posts its flags as `check:` and the check's ID, and the plugin records its own work as `dq:checks` and `dq:nightly`. A post whose source starts with `check:` or `dq:`, in capitals or not, is refused whole with HTTP 400: posted as `check:12`, it would replace or resolve the flags of that check. The answer says why:
+
+```
+source: check:12 is reserved: sources that start with check: or dq: are the plugin's own, its checks' and its runs'. Give your script a source of its own, such as script:outliers
+```
+
+Listing flags can still filter by such a source, as in `source=check:12`.
 
 ### What a post answers
 
-A post is checked whole before anything is stored, and stored all of it or none. A record that is not in the form's repository, a wrong severity or a missing message refuses the whole post with HTTP 400, and `errors` names each part, such as `results[3].flags[0].severity: critical, major or minor`.
+A post is checked whole before anything is stored, and stored all of it or none. A record that is not in the form's repository, a wrong severity, a missing message or a source of the plugin's own refuses the whole post with HTTP 400, and `errors` names each part, such as `results[3].flags[0].severity: critical, major or minor`.
 
 A post that is stored answers:
 
@@ -133,7 +145,8 @@ The answer holds `total`, `page`, `rows` and `flags`. Each flag has, among other
 | `check`, `severity`, `message`, `fields`, `value` | As posted, or as the check found them. A measure of the record shows as its own name, such as `measure:length`. |
 | `status` | `open`, `dismissed`, `resolved` or `removed`. |
 | `first_seen`, `last_seen` | When it was first and last found. |
-| `resolved_by`, `resolved_on`, `note` | Who dismissed it, or the source that no longer found it; when; and a supervisor's reason. |
+| `resolved_by`, `resolved_on`, `note` | Who dismissed it, or the source that no longer found it; when; and a supervisor's reason. Reopening a flag empties the three: who dismissed and who reopened it stay in `decisions`. |
+| `decisions` | Each dismissal and reopening of the flag, newest first, with `kind` (`dismissed` or `reopened`), `by`, `on` and `reason`, which a reopening may leave empty. An empty list for a flag never dismissed. |
 | `removed_by`, `removed_on`, `removed_reason`, `removed_as` | For a flag removed with its submission: who removed it, when, why, and how (`deleted` or `logs`). |
 | `record_score`, `submitted_by` | The record's score now, and its officer. |
 

@@ -64,11 +64,11 @@ On the phone, the notification has a **Download** button, which opens the downlo
 {% step %}
 ## See who has read it
 
-The **Sent** tab lists what was sent, newest first, to whom, and how many have read it.
+The **Sent** tab lists what was sent, newest first, to whom, its last day if it has one, and how many have read it.
 
-<figure><img src="../../.gitbook/assets/notif-sent.png" alt="The Sent tab: New version of the teacher interview to everyone, read by 1; Check this week's interviews to the group Supervisors, read by 1; Training on Friday to everyone, read by 2."><figcaption><p>The number under <strong>Read by</strong> counts assistants, whatever the device. In a crowdsourcing project it counts devices.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/notif-sent.png" alt="The Sent tab: New version of the teacher interview to everyone, read by 1; Check this week's interviews to the group Supervisors, read by 1; Training on Friday to everyone, read by 2. None has a last day."><figcaption><p>The number under <strong>Read by</strong> counts assistants, whatever the device. In a crowdsourcing project it counts devices.</p></figcaption></figure>
 
-Click a title to open the notification. Its **Message** tab changes the title, the text or the last day: phones that have it replace it at their next check, without announcing it again. **Withdraw it**, at the bottom, takes it off every phone at its next check, read or not.
+Click a title to open the notification. Its **Message** tab changes the title, the text or the last day: phones that have it replace it at their next check, without announcing it again. The last day cannot be one that has already passed. **Withdraw it**, at the bottom, takes the notification off every phone at its next check, read or not.
 
 <figure><img src="../../.gitbook/assets/notif-message.png" alt="The Message tab of Training on Friday: kind, recipients and sending time, the title and text to change, the last day, Save the changes, and Withdraw it."><figcaption><p>A notification's page.</p></figcaption></figure>
 
@@ -94,9 +94,9 @@ Open **Reminders** and click **Add a reminder**:
 
 <figure><img src="../../.gitbook/assets/notif-reminder-add.png" alt="A new reminder: Send this week's interviews, its text, the form Teacher interview, every week on Friday at 4:00 PM from today, to everyone in the project."><figcaption><p>The time is on each phone's own clock: 16:00 is four in the afternoon wherever the phone is.</p></figcaption></figure>
 
-Click **Save the reminder**. The **Reminders** tab shows when it comes next.
+Click **Save the reminder**. The **Reminders** tab shows when it comes next, worked out in the project's time zone. The note under the table names that time zone.
 
-<figure><img src="../../.gitbook/assets/notif-reminders.png" alt="The Reminders tab: Send this week's interviews, every Friday at 16:00, to everyone in the project, next time 2026-11-27 16:00."><figcaption><p>Phones take the next few times ahead, so a reminder comes on time even offline.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/notif-reminders.png" alt="The Reminders tab: Send this week's interviews, every Friday at 16:00, to everyone in the project, next time 2026-11-27 16:00, and the note that next times are worked out in the project's time zone, UTC."><figcaption><p>Phones take the next few times ahead, so a reminder comes on time even offline.</p></figcaption></figure>
 {% endstep %}
 
 {% step %}

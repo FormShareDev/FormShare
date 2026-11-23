@@ -83,11 +83,12 @@ The **Sent** tab is the first page of the project's Notifications. It lists what
 | Notification | The title, which opens the notification's page, and the start of its text. A badge marks a new version of a form, a notification withdrawn (*Withdrawn*), or one past its last day (*Expired*). |
 | To | Whom it went to, in words: *Everyone in the project*, an assistant's name and login, *The group ...*, *The device ...*, or an assistant *on the device ...*. An assistant who has left the project shows as *an assistant no longer in the project*. |
 | Sent | When, and by whom. |
+| Last day | The day in **Shown until the end of**: the phones list the notification until that day is over. Empty when it has none. |
 | Read by | How many assistants have read it, on any device. In a crowdsourcing project, how many devices. The number opens the Read by tab. |
 
-<figure><img src="../../.gitbook/assets/notif-sent.png" alt="The Sent tab with three notifications: a new version of a form to everyone, a message to the group Supervisors, and a message to everyone, each with how many have read it."><figcaption><p>Newest first.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/notif-sent.png" alt="The Sent tab with three notifications: a new version of a form to everyone, a message to the group Supervisors, and a message to everyone, each with how many have read it, and none with a last day."><figcaption><p>Newest first.</p></figcaption></figure>
 
-Only notifications sent by hand are here. A journey's notifications are counted in the journey's own Notifications tab (see "[Notifications in a journey](in-a-journey.md)").
+Only notifications sent by hand are here. A journey's notifications are counted, changed and withdrawn in the journey's own Notifications tab (see "[Notifications in a journey](in-a-journey.md)").
 
 ## Changing a notification
 
@@ -95,13 +96,13 @@ Click a notification's title to open its page. Its **Message** tab lists its kin
 
 Below that, you can change its **Title**, its **Text** and its **Shown until the end of**, then click **Save the changes**. Phones that have it replace it at their next check, without announcing it again.
 
+The new last day cannot be one that has already passed, as on the Send tab. The page then says *The last day has already passed: to take the notification off the phones now, use "Withdraw it" below.* Withdrawing is how you take a notification off the phones before its last day.
+
+A change to the last day reaches every phone that has the notification. A phone that checks only after the new last day is over takes the notification off at that check.
+
 The kind, the form and whom it goes to cannot change. To send something else, or to other people, withdraw it and send a new one.
 
 <figure><img src="../../.gitbook/assets/notif-message.png" alt="A notification's Message tab: its kind, recipients and sending time, the title, text and last day to change, Save the changes, and Withdraw it."><figcaption><p>A notification's page.</p></figcaption></figure>
-
-{% hint style="info" %}
-To take a notification off the phones before its last day, withdraw it. Changing the last day to a day already past does not reach the phones that have it.
-{% endhint %}
 
 ## Withdrawing a notification
 

@@ -53,6 +53,16 @@ A journey that follows each assistant is not affected by a reinstall: the assist
 A device's ID is random and names no one, but it links one person's submissions over time, which is what a journey needs. In a crowdsourcing project, say in the consent text that the project follows each device's submissions.
 {% endhint %}
 
+## Assistants with the same ID
+
+A journey that follows assistants knows each one by their assistant ID, which FormShare records with everything they send. Two assistants with the same ID are one assistant to the journey: they share one stage and one set of limits.
+
+FormShare refuses an assistant ID that another assistant of your account already has, but it does not count the assistants of an archived project. If you add an assistant with the ID of an archived project's assistant, both have that ID once the project is unarchived, and what each one sends counts toward the same stage.
+
+The Overview names such assistants under **Worth a look**, each with their project. It names them when they have sent the journey's forms or are assigned to submit them, directly or through a group, as long as one of them is still assigned. This happens only when the journey follows each assistant, or each assistant on each device: a journey that follows each device does not use the ID.
+
+An assistant ID cannot be changed, and what was sent keeps the ID it was sent with. To give a person a stage of their own, add an assistant with a new ID for them, assign it to the journey's forms, and remove their old assistant from those forms. The new assistant starts in the first stage. The Overview stops naming the ID once no assistant with that ID is assigned to the journey's forms.
+
 ## Changing whom it follows
 
 Changing whom the journey follows moves nobody and changes no submission. Every stage is worked out again from what was sent, under the new choice. On an applied journey, each form list follows the new choice from its next refresh. The journey's last tab takes the choice's name: **Assistants**, **Devices** or **Assistants on devices**.

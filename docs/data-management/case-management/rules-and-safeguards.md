@@ -23,7 +23,8 @@ Once a form's repository has been built against a list, the shape of that list i
 | Merge a new version that picks its cases from another list | Refused at the [merge check](../../fundamentals/repositories/merging-subversions-of-a-form.md), naming the list the version must keep. |
 | A follow-up arrives for a case that is inactive or missing | The submission is refused by the database check and goes to the form's [error log](../cleaning/submissions-with-errors.md). |
 | Put the case selector inside a repeat | The list is still served to the form, but no link is detected and nothing is enforced. Keep the question that picks the case outside every repeat. |
-| Delete a property that a list serves, or that a list's filter reads | Refused, naming what uses it. Remove it from the list, or change the filter, first. |
+| Delete a property that a list serves, that a list's filter or a filter given to assistants reads, or that an action reads or writes | Refused, naming what uses it. Remove it from the list, change the filter, or change the action, first. |
+| Remove or move an action while another action of the form is broken | Refused, naming the broken action: the actions that run are always the ones the list shows. |
 | Save an action FormShare cannot turn into code, or one that takes the form's actions past 64 KB together | Refused with the reason, and nothing is saved. |
 | An action fails on a submission | The submission stays stored. None of the form's actions is applied to it, and the run is marked *failed* on the [Form actions](case-actions.md) page, with **Retry**. |
 | Delete a submission whose actions changed a case, or move it to the error log | What the actions wrote goes back to what it was, unless it has changed since. The run is marked *taken back*. |

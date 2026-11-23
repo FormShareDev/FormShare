@@ -79,13 +79,23 @@ Phones may show the message on their lock screen. Write nothing personal or sens
 
 The days it stays count from the moment the visit began, or, in the first stage, from the check that made the message.
 
-### Changing or removing it
+### What it already sent
 
-A change reaches the messages made after it. Messages already on the phones keep their words.
+Each traveller who enters the stage gets a copy of the message, a notification of their own. The line above the fields says how many copies were sent, how many travellers have read one, and how many are still current: not withdrawn, and not past their days. A journey's messages do not count toward the project's 50 notifications a day.
 
-**Remove the message** asks again: **Remove it** confirms and **Keep it** cancels. No more messages are made from it, and those it already made stay on the phones until their days are over.
+### Changing it
 
-You cannot change or withdraw a message once the journey has made it. It stays until its days are over, or until the traveller deletes it from their phone. A journey's messages do not count toward the project's 50 notifications a day.
+A change applies to what is sent from now on. While copies are still current, the page also offers **Also change the copies still current**. Tick it before you click **Save the message**: the phones that have a copy replace its title and text at their next check, without announcing it again, and the page says so when it goes back to the tab. Each copy keeps the form it was sent with and its own last day. Leave the box unticked and the copies already sent keep their words.
+
+### Withdrawing the copies sent
+
+While copies are still current, the page has **Withdraw the copies sent**, which asks again in the page: **Withdraw them from every phone** confirms, and **Keep them** cancels. The copies leave every phone at its next check, read or not, as a withdrawn notification does. The page says *The copies were withdrawn: phones take them off at their next check.*
+
+Withdrawing does not stop the message: whoever enters the stage from now on still gets it. A traveller whose copy you withdrew gets no other for the same visit, only when they enter the stage again.
+
+### Removing it
+
+**Remove the message** asks again: **Remove it** confirms and **Keep it** cancels. No more copies are made from it, and those it already sent stay on the phones until their days are over. To take them off too, withdraw them before you remove the message.
 
 ## A reminder when a form is offered again
 
@@ -129,13 +139,19 @@ A form held back only by a limit per visit, a limit in total, or a last day in t
 The hour is on the phone's clock, worked out on the time zone FormShare has for the assistant signed in on the phone, or on the project's time zone in a crowdsourcing project. If that time zone is not where the phone is, the reminder can come a little before the form is offered again, or a day later than it could.
 {% endhint %}
 
-### Removing it
+### Changing or removing it
+
+A change to the title, the text or the hour reaches each phone at its next check. FormShare keeps no copy of a journey's reminder: each check works it out again, so the phone sets the new time in place of the one it had.
 
 **Remove the reminder** asks again: **Remove it** confirms and **Keep it** cancels. The reminder leaves the phones at their next check.
+
+FormShare cannot take back a reminder that has already come on a phone. There is nothing else to withdraw: a change or a removal already reaches every phone at its next check. The form's reminder page says so above its fields.
 
 ## A stage or a form no longer in the journey
 
 A message of a stage you deleted, or a reminder of a form you took out of the journey, is listed at the bottom of the tab, under **Of a stage or a form no longer in the journey**. It makes nothing any more. **Remove** takes it off the list, after **Remove it** confirms.
+
+The stage's page is gone with the stage, so a message whose copies are still current says how many under its title, and offers **Withdraw the copies sent** there. It works as on the stage's page.
 
 ## What's next
 

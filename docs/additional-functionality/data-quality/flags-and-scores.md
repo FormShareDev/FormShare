@@ -2,7 +2,8 @@
 description: >-
   What flags and warnings hold, their statuses and issue numbers, how a
   record's Data Quality Score is worked out from its open flags, and what
-  happens when an issue is fixed, dismissed or its submission removed.
+  happens when an issue is fixed, dismissed, reopened or its submission
+  removed.
 ---
 
 # Flags, warnings and scores
@@ -38,7 +39,7 @@ A flag on a row of a repeat counts against the record the row belongs to, and it
 | Status | Meaning |
 | --- | --- |
 | Open | The problem is there, and the flag takes points off the score. |
-| Dismissed by a supervisor | A supervisor decided it does not count, and said why. |
+| Dismissed by a supervisor | A supervisor decided it does not count, and said why. Until someone [reopens it](#reopening-an-issue), it takes no points off the score. |
 | No longer found by its source | The check or script that raised it no longer finds it: the answer was fixed, the check was changed, or the record no longer meets the check's condition. |
 | Removed with their submission | Its submission was deleted or moved to the logs. |
 
@@ -50,6 +51,7 @@ A flag stays the same flag while the same source finds the same problem: the sam
 * No longer found, an open flag is marked as no longer found.
 * Found again after that, it opens again, with its number.
 * Found again after a supervisor dismissed it, it stays dismissed.
+* Reopened, it is an open flag again, with its number, and lives as one from then on.
 
 ## The score
 
@@ -95,13 +97,13 @@ The **Warnings** box groups the warnings under their check, with how many each c
 | Severity | The severity of its check. |
 | What it found | The message. |
 | Last found | When a run last found it. |
-| Status | Open; Dismissed by whom and when, with the reason; or No longer found. |
+| Status | Open; Dismissed by whom and when, with the reason; or No longer found. A warning that was reopened also shows who reopened it and who had dismissed it. |
 
 The box shows the open warnings until you choose another **Status** (Dismissed, No longer found or All) and, on a form with more than one check on the whole form, a **Check**.
 
-A warning lives as a flag does. Found again, it is updated; no longer found, it is marked so; dismissed, it stays dismissed.
+A warning lives as a flag does. Found again, it is updated; no longer found, it is marked so; dismissed, it stays dismissed until someone reopens it.
 
-The project's owner, administrators and editors dismiss warnings on the Data quality page. **Dismiss** opens a box, *Why it does not count*, and **Dismiss it** sends it. The reason is required, up to 1,000 characters, and only an open warning can be dismissed. The page then returns to the warnings as they were shown, on the same page.
+The project's owner, administrators and editors dismiss warnings on the Data quality page. **Dismiss** opens a box, *Why it does not count*, and **Dismiss it** sends it. The reason is required, up to 1,000 characters, and only an open warning can be dismissed. The page then returns to the warnings as they were shown, on the same page. A dismissed warning has **Reopen** in the same place (see "[Reopening an issue](#reopening-an-issue)").
 
 ## Issue numbers
 
@@ -117,6 +119,8 @@ An open flag says where it is fixed:
 | The submission as a whole | On the form's **Manage submissions** page, which the flag calls the Submissions page: delete the submission, or move it to the logs, when it should not be there. Only the project's owner and administrators can, and an editor is told so. |
 
 The flags about a submission as a whole are those of Interview is too short or too long, the two near-duplicate types, the two too-fast types, Follow-up by another officer and Follow-up without the form it should follow, and any flag that names only a measure of the record or when the submission arrived. A script's flag points to an answer when it names one that can be changed.
+
+Clean data and the cleaning API belong to the assistants: Clean data is a page of the Assistant Access portal, and the cleaning API takes an assistant's API key. So on the Data quality page a flag about an answer reads *An assistant who can clean the form fixes the answer in Clean data, or through the cleaning API*. The page links to Clean data only when your own FormShare account can open it: when your account is also an assistant of the project's organization and can clean the form. The link then reads *Fix the answer in Clean data or through the cleaning API*.
 
 Either kind of flag can also be right as it is. A supervisor then [dismisses it](#dismissing-a-flag).
 
@@ -157,10 +161,12 @@ The **Status** column, of the flags and of the warnings, says what became of eac
 | Dismissed by *someone*, *when* | A supervisor, or for a warning an owner, administrator or editor, dismissed it. The reason is below. |
 | Its submission was deleted by *someone*, or moved to the logs by *someone* | The submission left the repository. The reason given then is below, and so is the earlier dismissal, if the flag had one. |
 | Its submission is no longer in the repository | The submission went without FormShare saying who removed it, as after **Delete all submissions**. |
+| Reopened by *someone*, *when*: *reason* | Someone reopened the issue after it was dismissed. The reason shows when they gave one. |
+| Dismissed by *someone*, *when*: *reason*, under the status | A dismissal that a reopening undid. It stays on the issue, with who dismissed it, when and why. |
 | Named in a change by *someone* | A change whose reason named the issue, other than the one that fixed it. |
 | Named when a submission was deleted by *someone*, or moved to the logs by *someone* | A removal whose reason named the issue. |
 
-Up to three changes show for each issue, then "and N more".
+Up to three changes show for each issue, then "and N more". The same goes for the dismissals and reopenings, newest first.
 
 ## Dismissing a flag
 
@@ -169,8 +175,31 @@ Only a supervisor of the form dismisses a flag, in Clean data, when the value is
 * The reason is required, up to 1,000 characters.
 * Only an open flag can be dismissed.
 * The record is scored again at once, without the flag.
-* A dismissed flag stays dismissed while its check or script keeps finding it.
-* The pages have no way to undo a dismissal.
+* A dismissed flag stays dismissed while its check or script keeps finding it, until someone reopens it.
+
+## Reopening an issue
+
+A dismissal can be undone. A dismissed flag or warning has **Reopen**:
+
+| Where | Who | What |
+| --- | --- | --- |
+| The **Flags** and **Warnings** boxes of the Data quality page, on an issue with the status Dismissed | The project's owner, administrators and editors | Flags and warnings |
+| The **Quality flags** dialog of Clean data, under a dismissed flag | Supervisors of the form (see "[Reopening a flag](supervisors-and-assistants.md#reopening-a-flag)") | Flags |
+
+**Reopen** asks once more. It shows a box, *Why it counts again (optional)*, and **Reopen it**, which sends it.
+
+* The reason is optional, up to 1,000 characters.
+* Only a dismissed flag or warning can be reopened. Otherwise the page says *Only a dismissed flag can be reopened*, or *Only a dismissed warning can be reopened*.
+* The issue is open again, with its number, and its status no longer reads Dismissed. Under the status, the issue keeps who reopened it, when and why, and who had dismissed it, when and why. The [flags API](flags-api.md#listing-flags) lists the same in a flag's `decisions`.
+* A reopened issue lives as an open one: dismissing it again needs a new reason.
+
+What happens next depends on the issue:
+
+| The issue | What happens when you reopen it |
+| --- | --- |
+| A flag of a check | The checks on records run on its record at once, as after an edit, and the record is scored again. If the check still finds the problem, the flag counts in the score again, and the page says *The flag was reopened: it counts in its record's score again*. If the problem went while the flag was dismissed, for example because the answer was fixed since, the flag is marked as no longer found instead, and the page says *The flag was reopened, but its check no longer finds it: it is marked as no longer found*. |
+| A flag posted by a script | The record is scored again with the flag open. The script's next post for the record finds it again, or marks it as no longer found. |
+| A warning | It is open again, and the page says *The warning was reopened. The next run of its check finds it again, or marks it as no longer found*. The reopening counts as a change, so **Run checks** and the nightly run do run its check (see "[How runs over all records take turns](when-checks-run.md#how-runs-over-all-records-take-turns)"). |
 
 ## When a submission is removed
 
@@ -180,4 +209,4 @@ A submission deleted, or moved to the logs, on the Manage submissions page keeps
 
 ## When a check is removed
 
-Removing a check deletes its flags and warnings, whatever their status, and scores its records again without them. Their numbers are not given to anything else.
+Removing a check deletes its flags and warnings, whatever their status, with who dismissed and reopened them, and scores its records again without them. Their numbers are not given to anything else.

@@ -11,9 +11,7 @@ A calendar reminder is a message FormShare Collect shows at times you set: "ever
 
 Open the project's **Notifications** and click the **Reminders** tab.
 
-{% hint style="info" %}
-Reminders reach phones only while the project's notifications are on, so turn them on in **Settings** before you add the first one (see "[Turning notifications on and off](README.md#turning-notifications-on-and-off)").
-{% endhint %}
+You can add reminders whether or not the project's notifications are on. Phones get them once notifications are on (see "[Turning notifications on and off](README.md#turning-notifications-on-and-off)").
 
 ## The Reminders tab
 
@@ -24,11 +22,13 @@ Reminders reach phones only while the project's notifications are on, so turn th
 | Reminder | The title, which opens the reminder's page, and the start of its text. |
 | When | Its schedule in words, for example *Every Monday, Thursday at 08:00*, with its first and last days when they matter. |
 | To | Whom it is for. |
-| Next time | The next time it comes, or *Ended* when it will not come again. |
+| Next time | The next time it comes, worked out in the project's time zone, or *Ended* when it will not come again. |
+
+Below the table, the tab names the project's time zone and says that what each phone gets is worked out in the time zone of the assistant signed in on it, so a time close to now can differ (see "[How a reminder reaches the phone](#how-a-reminder-reaches-the-phone)"). A crowdsourcing project has no such note: there, the phones' times are worked out in the project's time zone too.
 
 Each row has **Edit** and **Delete**. **Delete** asks again in the row: **Delete it** confirms, and **Keep it** cancels. A deleted reminder leaves the phones at their next check.
 
-<figure><img src="../../.gitbook/assets/notif-reminders.png" alt="The Reminders tab with a weekly reminder, every Friday at 16:00, to everyone in the project, and its next time."><figcaption><p>A weekly reminder.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/notif-reminders.png" alt="The Reminders tab with a weekly reminder, every Friday at 16:00, to everyone in the project, its next time, and the note on time zones under the table."><figcaption><p>A weekly reminder.</p></figcaption></figure>
 
 ## The fields
 
@@ -40,7 +40,9 @@ Each row has **Edit** and **Delete**. **Delete** asks again in the row: **Delete
 | When | How often it comes, at what time, from which day and until which day. See below. |
 | To | **Everyone in the project**, or **Only some**, as for a notification (see "[Who a notification can go to](README.md#who-a-notification-can-go-to)"). |
 
-Click **Save the reminder**. The page goes back to the Reminders tab and says *The reminder was saved: phones take it at their next check.* A saved reminder's page lists its next five times above the form, under *Its next times*.
+Click **Save the reminder**. The page goes back to the Reminders tab and says *The reminder was saved: phones take it at their next check.* While the project's notifications are off, it says *The reminder was saved. Phones take it at their next check once the project's notifications are on.*
+
+A saved reminder's page lists its next five times above the form, under *Its next times*, with the same note on time zones as the Reminders tab.
 
 <figure><img src="../../.gitbook/assets/notif-reminder-add.png" alt="A new reminder every week on Friday at 4:00 PM, with a form, from today with no last day, to everyone in the project."><figcaption><p>The time is on each phone's own clock.</p></figcaption></figure>
 
@@ -79,7 +81,7 @@ At every check, FormShare gives each phone the full set of reminders meant for t
 A reminder is for whoever its **To** names at the moment of each check. A reminder to a group therefore reaches whoever is in the group then, and leaves the phones of someone removed from it.
 
 {% hint style="info" %}
-**Which times are still to come** is decided on the time zone FormShare has for the assistant signed in on the phone (the **Time zone** on the assistant's page, on servers that offer time zones), or on the project's time zone in a crowdsourcing project. If that time zone is not the phone's, a time that falls within the hours between the two can be missed, or come late. Keep each assistant's time zone where they work. The **Next time** column and *Its next times* count from now on the project's time zone.
+**Which times are still to come** is decided on the time zone FormShare has for the assistant signed in on the phone (the **Time zone** on the assistant's page, on servers that offer time zones), or on the project's time zone in a crowdsourcing project. If that time zone is not the phone's, a time that falls within the hours between the two can be missed, or come late. Keep each assistant's time zone where they work. The **Next time** column and *Its next times* are worked out in the project's time zone, and both pages say so under the times they show.
 {% endhint %}
 
 ## When the page refuses

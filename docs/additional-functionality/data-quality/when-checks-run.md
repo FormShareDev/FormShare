@@ -16,8 +16,9 @@ The checks run by themselves. A record is checked as it arrives and again whenev
 | A check is saved | That check, on all the records | In the background |
 | Someone presses **Run checks** | All the checks, on all the records | In the background |
 | Every night | All the checks, on all the records, of each form that changed | Started by the server |
+| A dismissed flag of a check is reopened | The checks on records, on its record | At once |
 
-A supervisor's dismissal, a post of flags from a script and the removal of a check score the records they touch again at once, without running any check.
+A dismissal, a post of flags from a script, the reopening of a script's flag and the removal of a check score the records they touch again at once, without running any check. A reopened warning waits for the next run of its check over all records (see "[Reopening an issue](flags-and-scores.md#reopening-an-issue)").
 
 ## When a submission arrives
 
@@ -70,7 +71,7 @@ A run over all records is a saved check, **Run checks** or the nightly run. Seve
 * A run gives a sign of life every 30 seconds while it goes. If the server's worker stops, the run is taken for dead after two minutes without one: the next time someone opens the Data quality page, the open page checks on its runs, or another run ends, the run is marked as failed with the reason *It stopped before it finished: its worker may have stopped*, and the next run starts. However long a run takes, it is never taken for dead while its worker lives.
 
 
-A change, for these rules, is a check saved, a submission arrived, or an answer edited or a submission deleted in the main table or in a table a check reads. For a check across forms, a change to the case's repository counts too, and for **Cases without a follow-up** every new day does. The scores the plugin writes are not changes.
+A change, for these rules, is a check saved, a submission arrived, or an answer edited or a submission deleted in the main table or in a table a check reads. A warning reopened counts too, for the run of its check, so that the run finds it again or marks it as no longer found. For a check across forms, a change to the case's repository counts too, and for **Cases without a follow-up** every new day does. The scores the plugin writes are not changes.
 
 {% hint style="info" %}
 **For server administrators.** `dq.parallel.runs` in FormShare's .ini sets how many runs over all records may go at once on one form (2 by default). `dq.stale_run_minutes` sets how long a run may give no sign of life before it is taken for dead (2 by default, 1 at least).
@@ -109,7 +110,15 @@ At night the server goes through the forms one by one. A form runs when:
 
 A form that has not changed is skipped. A form busy with other runs waits for the next night. A form with **Cases without a follow-up** runs every night, because the days without a follow-up grow.
 
-Beside the box, the page shows *Last nightly run* and its date, or *No nightly run yet*. A form shows *No nightly run yet* until a nightly run has checked it, and the nightly run skips a form that has not changed since a run of all its checks started. So a form that nobody has changed since you pressed **Run checks** can show it on a server whose nightly job works. On a form that changes every day, it means the server has no nightly job: ask its administrator.
+Beside the box, the page says when the nightly run last looked at the form:
+
+| The page says | Meaning |
+| --- | --- |
+| *Last nightly run*, and its date | That night the nightly run ran the form's checks on all its records. |
+| *Last nightly run*, its date, and *nothing had changed since the checks last ran on all records.* | That night the nightly run looked at the form and found nothing to check: no change since a run of all its checks, yours or an earlier night's. |
+| *No nightly run has checked this form yet.* | No nightly run has looked at the form. |
+
+The date moves on every night the server's nightly job works. It stays the same while the form is paused, and on a night when the form was busy with other runs or the nightly run stopped before reaching it. So *No nightly run has checked this form yet.* means that the form got its first check after the last night, that its nightly run has been paused since then, or that the server has no nightly job. In the last case, ask the server's administrator: the page points them to this section, under *For server administrators*.
 
 {% hint style="info" %}
 **For server administrators.** The nightly run is a command, `dq_run_nightly`, that the plugin installs in FormShare's environment. Run it from cron, for example at 02:15 server time:

@@ -31,7 +31,7 @@ The pages have five tabs:
 
 | Tab | What it shows |
 | --- | --- |
-| Sent | The notifications sent by hand, newest first, with whom each one went to and how many have read it. |
+| Sent | The notifications sent by hand, newest first, with whom each one went to, its last day, and how many have read it. |
 | Send | The form to send a new notification. |
 | Reminders | The project's calendar reminders. |
 | Devices | The phones and tablets that have asked for the project's notifications. |
@@ -59,7 +59,7 @@ While notifications are off:
 * phones get no calendar reminders and no journey notifications;
 * no new device appears on the Devices tab, because phones only report themselves while notifications are on.
 
-You can still change or withdraw what was sent, and set up a journey's notifications for later.
+You can still change or withdraw what was sent, add calendar reminders, and set up a journey's notifications. Phones get the reminders and the journey's notifications once you turn notifications on.
 
 ## Who a notification can go to
 
@@ -158,7 +158,7 @@ You can still pick an assistant who uses ODK Collect. What you send waits for th
 | What you see | Why |
 | --- | --- |
 | No bell for the project | The project's notifications are off, or were turned on less than a day ago and the phone has not asked since. Or the phone uses another app than FormShare Collect. |
-| The bell, but not the notification | The phone has not checked since you sent it: pulling the list down checks at once. Or the notification was not for this person on this device: check its **To** on the Sent tab. |
+| The bell, but not the notification | The phone has not checked since you sent it: pulling the list down checks at once. Or the notification was not for this person on this device: check its **To** on the Sent tab. Or its last day has passed: the Sent tab shows it under **Last day**. |
 | The device is missing from the Devices tab | It has not asked since notifications were turned on, or it uses another app. |
 | A phone stopped getting anything | The assistant's password changed on the server, or the assistant was made inactive. The phone is refused quietly in the background, and FormShare Collect asks the person to sign in the next time they fetch forms. |
 

@@ -14,7 +14,7 @@ From the form details page, click **Manage submissions**. The screen shows a gri
 
 <!-- TODO screenshot: the Manage Submissions screen with the grid, the per-row buttons, and the "Danger zone" section visible. -->
 
-The screen is available to the **project owner** and to **collaborators** with editor or administrator access. Read-only collaborators, assistants, and partners do not see it.
+The screen is available to the **project owner** and to **collaborators** with administrator access. Editors, read-only collaborators, assistants and partners do not see it.
 
 {% hint style="warning" %}
 **The form must be inactive.** All delete operations on this screen require the form to be set to **inactive** so that no new submissions land mid-operation. If the form is currently accepting submissions, the buttons are disabled and FormShare prompts you to deactivate the form first. After you have finished cleaning, you can reactivate the form to resume data collection. To change a form's active state, see "[Forms — Edit the metadata of a form](../../fundamentals/forms/#edit-the-metadata-of-a-form)".
@@ -33,11 +33,14 @@ Use single delete when:
 
 For records that might still need work, prefer **Move to logs** instead — it preserves the record and lets an assistant decide what to do.
 
+The confirmation has a **Reason for deleting it** box. What you write is kept with the deletion in the form's [audit log](in-a-repository/audit-log.md), so the history says why the record went, and who removed it. When a [data quality](../../additional-functionality/data-quality/README.md) flag led you to the record, name its number (such as DQ-12) in the reason: the flag then shows who removed the record and why. See "[Reasons for changes](in-a-repository/audit-log.md#reasons-for-changes)".
+
 ## Move a submission to the error log
 
 Next to each submission, there is a **Move to logs** button. Clicking it opens a small dialog:
 
 * Pick the **assistant** to whom the moved submission should be assigned. That assistant then sees it in their error list with the **With error** status, ready for cleaning.
+* Optionally, say why in **Reason for moving it**. The reason is kept in the audit log, as a deletion's is.
 
 On confirmation, FormShare removes the submission from the repository and creates a corresponding entry in the [error log](submissions-with-errors.md). The full JSON of the submission is preserved — nothing is lost.
 
@@ -63,7 +66,7 @@ This is intended for situations like:
 FormShare requires extra confirmation: typically a typed acknowledgement and/or an email-based confirmation step, depending on how your FormShare instance is configured. The operation runs asynchronously — you'll see a progress task under the form's Tasks tab.
 
 {% hint style="danger" %}
-**Delete all is irreversible.** Every data row, every repeat row, every multi-select row, and every error-log entry for this form is removed. The audit log entries describing the deletions remain, but the underlying data is gone. There is no undo. If you might ever need this data again, [download a private product](../data-products/private-vs-public-products.md) first.
+**Delete all is irreversible.** Every data row, every repeat row, every multi-select row, and every error-log entry for this form is removed, and so is the form's audit log: only the lookup tables are kept. It asks for no reason, since there is no audit log left to keep one. There is no undo. If you might ever need this data again, [download a private product](../data-products/private-vs-public-products.md) first.
 {% endhint %}
 
 ## What gets audited

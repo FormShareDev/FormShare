@@ -27,6 +27,7 @@ The body of the request carries:
 * **`apikey`** — the assistant's API key.
 * **`rowuuid`** — the unique row ID of the record you want to update.
 * One or more **field names and values** — the columns you want to change.
+* Optionally, **`_reason`**: why the change is made, up to 1,000 characters. It is kept with the change in the [audit log](audit-log.md#reasons-for-changes). The answer's `reason_kept` says whether this form's repository keeps reasons.
 
 The request can be sent either as **JSON** (with `Content-Type: application/json`) or as **form-encoded POST data**. Both work identically.
 

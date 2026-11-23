@@ -39,6 +39,7 @@ A blue box, **Worth a look**, lists what is likely a mistake. These notes do not
 | "*form*" is not offered in any stage. | No traveller gets the form. Tick a stage on its **Where it is offered** tab. |
 | "*form*" has a move without a condition before other moves: those never apply. | Put the move without a condition last, on the form's **What sending it does** tab. |
 | These forms' repositories do not keep the device yet, so a journey that follows devices cannot read them until a new version of each is merged, followed by the forms' names. | Shown while the journey follows devices. See "[Whom a journey follows](whom-a-journey-follows.md#forms-whose-repository-does-not-keep-the-device)". |
+| More than one assistant has the ID "*ID*", so the journey reads what they send as one assistant's, with one stage and one set of limits, followed by each assistant's name and project. | Shown while the journey follows each assistant, or each assistant on each device. See "[Whom a journey follows](whom-a-journey-follows.md#assistants-with-the-same-id)". |
 | The project's QR does not set FormShare Collect to match the server's forms exactly, with automatic updates: a form that leaves a device's list stays on the device until it is removed by hand. | See the hint under "[Draft and applied](README.md#draft-and-applied)" for the QR settings that remove such a form. |
 
 Below the boxes, the Overview names the project's forms in testing, which can join the journey once their repository is created.
@@ -70,13 +71,27 @@ The page first says in which stage a traveller starts, and which forms of the jo
 
 | Column | What to enter |
 | --- | --- |
-| Day | The day the form is sent, as a number, such as 0, 3 or 14. The first row starts at day 0. Only the days between steps matter. |
+| Day | The day the form is sent, as a whole number from 0 to 99999, such as 0, 3 or 14. The first row starts at day 0. Only the days between steps matter. |
 | Form sent | A form of the journey. |
 | Its answers make it | Only for a form whose moves have conditions: what its answers would do. The first choice, selected unless you pick another, is what happens when no condition holds: the move without a condition, or *stays* when every move has one. The others are the moves with a condition. |
 
-**Add a step** adds a row on the same day as the last one, and the cross at the end of a row removes it. Steps on the same day are read in the order of the rows. Type the steps in the order they would be sent, with days that never go back.
+**Add a step** adds a row on the same day as the last one, and the cross at the end of a row removes it. Type the steps in the order they would be sent. A step can be on the same day as the steps above it or on a later day, but never on an earlier one. Steps on the same day are read in the order of the rows.
 
-**Then look again *N* days after the last step (optional)** also shows where the traveller would be that many days after the last step, with any lapse on the way.
+**Then look again *N* days after the last step (optional)** also shows where the traveller would be that many days after the last step, with any lapse on the way. *N* is a whole number from 1 to 99999.
+
+### When a step is refused
+
+If a step breaks these rules, **Try it** shows no results. Instead, the top of the page has a red box for each refused step. The box names the step by its number, where the first row is step 1, and by its form, and says what is wrong:
+
+| The box says | What to do |
+| --- | --- |
+| Step *n* ("*form*") has no day. Days are whole numbers from 0 to 99999, and never go back from one step to the next. | Type the step's day. |
+| Step *n* ("*form*"): "*what you typed*" is not a day. Days are whole numbers from 0 to 99999, and never go back from one step to the next. | Type the day as a whole number of up to five digits. |
+| Step *n* ("*form*") is on day *d*, before day *e* of step *m*. Days never go back from one step to the next. | Give step *n* day *e* or later, or correct the day of step *m*, the step above it with the latest day. |
+| Step *n*: choose a form of the journey under "Form sent". | The step's form left the journey after you opened the page. Choose one of the journey's forms. |
+| Then look again: "*what you typed*" is not a number of days. It is a whole number from 1 to 99999. | Type a whole number of days, or leave the field empty. |
+
+Your steps stay on the page as you typed them, and each field to correct is outlined in red. Correct them and click **Try it** again.
 
 The **Try it** button shows **What would happen**:
 

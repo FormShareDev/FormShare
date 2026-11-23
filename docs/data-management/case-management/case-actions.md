@@ -28,6 +28,8 @@ The text at the top says which case the actions act on. Below it, the actions ar
 | The arrows | Move the action up or down. The order decides [which action wins](#which-action-wins). |
 | Remove | Removes the action, after a confirmation. It stops running on the submissions that arrive from then on, and what it already changed stays. |
 
+Removing or moving an action puts the form's actions together again, as adding one does. When the others cannot be put together, because one of them is broken (it names a question or a property the form no longer has), nothing changes and the page says which action is broken: fix or remove that one first. The action that runs is always the one the list shows.
+
 **Add an action** adds a rule, and **Add an action (Expert mode)** adds code. Saving either one takes you to its test. Under the list, the [Runs](#runs) table records what the actions did to each submission.
 
 ## The case an action acts on
@@ -89,7 +91,7 @@ The target is three choices in a row:
 
 | Choice | Options |
 | --- | --- |
-| Whose | *the case*, or *the case's parent*. The parent is offered when the case is a row of a repeat whose parent's table has properties. |
+| Whose | *the case*, or *the case's parent*. The parent is offered whenever the case is a row of a repeat. Without properties of its own, the parent can still be deactivated or reactivated; *set property* and *set column* are then greyed out. |
 | What | *set property*, *set column*, or *activate or deactivate*. |
 | Which | A property or a column of that row, each shown with its type, or *deactivate the case* or *reactivate the case*. |
 

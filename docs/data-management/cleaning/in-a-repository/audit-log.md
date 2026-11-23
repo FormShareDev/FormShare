@@ -17,14 +17,34 @@ For each modified value, the audit log stores:
 * **New value**, after the change.
 * **Submission ID** (`rowuuid`) — the row that was modified. This lets you trace all the changes that affected one submission across all of its tables (main table, repeats, multi-select tables).
 * **Action** — a short label describing the operation (typically *update*, but moves between database and error log are also logged).
+* **Reason**, when one was given: see "[Reasons for changes](#reasons-for-changes)".
 
 Both web-interface edits and API edits write to the same log, in the same format. There is no way to tell, after the fact, which surface a change came through — and that is intentional: the audit log is about *what changed*, not *how the request reached the server*.
 
 ## Where to find it
 
-From the form details page, click **Audit log**. The audit-log page opens with a grid of all changes ever made to the form's data.
+From the form details page, click **Review the history of changes**, in the Repository tools box. The audit-log page opens with a grid of all changes ever made to the form's data.
 
 <!-- TODO screenshot: the audit-log grid showing several recent changes with all columns visible. -->
+
+## Reasons for changes
+
+A change can carry its reason, which the audit log keeps beside it:
+
+| Where | The box |
+| --- | --- |
+| Clean data, editing a row or a multi-select | **Reason for the change** |
+| The API | the `_reason` field |
+| Manage submissions, deleting a submission | **Reason for deleting it** |
+| Manage submissions, moving a submission to the logs | **Reason for moving it** |
+
+A reason is optional and holds up to 1,000 characters. The audit page shows it in its own column. "Delete all submissions" takes none, because it empties the audit log.
+
+The boxes appear only where the form's repository keeps reasons. A repository whose audit was set up before FormShare kept reasons drops them without a word, so FormShare hides the boxes there; the API's answer says so with `reason_kept`.
+
+{% hint style="info" %}
+**For server administrators:** `regenerate_audit_triggers <ini> --all-tables` sets up the audit of every repository again, so that they all keep reasons. Run it once after upgrading.
+{% endhint %}
 
 ## Reading the audit log
 

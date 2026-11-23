@@ -117,7 +117,7 @@ With a condition, Test also says how many rows the condition keeps, of how many.
 
 **Save** keeps the check and runs it on all the records in the background. The Data quality page then says whether the run started or is waiting for its turn (see "[When checks run](when-checks-run.md)"). Saving a check again runs it again, and what it no longer finds is marked as no longer found.
 
-**Remove**, in the checks list, asks once more: **Remove it and its flags**. Removing a check deletes its flags and warnings, whatever their status, and scores its records again without them. Their issue numbers are not given to anything else.
+**Remove**, in the checks list, asks once more: **Remove it and its flags**. Removing a check deletes its flags and warnings, whatever their status, with who dismissed and reopened them, and scores its records again without them. Their issue numbers are not given to anything else.
 
 ## On each record
 
@@ -300,7 +300,7 @@ The group types compare groups of records: officers, or the answers to a select 
 
 Warnings about officers are also counted for each officer in the **By who sent the records** box.
 
-Cases without a follow-up is a check on the form that registers the cases, and the follow-up form is one of this project's forms that follows them up. It warns once for each case the follow-up's list serves (active, and within the list's filter) with no submission of the follow-up form in the last days you give, counted from the case's registration when it has none. One warning per case lets you dismiss a case on its own, such as one that moved away. A warning is marked as no longer found when its case gets its follow-up or leaves the list.
+Cases without a follow-up is a check on the form that registers the cases, and the follow-up form is one of this project's forms that follows them up. It warns once for each case the follow-up's list serves (active, and within the list's filter) with no submission of the follow-up form in the last days you give, counted from the case's registration when it has none. One warning per case lets you dismiss a case on its own, such as one that moved away, and reopen it if the case should be followed up after all (see "[Reopening an issue](flags-and-scores.md#reopening-an-issue)"). A warning is marked as no longer found when its case gets its follow-up or leaves the list.
 
 ## Records sent with different versions
 
